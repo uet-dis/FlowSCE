@@ -1,0 +1,119 @@
+06:05:26 | INFO | start sections=[1] procs=3 device=cuda
+06:07:39 | INFO | [1/90] done tune cic 11 in 0h02m12s (elapsed 0h02m13s)
+06:07:40 | INFO | [2/90] done tune cic 11 in 0h02m13s (elapsed 0h02m13s)
+06:07:40 | INFO | [3/90] done tune cic 11 in 0h02m13s (elapsed 0h02m14s)
+06:08:02 | INFO | [4/90] done tune cic 11 in 0h00m21s (elapsed 0h02m36s)
+06:08:13 | INFO | [5/90] done tune cic 11 in 0h00m33s (elapsed 0h02m47s)
+06:09:43 | INFO | [6/90] done tune cic 11 in 0h02m04s (elapsed 0h04m17s)
+06:10:05 | INFO | [7/90] done tune cic 23 in 0h02m03s (elapsed 0h04m39s)
+06:10:17 | INFO | [8/90] done tune cic 23 in 0h02m03s (elapsed 0h04m51s)
+06:11:44 | INFO | [9/90] done tune cic 23 in 0h02m00s (elapsed 0h06m18s)
+06:12:05 | INFO | [10/90] done tune cic 23 in 0h02m00s (elapsed 0h06m39s)
+06:12:06 | INFO | [11/90] done tune cic 23 in 0h01m48s (elapsed 0h06m40s)
+06:13:31 | INFO | [12/90] done tune cic 23 in 0h01m46s (elapsed 0h08m05s)
+06:14:06 | INFO | [13/90] done tune cic 37 in 0h02m00s (elapsed 0h08m40s)
+06:14:06 | INFO | [14/90] done tune cic 37 in 0h02m00s (elapsed 0h08m40s)
+06:15:32 | INFO | [15/90] done tune cic 37 in 0h02m01s (elapsed 0h10m06s)
+06:15:54 | INFO | [16/90] done tune cic 37 in 0h01m47s (elapsed 0h10m28s)
+06:16:05 | INFO | [17/90] done tune cic 37 in 0h01m59s (elapsed 0h10m39s)
+06:17:19 | INFO | [18/90] done tune cic 37 in 0h01m46s (elapsed 0h11m52s)
+06:17:54 | INFO | [19/90] done tune cic 53 in 0h02m00s (elapsed 0h12m28s)
+06:18:06 | INFO | [20/90] done tune cic 53 in 0h02m01s (elapsed 0h12m40s)
+06:18:32 | INFO | [21/90] done tune cic 53 in 0h00m25s (elapsed 0h13m06s)
+06:18:51 | INFO | [22/90] done tune cic 53 in 0h00m18s (elapsed 0h13m24s)
+06:19:21 | INFO | [23/90] done tune cic 53 in 0h02m02s (elapsed 0h13m55s)
+06:19:56 | INFO | [24/90] done tune cic 53 in 0h02m01s (elapsed 0h14m30s)
+06:20:54 | INFO | [25/90] done tune cic 71 in 0h02m03s (elapsed 0h15m28s)
+06:21:25 | INFO | [26/90] done tune cic 71 in 0h02m03s (elapsed 0h15m59s)
+06:22:00 | INFO | [27/90] done tune cic 71 in 0h02m03s (elapsed 0h16m33s)
+06:22:56 | INFO | [28/90] done tune cic 71 in 0h02m01s (elapsed 0h17m30s)
+06:23:20 | INFO | [29/90] done tune cic 71 in 0h01m55s (elapsed 0h17m54s)
+06:23:47 | INFO | [30/90] done tune cic 71 in 0h01m47s (elapsed 0h18m21s)
+06:24:35 | INFO | [31/90] done tune doh 11 in 0h01m39s (elapsed 0h19m09s)
+06:24:58 | INFO | [32/90] done tune doh 11 in 0h01m37s (elapsed 0h19m32s)
+06:25:30 | INFO | [33/90] done tune doh 11 in 0h00m32s (elapsed 0h20m04s)
+06:25:31 | INFO | [34/90] done tune doh 11 in 0h01m43s (elapsed 0h20m05s)
+06:25:52 | INFO | [35/90] done tune doh 11 in 0h00m21s (elapsed 0h20m26s)
+06:26:17 | INFO | [36/90] done tune doh 11 in 0h01m41s (elapsed 0h20m51s)
+06:27:13 | INFO | [37/90] done tune doh 23 in 0h01m42s (elapsed 0h21m47s)
+06:27:34 | INFO | [38/90] done tune doh 23 in 0h01m42s (elapsed 0h22m08s)
+06:28:01 | INFO | [39/90] done tune doh 23 in 0h01m43s (elapsed 0h22m35s)
+06:28:05 | INFO | [40/90] done tune doh 23 in 0h00m31s (elapsed 0h22m39s)
+06:28:24 | INFO | [41/90] done tune doh 23 in 0h00m23s (elapsed 0h22m58s)
+06:29:00 | INFO | [42/90] done tune doh 23 in 0h01m46s (elapsed 0h23m34s)
+06:29:50 | INFO | [43/90] done tune doh 37 in 0h01m45s (elapsed 0h24m24s)
+06:30:09 | INFO | [44/90] done tune doh 37 in 0h01m45s (elapsed 0h24m43s)
+06:30:39 | INFO | [45/90] done tune doh 37 in 0h00m29s (elapsed 0h25m12s)
+06:30:43 | INFO | [46/90] done tune doh 37 in 0h01m42s (elapsed 0h25m16s)
+06:31:00 | INFO | [47/90] done tune doh 37 in 0h00m21s (elapsed 0h25m34s)
+06:31:33 | INFO | [48/90] done tune doh 37 in 0h01m42s (elapsed 0h26m06s)
+06:32:27 | INFO | [49/90] done tune doh 53 in 0h01m44s (elapsed 0h27m01s)
+06:32:44 | INFO | [50/90] done tune doh 53 in 0h01m43s (elapsed 0h27m18s)
+06:33:17 | INFO | [51/90] done tune doh 53 in 0h01m44s (elapsed 0h27m51s)
+06:34:08 | INFO | [52/90] done tune doh 53 in 0h01m40s (elapsed 0h28m41s)
+06:34:28 | INFO | [53/90] done tune doh 53 in 0h01m43s (elapsed 0h29m02s)
+06:35:00 | INFO | [54/90] done tune doh 53 in 0h01m42s (elapsed 0h29m34s)
+06:35:50 | INFO | [55/90] done tune doh 71 in 0h01m42s (elapsed 0h30m24s)
+06:36:10 | INFO | [56/90] done tune doh 71 in 0h01m41s (elapsed 0h30m43s)
+06:36:42 | INFO | [57/90] done tune doh 71 in 0h01m42s (elapsed 0h31m16s)
+06:37:10 | INFO | [58/90] done tune doh 71 in 0h01m00s (elapsed 0h31m43s)
+06:37:19 | INFO | [59/90] done tune doh 71 in 0h00m37s (elapsed 0h31m53s)
+06:37:29 | INFO | [60/90] done tune doh 71 in 0h01m39s (elapsed 0h32m03s)
+06:38:55 | INFO | [61/90] done tune unsw 11 in 0h01m45s (elapsed 0h33m29s)
+06:39:04 | INFO | [62/90] done tune unsw 11 in 0h01m44s (elapsed 0h33m37s)
+06:39:17 | INFO | [63/90] done tune unsw 11 in 0h01m47s (elapsed 0h33m51s)
+06:40:36 | INFO | [64/90] done tune unsw 11 in 0h01m40s (elapsed 0h35m09s)
+06:40:47 | INFO | [65/90] done tune unsw 11 in 0h01m43s (elapsed 0h35m21s)
+06:40:59 | INFO | [66/90] done tune unsw 11 in 0h01m41s (elapsed 0h35m32s)
+06:42:14 | INFO | [67/90] done tune unsw 23 in 0h01m38s (elapsed 0h36m48s)
+06:42:25 | INFO | [68/90] done tune unsw 23 in 0h01m38s (elapsed 0h36m59s)
+06:42:41 | INFO | [69/90] done tune unsw 23 in 0h01m42s (elapsed 0h37m15s)
+06:43:14 | INFO | [70/90] done tune unsw 23 in 0h00m32s (elapsed 0h37m48s)
+06:43:21 | INFO | [71/90] done tune unsw 23 in 0h00m55s (elapsed 0h37m55s)
+06:43:50 | INFO | [72/90] done tune unsw 23 in 0h01m35s (elapsed 0h38m24s)
+06:44:45 | INFO | [73/90] done tune unsw 37 in 0h01m31s (elapsed 0h39m19s)
+06:44:53 | INFO | [74/90] done tune unsw 37 in 0h01m31s (elapsed 0h39m26s)
+06:45:30 | INFO | [75/90] done tune unsw 37 in 0h01m39s (elapsed 0h40m03s)
+06:45:54 | INFO | [76/90] done tune unsw 37 in 0h01m01s (elapsed 0h40m28s)
+06:46:03 | INFO | [77/90] done tune unsw 37 in 0h00m33s (elapsed 0h40m37s)
+06:46:23 | INFO | [78/90] done tune unsw 37 in 0h01m37s (elapsed 0h40m57s)
+06:47:24 | INFO | [79/90] done tune unsw 53 in 0h01m29s (elapsed 0h41m57s)
+06:47:33 | INFO | [80/90] done tune unsw 53 in 0h01m29s (elapsed 0h42m07s)
+06:47:57 | INFO | [81/90] done tune unsw 53 in 0h01m33s (elapsed 0h42m30s)
+06:48:55 | INFO | [82/90] done tune unsw 53 in 0h00m58s (elapsed 0h43m29s)
+06:48:56 | INFO | [83/90] done tune unsw 53 in 0h01m32s (elapsed 0h43m30s)
+06:49:08 | INFO | [84/90] done tune unsw 53 in 0h01m34s (elapsed 0h43m41s)
+06:50:24 | INFO | [85/90] done tune unsw 71 in 0h01m28s (elapsed 0h44m57s)
+06:50:25 | INFO | [86/90] done tune unsw 71 in 0h01m28s (elapsed 0h44m59s)
+06:50:41 | INFO | [87/90] done tune unsw 71 in 0h01m33s (elapsed 0h45m15s)
+06:50:57 | INFO | [88/90] done tune unsw 71 in 0h00m33s (elapsed 0h45m31s)
+06:51:11 | INFO | [89/90] done tune unsw 71 in 0h00m29s (elapsed 0h45m45s)
+06:51:17 | INFO | [90/90] done tune unsw 71 in 0h00m52s (elapsed 0h45m51s)
+06:51:18 | INFO | §1 baseline_config
+{
+  "cic": {
+    "candice": {
+      "lam1": 0.005,
+      "lam2": 0.005,
+      "lr": 0.1
+    }
+  },
+  "doh": {
+    "candice": {
+      "lam1": 0.005,
+      "lam2": 0.005,
+      "lr": 0.1
+    }
+  },
+  "unsw": {
+    "candice": {
+      "lam1": 0.005,
+      "lam2": 0.005,
+      "lr": 0.1
+    }
+  }
+}
+06:51:18 | INFO | 0 jobs to run
+06:51:18 | WARNING | GEN: 15 ledgers missing
+06:51:18 | WARNING | MIN: 15 ledgers missing
+06:51:18 | INFO | DONE in 0h45m52s | log results/logs/baselines_20261015_060525.log | report results/logs/baselines_20261015_060525_report.txt

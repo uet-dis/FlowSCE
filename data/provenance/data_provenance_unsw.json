@@ -1,0 +1,452 @@
+{
+ "dataset": "unsw",
+ "release": "UNSW-NB15 (original 49-feature CSVs UNSW-NB15_1..4, Argus + Bro-IDS)",
+ "url": "https://research.unsw.edu.au/projects/unsw-nb15-dataset",
+ "zip": "UNSW-NB15 CSV folder (download as zip)",
+ "members": [
+  {
+   "member": "CSV Files/UNSW-NB15_1.csv",
+   "sha256": "7d851bbeabd27894ce39c8e78835c73341fc946652fb7743b9eff193b55eb511",
+   "bytes": 168979718,
+   "uncompressed_size": 168979718,
+   "data_rows": 700001,
+   "class_counts": {
+    "": 677786,
+    "Generic": 7522,
+    "Exploits": 5409,
+    "Fuzzers": 5051,
+    "Reconnaissance": 1759,
+    "DoS": 1167,
+    "Backdoors": 534,
+    "Analysis": 526,
+    "Shellcode": 223,
+    "Worms": 24
+   }
+  },
+  {
+   "member": "CSV Files/UNSW-NB15_2.csv",
+   "sha256": "6130ad02873cc6069ae695cf2844f2e8c2e9a9a1b7532dd82ab8f202757cacf8",
+   "bytes": 165221021,
+   "uncompressed_size": 165221021,
+   "data_rows": 700001,
+   "class_counts": {
+    "": 647252,
+    "Generic": 27883,
+    "Exploits": 11103,
+    "DoS": 4637,
+    "Fuzzers": 4668,
+    "Reconnaissance": 3116,
+    "Backdoor": 370,
+    "Analysis": 608,
+    "Shellcode": 324,
+    "Worms": 40
+   }
+  },
+  {
+   "member": "CSV Files/UNSW-NB15_3.csv",
+   "sha256": "ae990a96c3dfcd425ce2801aadb1727a34d5e0ae6d8215dbcdae60dedfaef640",
+   "bytes": 154588103,
+   "uncompressed_size": 154588103,
+   "data_rows": 700001,
+   "class_counts": {
+    "": 542576,
+    "Generic": 118198,
+    "Exploits": 16574,
+    "Fuzzers": 9137,
+    "DoS": 5642,
+    "Reconnaissance": 5582,
+    "Analysis": 873,
+    "Backdoor": 759,
+    "Shellcode": 593,
+    "Worms": 67
+   }
+  },
+  {
+   "member": "CSV Files/UNSW-NB15_4.csv",
+   "sha256": "cdf563692d51d405541dd659ddcdad9fa01f001f05fe9fc4b67f00ca12fbc96a",
+   "bytes": 97588754,
+   "uncompressed_size": 97588754,
+   "data_rows": 440044,
+   "class_counts": {
+    "": 351150,
+    "Generic": 61878,
+    "Exploits": 11439,
+    "Fuzzers": 5390,
+    "DoS": 4907,
+    "Reconnaissance": 3530,
+    "Analysis": 670,
+    "Backdoor": 666,
+    "Shellcode": 371,
+    "Worms": 43
+   }
+  }
+ ],
+ "subset_file": "data/unsw_nb15_60k.parquet",
+ "subset_rows": 60000,
+ "subset_class_counts": {
+  "Normal": 30000,
+  "Generic": 20087,
+  "Exploits": 4187,
+  "Fuzzers": 2229,
+  "DoS": 1507,
+  "Reconnaissance": 1318,
+  "Analysis": 256,
+  "Backdoor": 182,
+  "Shellcode": 157,
+  "Backdoors": 52,
+  "Worms": 25
+ },
+ "matched_rows": 60000,
+ "full_match_rows": 60000,
+ "unmatched_rows": 0,
+ "rows_with_duplicate_source_candidates": 27465,
+ "subset_rows_per_source_file": {
+  "CSV Files/UNSW-NB15_1.csv": 11138,
+  "CSV Files/UNSW-NB15_2.csv": 13738,
+  "CSV Files/UNSW-NB15_3.csv": 22161,
+  "CSV Files/UNSW-NB15_4.csv": 12963
+ },
+ "source_rows_file": "data/source_rows/source_rows_unsw.csv.gz",
+ "key_columns": [
+  "srcip",
+  "sport",
+  "dstip",
+  "dsport",
+  "Stime",
+  "Ltime",
+  "sbytes",
+  "dbytes",
+  "Spkts",
+  "Dpkts"
+ ],
+ "note": "source_row = 0-based data row index in the member file (header excluded). The subsets are documented by these row lists.",
+ "feature_docs": [
+  {
+   "No.": "1",
+   "Name": "srcip",
+   "Type": "nominal",
+   "Description": "Source IP address"
+  },
+  {
+   "No.": "2",
+   "Name": "sport",
+   "Type": "integer",
+   "Description": "Source port number"
+  },
+  {
+   "No.": "3",
+   "Name": "dstip",
+   "Type": "nominal",
+   "Description": "Destination IP address"
+  },
+  {
+   "No.": "4",
+   "Name": "dsport",
+   "Type": "integer",
+   "Description": "Destination port number"
+  },
+  {
+   "No.": "5",
+   "Name": "proto",
+   "Type": "nominal",
+   "Description": "Transaction protocol"
+  },
+  {
+   "No.": "6",
+   "Name": "state",
+   "Type": "nominal",
+   "Description": "Indicates to the state and its dependent protocol, e.g. ACC, CLO, CON, ECO, ECR, FIN, INT, MAS, PAR, REQ, RST, TST, TXD, URH, URN, and (-) (if not used state)"
+  },
+  {
+   "No.": "7",
+   "Name": "dur",
+   "Type": "Float",
+   "Description": "Record total duration"
+  },
+  {
+   "No.": "8",
+   "Name": "sbytes",
+   "Type": "Integer",
+   "Description": "Source to destination transaction bytes "
+  },
+  {
+   "No.": "9",
+   "Name": "dbytes",
+   "Type": "Integer",
+   "Description": "Destination to source transaction bytes"
+  },
+  {
+   "No.": "10",
+   "Name": "sttl",
+   "Type": "Integer",
+   "Description": "Source to destination time to live value "
+  },
+  {
+   "No.": "11",
+   "Name": "dttl",
+   "Type": "Integer",
+   "Description": "Destination to source time to live value"
+  },
+  {
+   "No.": "12",
+   "Name": "sloss",
+   "Type": "Integer",
+   "Description": "Source packets retransmitted or dropped "
+  },
+  {
+   "No.": "13",
+   "Name": "dloss",
+   "Type": "Integer",
+   "Description": "Destination packets retransmitted or dropped"
+  },
+  {
+   "No.": "14",
+   "Name": "service",
+   "Type": "nominal",
+   "Description": "http, ftp, smtp, ssh, dns, ftp-data ,irc  and (-) if not much used service"
+  },
+  {
+   "No.": "15",
+   "Name": "Sload",
+   "Type": "Float",
+   "Description": "Source bits per second"
+  },
+  {
+   "No.": "16",
+   "Name": "Dload",
+   "Type": "Float",
+   "Description": "Destination bits per second"
+  },
+  {
+   "No.": "17",
+   "Name": "Spkts",
+   "Type": "integer",
+   "Description": "Source to destination packet count "
+  },
+  {
+   "No.": "18",
+   "Name": "Dpkts",
+   "Type": "integer",
+   "Description": "Destination to source packet count"
+  },
+  {
+   "No.": "19",
+   "Name": "swin",
+   "Type": "integer",
+   "Description": "Source TCP window advertisement value"
+  },
+  {
+   "No.": "20",
+   "Name": "dwin",
+   "Type": "integer",
+   "Description": "Destination TCP window advertisement value"
+  },
+  {
+   "No.": "21",
+   "Name": "stcpb",
+   "Type": "integer",
+   "Description": "Source TCP base sequence number"
+  },
+  {
+   "No.": "22",
+   "Name": "dtcpb",
+   "Type": "integer",
+   "Description": "Destination TCP base sequence number"
+  },
+  {
+   "No.": "23",
+   "Name": "smeansz",
+   "Type": "integer",
+   "Description": "Mean of the ?ow packet size transmitted by the src "
+  },
+  {
+   "No.": "24",
+   "Name": "dmeansz",
+   "Type": "integer",
+   "Description": "Mean of the ?ow packet size transmitted by the dst "
+  },
+  {
+   "No.": "25",
+   "Name": "trans_depth",
+   "Type": "integer",
+   "Description": "Represents the pipelined depth into the connection of http request/response transaction"
+  },
+  {
+   "No.": "26",
+   "Name": "res_bdy_len",
+   "Type": "integer",
+   "Description": "Actual uncompressed content size of the data transferred from the server\u0092s http service."
+  },
+  {
+   "No.": "27",
+   "Name": "Sjit",
+   "Type": "Float",
+   "Description": "Source jitter (mSec)"
+  },
+  {
+   "No.": "28",
+   "Name": "Djit",
+   "Type": "Float",
+   "Description": "Destination jitter (mSec)"
+  },
+  {
+   "No.": "29",
+   "Name": "Stime",
+   "Type": "Timestamp",
+   "Description": "record start time"
+  },
+  {
+   "No.": "30",
+   "Name": "Ltime",
+   "Type": "Timestamp",
+   "Description": "record last time"
+  },
+  {
+   "No.": "31",
+   "Name": "Sintpkt",
+   "Type": "Float",
+   "Description": "Source interpacket arrival time (mSec)"
+  },
+  {
+   "No.": "32",
+   "Name": "Dintpkt",
+   "Type": "Float",
+   "Description": "Destination interpacket arrival time (mSec)"
+  },
+  {
+   "No.": "33",
+   "Name": "tcprtt",
+   "Type": "Float",
+   "Description": "TCP connection setup round-trip time, the sum of \u0092synack\u0092 and \u0092ackdat\u0092."
+  },
+  {
+   "No.": "34",
+   "Name": "synack",
+   "Type": "Float",
+   "Description": "TCP connection setup time, the time between the SYN and the SYN_ACK packets."
+  },
+  {
+   "No.": "35",
+   "Name": "ackdat",
+   "Type": "Float",
+   "Description": "TCP connection setup time, the time between the SYN_ACK and the ACK packets."
+  },
+  {
+   "No.": "36",
+   "Name": "is_sm_ips_ports",
+   "Type": "Binary",
+   "Description": "If source (1) and destination (3)IP addresses equal and port numbers (2)(4)  equal then, this variable takes value 1 else 0"
+  },
+  {
+   "No.": "37",
+   "Name": "ct_state_ttl",
+   "Type": "Integer",
+   "Description": "No. for each state (6) according to specific range of values for source/destination time to live (10) (11)."
+  },
+  {
+   "No.": "38",
+   "Name": "ct_flw_http_mthd",
+   "Type": "Integer",
+   "Description": "No. of flows that has methods such as Get and Post in http service."
+  },
+  {
+   "No.": "39",
+   "Name": "is_ftp_login",
+   "Type": "Binary",
+   "Description": "If the ftp session is accessed by user and password then 1 else 0. "
+  },
+  {
+   "No.": "40",
+   "Name": "ct_ftp_cmd",
+   "Type": "integer",
+   "Description": "No of flows that has a command in ftp session."
+  },
+  {
+   "No.": "41",
+   "Name": "ct_srv_src",
+   "Type": "integer",
+   "Description": "No. of connections that contain the same service (14) and source address (1) in 100 connections according to the last time (26)."
+  },
+  {
+   "No.": "42",
+   "Name": "ct_srv_dst",
+   "Type": "integer",
+   "Description": "No. of connections that contain the same service (14) and destination address (3) in 100 connections according to the last time (26)."
+  },
+  {
+   "No.": "43",
+   "Name": "ct_dst_ltm",
+   "Type": "integer",
+   "Description": "No. of connections of the same destination address (3) in 100 connections according to the last time (26)."
+  },
+  {
+   "No.": "44",
+   "Name": "ct_src_ ltm",
+   "Type": "integer",
+   "Description": "No. of connections of the same source address (1) in 100 connections according to the last time (26)."
+  },
+  {
+   "No.": "45",
+   "Name": "ct_src_dport_ltm",
+   "Type": "integer",
+   "Description": "No of connections of the same source address (1) and the destination port (4) in 100 connections according to the last time (26)."
+  },
+  {
+   "No.": "46",
+   "Name": "ct_dst_sport_ltm",
+   "Type": "integer",
+   "Description": "No of connections of the same destination address (3) and the source port (2) in 100 connections according to the last time (26)."
+  },
+  {
+   "No.": "47",
+   "Name": "ct_dst_src_ltm",
+   "Type": "integer",
+   "Description": "No of connections of the same source (1) and the destination (3) address in in 100 connections according to the last time (26)."
+  },
+  {
+   "No.": "48",
+   "Name": "attack_cat",
+   "Type": "nominal",
+   "Description": "The name of each attack category. In this data set , nine categories e.g. Fuzzers, Analysis, Backdoors, DoS Exploits, Generic, Reconnaissance, Shellcode and Worms"
+  },
+  {
+   "No.": "49",
+   "Name": "Label",
+   "Type": "binary",
+   "Description": "0 for normal and 1 for attack records"
+  }
+ ],
+ "source_class_counts": {
+  "Normal": 2218764,
+  "Generic": 215481,
+  "Exploits": 44525,
+  "Fuzzers": 24246,
+  "Reconnaissance": 13987,
+  "DoS": 16353,
+  "Backdoors": 534,
+  "Analysis": 2677,
+  "Shellcode": 1511,
+  "Worms": 174,
+  "Backdoor": 1795
+ },
+ "sampling_ratio_by_class": {
+  "Normal": 0.013521041444696236,
+  "Generic": 0.09321935576686576,
+  "Exploits": 0.09403705783267827,
+  "Fuzzers": 0.09193268992823558,
+  "Reconnaissance": 0.09423035675984844,
+  "DoS": 0.09215434476854399,
+  "Backdoors": 0.09737827715355805,
+  "Analysis": 0.09562943593574898,
+  "Shellcode": 0.10390469887491727,
+  "Worms": 0.14367816091954022,
+  "Backdoor": 0.10139275766016713
+ },
+ "data_quality_notes": [
+  "four dsport values (ICMP rows) are stored in hexadecimal in the release (e.g. 0xcc09); prepare_data.py parses them to integers",
+  "attack_cat in the release carries leading spaces (e.g. ' Fuzzers') and two spellings 'Backdoor' / 'Backdoors'; the original column is kept (it stratifies the split) and attack_type harmonises them",
+  "UNSW_NB15_training-set.csv / testing-set.csv (no IP addresses) are not used; the subset comes from UNSW-NB15_1..4.csv",
+  "the release contains exact duplicate rows; source_row lists the first unused identical row in file order"
+ ],
+ "subset_content_sha256": "a644b8edca4a4c746c2f36c5f55fa68dcf9ed8623b4fdf5abc445430ca6e9dd9"
+}

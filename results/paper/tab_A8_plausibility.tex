@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering\footnotesize
+\caption{Where the counterfactual values lie. For every changed feature of a valid counterfactual on the registered alerts: share of raw counterfactual values inside the 1st--99th percentile of the training distribution of that feature, and share at the extremes ($\le$0.1th or $\ge$99.9th percentile). Reference scale of the kNN distance (median distance to the five nearest benign training flows): the registered alerts themselves and 500 benign test flows.}
+\label{tab:a-plausibility}
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+Dataset & Method & Changed values & Inside p1--p99 (\%) & At extremes (\%) & kNN alerts & kNN benign \\
+\midrule
+CIC-IDS2018 & FlowSCE & 534 & 26.0 & 17.6 & 6.41 & 0.58 \\
+ & LBS-adapted & 527 & 14.0 & 34.7 &  &  \\
+ & CANDICE (tuned $\lambda$) & 7925 & 84.7 & 12.8 &  &  \\
+\midrule
+DoHBrw-2020 & FlowSCE & 644 & 9.3 & 70.7 & 3.80 & 0.24 \\
+ & LBS-adapted & 686 & 16.6 & 69.5 &  &  \\
+ & CANDICE (tuned $\lambda$) & 8583 & 63.9 & 14.4 &  &  \\
+\midrule
+UNSW-NB15 & FlowSCE & 501 & 23.4 & 50.9 & 4.00 & 1.22 \\
+ & LBS-adapted & 511 & 11.4 & 64.4 &  &  \\
+ & CANDICE (tuned $\lambda$) & 6546 & 62.8 & 27.4 &  &  \\
+\bottomrule
+\end{tabular}
+\end{table}

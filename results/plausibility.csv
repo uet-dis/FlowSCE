@@ -1,0 +1,25 @@
+dataset,kind,method,knn_median,changed_values,share_inside_p1_p99,share_at_extremes,share_of_explanations,distinct_features
+cic,reference,registered alerts (original),6.409432888031006,,,,,
+cic,reference,benign test flows,0.5776273608207703,,,,,
+cic,percentile,FlowSCE,,534.0,0.2602996254681648,0.1760299625468165,,
+cic,percentile,LBS-adapted,,527.0,0.14041745730550284,0.34724857685009486,,
+cic,percentile,CANDICE (tuned λ),,7925.0,0.8466876971608833,0.1280757097791798,,
+cic,feature_share,DST_TO_SRC_IAT_MIN,,,,,0.416,18.0
+cic,feature_share,NUM_PKTS_128_TO_256_BYTES,,,,,0.234,18.0
+cic,feature_share,SRC_TO_DST_IAT_MIN,,,,,0.14,18.0
+doh,reference,registered alerts (original),3.8042304515838623,,,,,
+doh,reference,benign test flows,0.23768768459558487,,,,,
+doh,percentile,FlowSCE,,644.0,0.09316770186335403,0.7065217391304348,,
+doh,percentile,LBS-adapted,,686.0,0.1661807580174927,0.6953352769679301,,
+doh,percentile,CANDICE (tuned λ),,8583.0,0.6390539438424793,0.14423861120820225,,
+doh,feature_share,ResponseTimeTimeVariance,,,,,0.576,20.0
+doh,feature_share,FlowSentRate,,,,,0.332,20.0
+doh,feature_share,PacketTimeMode,,,,,0.102,20.0
+unsw,reference,registered alerts (original),4.000604629516602,,,,,
+unsw,reference,benign test flows,1.2200944423675537,,,,,
+unsw,percentile,FlowSCE,,501.0,0.23353293413173654,0.5089820359281437,,
+unsw,percentile,LBS-adapted,,511.0,0.11350293542074363,0.6438356164383562,,
+unsw,percentile,CANDICE (tuned λ),,6546.0,0.628017109685304,0.2742132600061106,,
+unsw,feature_share,tcprtt,,,,,0.7595190380761523,4.0
+unsw,feature_share,smeansz,,,,,0.23847695390781562,4.0
+unsw,feature_share,Dload,,,,,0.004008016032064128,4.0

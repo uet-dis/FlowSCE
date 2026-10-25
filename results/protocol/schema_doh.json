@@ -1,0 +1,233 @@
+[
+  {
+    "name": "SourcePort",
+    "mutable": false,
+    "integer": true,
+    "nonneg": true,
+    "lo": 443.0,
+    "hi": 65532.0,
+    "transform": "standardize",
+    "unit": "port number",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020)"
+  },
+  {
+    "name": "Duration",
+    "mutable": true,
+    "integer": false,
+    "nonneg": true,
+    "lo": 0.0,
+    "hi": 179.021144,
+    "transform": "standardize",
+    "unit": "seconds",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020)"
+  },
+  {
+    "name": "FlowBytesSent",
+    "mutable": true,
+    "integer": true,
+    "nonneg": true,
+    "lo": 55.0,
+    "hi": 6209568.0,
+    "transform": "log1p+standardize",
+    "unit": "bytes",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020)"
+  },
+  {
+    "name": "FlowSentRate",
+    "mutable": true,
+    "integer": false,
+    "nonneg": false,
+    "lo": -1.0,
+    "hi": 7136363.636363636,
+    "transform": "standardize",
+    "unit": "bytes/s",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020); equals FlowBytesSent / Duration on every flow of the subset"
+  },
+  {
+    "name": "FlowBytesReceived",
+    "mutable": true,
+    "integer": true,
+    "nonneg": true,
+    "lo": 0.0,
+    "hi": 7723184.0,
+    "transform": "log1p+standardize",
+    "unit": "bytes",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020)"
+  },
+  {
+    "name": "PacketLengthVariance",
+    "mutable": true,
+    "integer": false,
+    "nonneg": true,
+    "lo": 0.0,
+    "hi": 1578115.36,
+    "transform": "log1p+standardize",
+    "unit": "bytes^2",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020)"
+  },
+  {
+    "name": "PacketLengthMedian",
+    "mutable": true,
+    "integer": false,
+    "nonneg": true,
+    "lo": 54.0,
+    "hi": 288.0,
+    "transform": "log1p+standardize",
+    "unit": "bytes",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020)"
+  },
+  {
+    "name": "PacketLengthMode",
+    "mutable": true,
+    "integer": true,
+    "nonneg": true,
+    "lo": 54.0,
+    "hi": 553.0,
+    "transform": "log1p+standardize",
+    "unit": "bytes",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020)"
+  },
+  {
+    "name": "PacketLengthSkewFromMedian",
+    "mutable": true,
+    "integer": false,
+    "nonneg": false,
+    "lo": -10.0,
+    "hi": 2.9056724766385558,
+    "transform": "standardize",
+    "unit": "dimensionless",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020)"
+  },
+  {
+    "name": "PacketLengthSkewFromMode",
+    "mutable": true,
+    "integer": false,
+    "nonneg": false,
+    "lo": -10.0,
+    "hi": 1.3627259387602382,
+    "transform": "standardize",
+    "unit": "dimensionless",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020)"
+  },
+  {
+    "name": "PacketTimeVariance",
+    "mutable": true,
+    "integer": false,
+    "nonneg": true,
+    "lo": 0.0,
+    "hi": 3546.09099477893,
+    "transform": "log1p+standardize",
+    "unit": "unknown",
+    "unit_note": "DoHMeter lists this time statistic without stating its unit"
+  },
+  {
+    "name": "PacketTimeMode",
+    "mutable": true,
+    "integer": false,
+    "nonneg": true,
+    "lo": 0.0,
+    "hi": 119.990979,
+    "transform": "log1p+standardize",
+    "unit": "unknown",
+    "unit_note": "DoHMeter lists this time statistic without stating its unit"
+  },
+  {
+    "name": "PacketTimeSkewFromMedian",
+    "mutable": true,
+    "integer": false,
+    "nonneg": false,
+    "lo": -10.0,
+    "hi": 2.8443332204222633,
+    "transform": "standardize",
+    "unit": "dimensionless",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020)"
+  },
+  {
+    "name": "PacketTimeSkewFromMode",
+    "mutable": true,
+    "integer": false,
+    "nonneg": false,
+    "lo": -10.0,
+    "hi": 11.380724645366389,
+    "transform": "standardize",
+    "unit": "dimensionless",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020)"
+  },
+  {
+    "name": "PacketTimeCoefficientofVariation",
+    "mutable": true,
+    "integer": false,
+    "nonneg": false,
+    "lo": -1.0,
+    "hi": 5.616085482691796,
+    "transform": "standardize",
+    "unit": "dimensionless",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020)"
+  },
+  {
+    "name": "ResponseTimeTimeVariance",
+    "mutable": true,
+    "integer": false,
+    "nonneg": false,
+    "lo": -1.0,
+    "hi": 647.2453301243248,
+    "transform": "standardize",
+    "unit": "unknown",
+    "unit_note": "DoHMeter lists this time statistic without stating its unit"
+  },
+  {
+    "name": "ResponseTimeTimeMean",
+    "mutable": true,
+    "integer": false,
+    "nonneg": false,
+    "lo": -1.0,
+    "hi": 15.114213,
+    "transform": "standardize",
+    "unit": "unknown",
+    "unit_note": "DoHMeter lists this time statistic without stating its unit"
+  },
+  {
+    "name": "ResponseTimeTimeMode",
+    "mutable": true,
+    "integer": false,
+    "nonneg": false,
+    "lo": -1.0,
+    "hi": 15.089161,
+    "transform": "standardize",
+    "unit": "unknown",
+    "unit_note": "DoHMeter lists this time statistic without stating its unit"
+  },
+  {
+    "name": "ResponseTimeTimeSkewFromMedian",
+    "mutable": true,
+    "integer": false,
+    "nonneg": false,
+    "lo": -10.0,
+    "hi": 2.8456028070327424,
+    "transform": "standardize",
+    "unit": "dimensionless",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020)"
+  },
+  {
+    "name": "ResponseTimeTimeSkewFromMode",
+    "mutable": true,
+    "integer": false,
+    "nonneg": false,
+    "lo": -10.0,
+    "hi": 3.926140948026135,
+    "transform": "standardize",
+    "unit": "dimensionless",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020)"
+  },
+  {
+    "name": "ResponseTimeTimeCoefficientofVariation",
+    "mutable": true,
+    "integer": false,
+    "nonneg": true,
+    "lo": 0.0,
+    "hi": 58.76050777269456,
+    "transform": "standardize",
+    "unit": "dimensionless",
+    "unit_note": "DoHMeter feature list (DoHBrw-2020)"
+  }
+]

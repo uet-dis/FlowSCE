@@ -1,0 +1,7 @@
+# torch is installed separately (CUDA build): pip install torch==2.2.2 --index-url https://download.pytorch.org/whl/cu121
+# The registered split depends on the pandas / scikit-learn versions (results/protocol/config.json lists the versions used).
+numpy==1.26.4
+pandas==3.0.6
+pyarrow==14.0.2
+scikit-learn==1.9.1
+dice-ml==0.12

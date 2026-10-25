@@ -1,0 +1,31 @@
+\begin{table*}[t]
+\centering\footnotesize
+\caption{Explanation metrics of the CANDICE paper. ADA@$k$: mean attack probability after the top-$k$ explanatory features of each alert are set to zero in the standardized space (lower is more faithful). IS: mean intersection of the top-10 features over five runs (50 alerts per dataset); FlowSCE initializes at zero and is deterministic, so a variant initialized from $\mathcal N(0,0.1)$ is also shown. Time: sequential seconds to explain the 500 registered alerts (DiCE: generation only, from its ledger).}
+\label{tab:a-candice}
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+Dataset & Method & ADA@1 & ADA@2 & ADA@5 & ADA@10 & IS & Time (s) \\
+\midrule
+CIC-IDS2018 & FlowSCE & 0.988 & 0.988 & 0.988 & 0.988 & 0.116 & 5475 \\
+ & FlowSCE, $\mathcal N(0,0.1)$ init & -- & -- & -- & -- & 0.078 & -- \\
+ & One restoration pass (A) & 0.988 & 0.988 & 0.988 & 0.987 & 0.672 & 48 \\
+ & CANDICE & 0.710 & 0.624 & 0.410 & 0.007 & 0.019 & 11484 \\
+ & DiCE (post-hoc) & 0.988 & 0.987 & 0.987 & 0.986 & 1.000 & 10130 \\
+ & A0 + LBS-adapted & 0.988 & 0.988 & 0.988 & 0.988 & 0.036 & 287 \\
+\midrule
+DoHBrw-2020 & FlowSCE & 0.977 & 0.977 & 0.977 & 0.977 & 0.112 & 5522 \\
+ & FlowSCE, $\mathcal N(0,0.1)$ init & -- & -- & -- & -- & 0.075 & -- \\
+ & One restoration pass (A) & 0.986 & 0.982 & 0.977 & 0.976 & 0.566 & 99 \\
+ & CANDICE & 0.774 & 0.740 & 0.725 & 0.602 & 0.294 & 8732 \\
+ & DiCE (post-hoc) & 0.269 & 0.392 & 0.241 & 0.184 & 0.260 & 2941 \\
+ & A0 + LBS-adapted & 0.972 & 0.972 & 0.972 & 0.972 & 0.049 & 531 \\
+\midrule
+UNSW-NB15 & FlowSCE & 0.987 & 0.987 & 0.987 & 0.987 & 0.100 & 2249 \\
+ & FlowSCE, $\mathcal N(0,0.1)$ init & -- & -- & -- & -- & 0.100 & -- \\
+ & One restoration pass (A) & 0.976 & 0.975 & 0.982 & 0.982 & 0.638 & 79 \\
+ & CANDICE & -- & -- & -- & -- & 0.000 & 6670 \\
+ & DiCE (post-hoc) & 0.979 & 0.980 & 0.984 & 0.979 & 0.900 & 2526 \\
+ & A0 + LBS-adapted & 0.987 & 0.986 & 0.986 & 0.986 & 0.100 & 320 \\
+\bottomrule
+\end{tabular}
+\end{table*}

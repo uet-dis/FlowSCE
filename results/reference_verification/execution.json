@@ -1,0 +1,16 @@
+{
+  "command": [
+    "reference/run_reference_verification.py",
+    "--out",
+    "results/reference_verification"
+  ],
+  "elapsed_seconds": 1.9005106890108436,
+  "code_sha256": {
+    "traffic_validator.py": "3c5f4d901614ed0f261f6f20bfd8ce7c17f38c3c8d76c6f2d2bce692fa081ff8",
+    "evaluation_contract.py": "567c9e3b5fb4dfbc9196e51f5dd351f7b2f20dbc2b6fe13733b423f371b86b51",
+    "repeated_restoration.py": "723c7f541017bd9f5f7a0f10fe07a52ee6f5e8c0afbc38bfcc72b9909cbb6a8b",
+    "test_reference_contract.py": "7cf522100dcb97e23806a6d3a402d5b029960c15e39f947acae50570dc1d4fd8",
+    "run_reference_verification.py": "eef241714cb1aeb2282715711e3804539925f1da32e5ec21ac5aa1d292a91943",
+    "flowsce_reference.py": "12a40c4e2775575b479fe0f64014fc18066551198484ed1701e58906a5606b8a"
+  }
+}

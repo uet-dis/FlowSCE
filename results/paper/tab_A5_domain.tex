@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering\footnotesize
+\caption{Byte--duration--rate relations (diagnostic; not enforced by the validator). Raw data: share of flows on which the documented relation holds (relative tolerance 1\%). Counterfactuals: share of valid counterfactuals that violate it, where the relation holds on every flow and all its fields are features (n/a: the relation does not hold on every raw flow, so counterfactuals are not checked).}
+\label{tab:a-domain}
+\begin{tabular}{@{}llllrr@{}}
+\toprule
+Dataset & Step & Method & Relation & $n$ & Share \\
+\midrule
+DoHBrw-2020 & raw data & -- & \texttt{FlowSentRate = 1$\cdot$FlowBytesSent/duration} & 49734 & 1.000 \\
+DoHBrw-2020 & counterfactuals & original alerts & \texttt{FlowSentRate = FlowBytesSent/Duration} & 500 & 0.000 \\
+DoHBrw-2020 & counterfactuals & FlowSCE & \texttt{FlowSentRate = FlowBytesSent/Duration} & 500 & 0.354 \\
+DoHBrw-2020 & counterfactuals & FlowSCE (A) & \texttt{FlowSentRate = FlowBytesSent/Duration} & 500 & 0.882 \\
+DoHBrw-2020 & counterfactuals & CANDICE & \texttt{FlowSentRate = FlowBytesSent/Duration} & 38 & 0.974 \\
+DoHBrw-2020 & counterfactuals & DiCE & \texttt{FlowSentRate = FlowBytesSent/Duration} & 15 & 0.800 \\
+DoHBrw-2020 & counterfactuals & A0 + LBS-adapted & \texttt{FlowSentRate = FlowBytesSent/Duration} & 500 & 0.292 \\
+UNSW-NB15 & raw data & -- & \texttt{Sload = 8$\cdot$sbytes/duration} & 59894 & 0.037 \\
+UNSW-NB15 & counterfactuals & all & -- & 0 & n/a \\
+CIC-IDS2018 & raw data & -- & \texttt{SRC\_TO\_DST\_AVG\_THROUGHPUT = 8$\cdot$IN\_BYTES/duration} & 60000 & 0.653 \\
+CIC-IDS2018 & counterfactuals & all & -- & 0 & n/a \\
+\bottomrule
+\end{tabular}
+\end{table*}

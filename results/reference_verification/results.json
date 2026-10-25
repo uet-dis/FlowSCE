@@ -1,0 +1,518 @@
+{
+  "tests": [
+    {
+      "name": "exact_snapshot_vs_independent_rebuild",
+      "status": "PASS",
+      "cases": 100
+    },
+    {
+      "name": "fixed_reference_invariance",
+      "status": "PASS",
+      "cases": 30
+    },
+    {
+      "name": "reject_original_graph_policy_mismatch",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "independent_original_rebuild",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "isolated_node_zero_summary",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "self_loop_double_incidence",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "total_gradient_finite_difference_attention_oracle",
+      "status": "PASS",
+      "cases": 24
+    },
+    {
+      "name": "total_gradient_chain_identity",
+      "status": "PASS",
+      "cases": 24
+    },
+    {
+      "name": "linear_spurious_validity_and_bound_equality",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "detached_gradient_negative_control",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "matched_constructed_search_gradient_control",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "degree_conditioned_sharp_bound_family",
+      "status": "PASS",
+      "cases": 6
+    },
+    {
+      "name": "restoration_validity_support_lp_joint_deviation",
+      "status": "PASS",
+      "cases": 64
+    },
+    {
+      "name": "mahalanobis_nonmonotonicity_counterexample",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "last_post_update_candidate_checked",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "zero_budget_failure_not_fabricated_counterfactual",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "constant_predictor_budget_exhaustion",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "all_immutable_failure",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "zero_scale_excluded",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "non_alert_input_has_distinct_status",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "threshold_tie_not_benign",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "sub_epsilon_validity_critical_change_not_silently_zeroed",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "coupled_validator_rechecked_during_restoration",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "single_pass_not_final_coordinate_irreducible",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "asymmetric_precision_rejected",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "indefinite_precision_rejected",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "full_rank_covariance_coordinate_transform",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "computed_residual_matches_policy_state",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "unqueried_flows_and_original_inputs_unchanged",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "module_eval_mode_and_parameters_frozen",
+      "status": "PASS",
+      "cases": 1
+    },
+    {
+      "name": "reciprocal_support_bound_enumeration",
+      "status": "PASS",
+      "cases": 142
+    }
+  ],
+  "metrics": {
+    "max_snapshot_abs_error": 2.220446049250313e-16,
+    "max_gradient_fd_abs_error": 3.209804644299652e-11,
+    "max_gradient_chain_abs_error": 2.7755575615628914e-17,
+    "counterexample": {
+      "frozen_score": -0.5,
+      "reconstructed_score": 1.5,
+      "coupled_gradient": 1.0,
+      "detached_gradient": -1.0,
+      "score_discrepancy": 2.0
+    },
+    "linear_search": {
+      "coupled_status": "Valid",
+      "coupled_updates": 6,
+      "coupled_final_score": -0.0999999939999987,
+      "detached_status": "Failure",
+      "detached_updates": 20
+    },
+    "mahalanobis_counterexample": {
+      "before_squared": 0.19999999999999996,
+      "after_squared": 1.0
+    }
+  },
+  "raw": {
+    "linear_search_coupled": {
+      "status": "Valid",
+      "delta": [
+        -0.5999999939999987
+      ],
+      "score": -0.0999999939999987,
+      "updates": 6,
+      "forward_calls": 10,
+      "accepted_restorations": 0,
+      "trace": [
+        {
+          "step": 0,
+          "score": 0.5,
+          "delta": [
+            0.0
+          ]
+        },
+        {
+          "step": 1,
+          "score": 0.400000001,
+          "delta": [
+            -0.09999999900000002
+          ]
+        },
+        {
+          "step": 2,
+          "score": 0.30000000200000065,
+          "delta": [
+            -0.19999999799999935
+          ]
+        },
+        {
+          "step": 3,
+          "score": 0.20000000300000065,
+          "delta": [
+            -0.2999999969999993
+          ]
+        },
+        {
+          "step": 4,
+          "score": 0.1000000040000012,
+          "delta": [
+            -0.3999999959999988
+          ]
+        },
+        {
+          "step": 5,
+          "score": 5.000001301880275e-09,
+          "delta": [
+            -0.4999999949999987
+          ]
+        },
+        {
+          "step": 6,
+          "score": -0.0999999939999987,
+          "delta": [
+            -0.5999999939999987
+          ]
+        },
+        {
+          "restoration": {
+            "coordinate": 0,
+            "score": 0.5,
+            "accepted": false,
+            "support": 1
+          }
+        }
+      ],
+      "note": "Reference implementation on constructed inputs."
+    },
+    "linear_search_detached": {
+      "status": "Failure",
+      "delta": null,
+      "score": null,
+      "updates": 20,
+      "forward_calls": 21,
+      "accepted_restorations": 0,
+      "trace": [
+        {
+          "step": 0,
+          "score": 0.5,
+          "delta": [
+            0.0
+          ]
+        },
+        {
+          "step": 1,
+          "score": 0.599999999,
+          "delta": [
+            0.09999999900000002
+          ]
+        },
+        {
+          "step": 2,
+          "score": 0.6999999979999993,
+          "delta": [
+            0.19999999799999935
+          ]
+        },
+        {
+          "step": 3,
+          "score": 0.7999999969999994,
+          "delta": [
+            0.2999999969999993
+          ]
+        },
+        {
+          "step": 4,
+          "score": 0.8999999959999987,
+          "delta": [
+            0.3999999959999988
+          ]
+        },
+        {
+          "step": 5,
+          "score": 0.9999999949999987,
+          "delta": [
+            0.4999999949999987
+          ]
+        },
+        {
+          "step": 6,
+          "score": 1.0999999939999987,
+          "delta": [
+            0.5999999939999987
+          ]
+        },
+        {
+          "step": 7,
+          "score": 1.1999999929999983,
+          "delta": [
+            0.6999999929999984
+          ]
+        },
+        {
+          "step": 8,
+          "score": 1.2999999919999987,
+          "delta": [
+            0.7999999919999986
+          ]
+        },
+        {
+          "step": 9,
+          "score": 1.3999999909999987,
+          "delta": [
+            0.8999999909999988
+          ]
+        },
+        {
+          "step": 10,
+          "score": 1.4999999899999987,
+          "delta": [
+            0.9999999899999987
+          ]
+        },
+        {
+          "step": 11,
+          "score": 1.5999999889999987,
+          "delta": [
+            1.099999988999999
+          ]
+        },
+        {
+          "step": 12,
+          "score": 1.6999999879999992,
+          "delta": [
+            1.199999987999999
+          ]
+        },
+        {
+          "step": 13,
+          "score": 1.7999999869999987,
+          "delta": [
+            1.2999999869999987
+          ]
+        },
+        {
+          "step": 14,
+          "score": 1.8999999859999988,
+          "delta": [
+            1.3999999859999988
+          ]
+        },
+        {
+          "step": 15,
+          "score": 1.9999999849999988,
+          "delta": [
+            1.499999984999999
+          ]
+        },
+        {
+          "step": 16,
+          "score": 2.099999983999999,
+          "delta": [
+            1.5999999839999992
+          ]
+        },
+        {
+          "step": 17,
+          "score": 2.1999999829999988,
+          "delta": [
+            1.699999982999999
+          ]
+        },
+        {
+          "step": 18,
+          "score": 2.299999981999999,
+          "delta": [
+            1.7999999819999992
+          ]
+        },
+        {
+          "step": 19,
+          "score": 2.3999999809999997,
+          "delta": [
+            1.8999999809999994
+          ]
+        },
+        {
+          "step": 20,
+          "score": 2.4999999799999992,
+          "delta": [
+            1.9999999799999995
+          ]
+        }
+      ],
+      "note": "Reference implementation on constructed inputs."
+    },
+    "degree_family": [
+      {
+        "endpoint_degree": 1,
+        "frozen_score": -0.5,
+        "reconstructed_score": 1.5,
+        "discrepancy_bound": 2.0,
+        "valid_after_rebuild": false
+      },
+      {
+        "endpoint_degree": 2,
+        "frozen_score": -0.5,
+        "reconstructed_score": 0.5,
+        "discrepancy_bound": 1.0,
+        "valid_after_rebuild": false
+      },
+      {
+        "endpoint_degree": 4,
+        "frozen_score": -0.5,
+        "reconstructed_score": 0.0,
+        "discrepancy_bound": 0.5,
+        "valid_after_rebuild": false
+      },
+      {
+        "endpoint_degree": 8,
+        "frozen_score": -0.5,
+        "reconstructed_score": -0.25,
+        "discrepancy_bound": 0.25,
+        "valid_after_rebuild": true
+      },
+      {
+        "endpoint_degree": 16,
+        "frozen_score": -0.5,
+        "reconstructed_score": -0.375,
+        "discrepancy_bound": 0.125,
+        "valid_after_rebuild": true
+      },
+      {
+        "endpoint_degree": 32,
+        "frozen_score": -0.5,
+        "reconstructed_score": -0.4375,
+        "discrepancy_bound": 0.0625,
+        "valid_after_rebuild": true
+      }
+    ],
+    "non_irreducibility": {
+      "initial": [
+        1,
+        2,
+        3
+      ],
+      "final": [
+        1.0,
+        0.0,
+        3.0
+      ],
+      "later_valid": [
+        0.0,
+        0.0,
+        3.0
+      ],
+      "trace": [
+        {
+          "coordinate": 0,
+          "score": 0.5,
+          "accepted": false,
+          "support": 3
+        },
+        {
+          "coordinate": 1,
+          "score": -0.5,
+          "accepted": true,
+          "support": 2
+        },
+        {
+          "coordinate": 2,
+          "score": 0.5,
+          "accepted": false,
+          "support": 2
+        }
+      ]
+    }
+  },
+  "evidence_type": "constructed-data verification (not a network experiment)",
+  "stage": 3,
+  "groups_passed": 31,
+  "cases_passed": 414,
+  "seed_ranges": {
+    "snapshot": "1000..1099",
+    "reference": "2000..2029",
+    "gradient": "3000..3023",
+    "restoration": "4000..4063"
+  },
+  "precision": "float64, CPU, one Torch thread",
+  "training_performed": false,
+  "reference_detector": "fixed untrained two-head smooth attention test oracle and explicit affine fixtures",
+  "environment": {
+    "python": "3.11.7",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "platform": "Linux-5.15.0-194-generic-x86_64-with-glibc2.35",
+    "cuda_available": true
+  },
+  "contract_tests_run": 25,
+  "contract_tests_ok": true,
+  "fd_step": 1e-06,
+  "excluded_reference_max_abs_error": 0.0,
+  "excluded_reference_check": "torch.equal (bitwise identical summaries)"
+}

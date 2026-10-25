@@ -1,0 +1,35 @@
+{
+ "cic": {
+  "config": {
+   "kind": "flow",
+   "lr": 0.003,
+   "dropout": 0.1,
+   "layers": 1
+  },
+  "val_macro_f1_mean": 1.0,
+  "val_macro_f1_sd": 0.0,
+  "rule": "highest mean validation macro-F1 over five seeds; ties: smaller s.d., then fewer parameters"
+ },
+ "doh": {
+  "config": {
+   "kind": "flow",
+   "lr": 0.003,
+   "dropout": 0.1,
+   "layers": 1
+  },
+  "val_macro_f1_mean": 1.0,
+  "val_macro_f1_sd": 0.0,
+  "rule": "highest mean validation macro-F1 over five seeds; ties: smaller s.d., then fewer parameters"
+ },
+ "unsw": {
+  "config": {
+   "kind": "flow_sage_gate",
+   "lr": 0.003,
+   "dropout": 0.1,
+   "layers": 1
+  },
+  "val_macro_f1_mean": 0.9941273175186494,
+  "val_macro_f1_sd": 0.00013958756357176138,
+  "rule": "highest mean validation macro-F1 over five seeds; ties: smaller s.d., then fewer parameters"
+ }
+}

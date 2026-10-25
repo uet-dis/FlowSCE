@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering\footnotesize
+\caption{Window policies: CSR of a stale search followed by a check on the reconstructed graph (B checked) and of FlowSCE's search (A); A$-$C CSR difference with a Bonferroni-adjusted 95\% bootstrap interval over the 15 policies (alerts resampled within checkpoints); and the median ratio $|q_{\rm rec}-q_{\rm stale}|/(\omega_{\pi,k}\norm{\delta}_2)$ of B's candidates, an empirical counterpart of $L_V$ in Proposition~\ref{prop:mismatch}.}
+\label{tab:a-windows2}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Dataset & $\Delta t$ (s) & CSR B checked & CSR A & $\Delta$CSR A$-$C (Bonferroni) & $\hat L_V$ \\
+\midrule
+CIC-IDS2018 & 600 & 1.000 & 1.000 & 0.000 [0.000, 0.000] & 0.251 \\
+CIC-IDS2018 & 60 & 1.000 & 1.000 & 0.000 [0.000, 0.000] & 0.201 \\
+CIC-IDS2018 & 10 & 0.998 & 1.000 & 0.000 [0.000, 0.000] & 0.296 \\
+CIC-IDS2018 & 1 & 1.000 & 1.000 & 0.000 [0.000, 0.000] & 0.895 \\
+DoHBrw-2020 & 600 & 1.000 & 1.000 & 0.000 [0.000, 0.000] & 0.083 \\
+DoHBrw-2020 & 60 & 0.918 & 0.916 & 0.000 [0.000, 0.000] & 0.248 \\
+DoHBrw-2020 & 10 & 0.916 & 0.930 & +0.012 [-0.002, +0.030] & 0.547 \\
+DoHBrw-2020 & 1 & 0.966 & 0.994 & +0.006 [0.000, +0.017] & 1.240 \\
+DoHBrw-2020 (full) & 60 & 0.784 & 0.782 & +0.002 [-0.008, +0.012] & 0.114 \\
+DoHBrw-2020 (full) & 10 & 0.966 & 0.972 & +0.008 [0.000, +0.022] & 0.138 \\
+DoHBrw-2020 (full) & 1 & 0.862 & 0.892 & +0.014 [-0.004, +0.035] & 0.135 \\
+UNSW-NB15 & 600 & 0.926 & 0.958 & +0.006 [0.000, +0.018] & 0.040 \\
+UNSW-NB15 & 60 & 0.940 & 0.998 & 0.000 [0.000, 0.000] & 0.045 \\
+UNSW-NB15 & 10 & 0.736 & 0.972 & +0.032 [+0.012, +0.058] & 0.067 \\
+UNSW-NB15 & 1 & 0.642 & 0.932 & +0.132 [+0.090, +0.176] & 0.115 \\
+\bottomrule
+\end{tabular}
+\end{table}

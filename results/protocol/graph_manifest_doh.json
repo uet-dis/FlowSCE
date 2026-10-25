@@ -1,0 +1,52 @@
+{
+  "policy": "snapshot per partition (train/val/test built separately)",
+  "direction": "source \u2192 destination endpoint",
+  "host_feature": "mean of incident processed flow vectors, X_V = D^{-1} B X_E; self-loop counted twice",
+  "parallel_flows": "kept as distinct edges",
+  "message_passing": "directed src\u2192dst, no added self-loops",
+  "query_membership": "query belongs to the test snapshot whose summaries are reconstructed",
+  "unseen_hosts": "hosts of a partition are built from that partition's flows only",
+  "labels_used": false,
+  "train": {
+    "max_abs_residual": 4.853386403880222e-08,
+    "max_rel_residual": 4.5488118440315104e-08,
+    "rtol": 1e-06,
+    "ok": true,
+    "nodes": 21,
+    "flows": 34859,
+    "deg_median": 4821.0,
+    "deg_p10": 1732.0,
+    "omega_median": 0.00048282224452123046,
+    "omega_p90": 0.0007284791790880263,
+    "self_loops": 0,
+    "xe_sha": "e73efc74ff95d4e4"
+  },
+  "val": {
+    "max_abs_residual": 3.398244463603817e-08,
+    "max_rel_residual": 2.9802322387695312e-08,
+    "rtol": 1e-06,
+    "ok": true,
+    "nodes": 21,
+    "flows": 4985,
+    "deg_median": 947.0,
+    "deg_p10": 229.0,
+    "omega_median": 0.003291202010586858,
+    "omega_p90": 0.005458299070596695,
+    "self_loops": 0,
+    "xe_sha": "2bf42ea1e1c9b483"
+  },
+  "test": {
+    "max_abs_residual": 6.64821038220964e-08,
+    "max_rel_residual": 5.139433716718987e-08,
+    "rtol": 1e-06,
+    "ok": true,
+    "nodes": 21,
+    "flows": 9963,
+    "deg_median": 1853.0,
+    "deg_p10": 474.0,
+    "omega_median": 0.001719251973554492,
+    "omega_p90": 0.0025888122618198395,
+    "self_loops": 0,
+    "xe_sha": "7f07067b0decaddd"
+  }
+}

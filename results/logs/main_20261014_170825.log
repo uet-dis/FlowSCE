@@ -1,0 +1,43 @@
+17:08:31 | data cic: split {'train': 42000, 'val': 5995, 'test': 12005} | attack rate {'train': 0.75, 'val': 0.75, 'test': 0.75} | test vectors also in train after preprocessing 0.0491 | F = 32
+17:08:37 | data doh: split {'train': 34859, 'val': 4985, 'test': 9963} | attack rate {'train': 0.602, 'val': 0.602, 'test': 0.602} | test vectors also in train after preprocessing 0.0080 | F = 21
+17:08:43 | data unsw: split {'train': 41995, 'val': 5994, 'test': 12011} | attack rate {'train': 0.5, 'val': 0.5, 'test': 0.5} | test vectors also in train after preprocessing 0.1907 | F = 48
+17:08:43 | stages 1-3 done (18s)
+17:44:03 | tuning cic locked {'lr': 0.5, 'lam1': 0.0003, 'lam2': 0.001, 'search_margin': 0.25} (mean validation CSR 1.000, mean s_eps 6.20, mean L1 10.644)
+17:44:03 | tuning doh locked {'lr': 0.5, 'lam1': 0.003, 'lam2': 0.0003, 'search_margin': 0.25} (mean validation CSR 1.000, mean s_eps 10.00, mean L1 31.771)
+17:44:03 | tuning unsw locked {'lr': 0.5, 'lam1': 0.01, 'lam2': 0.01, 'search_margin': 0.25} (mean validation CSR 1.000, mean s_eps 4.80, mean L1 10.667)
+17:44:04 | RQ1 cic rebuild 8.9e-16 | original score 9.5e-07 | FD 2.9e-09 | context share 6.9e-05
+17:44:04 | RQ1 doh rebuild 2.2e-16 | original score 2.7e-06 | FD 5.0e-08 | context share 5.2e-04
+17:44:05 | RQ1 unsw rebuild 1.8e-15 | original score 1.4e-06 | FD 1.3e-09 | context share 1.5e-04
+17:44:06 | ablation cic seed 11 (1s)
+17:44:06 | ablation cic seed 23 (1s)
+17:44:07 | ablation cic seed 37 (1s)
+17:44:08 | ablation cic seed 53 (1s)
+17:44:09 | ablation cic seed 71 (1s)
+17:44:10 | ablation doh seed 11 (1s)
+17:44:11 | ablation doh seed 23 (1s)
+17:44:12 | ablation doh seed 37 (1s)
+17:44:14 | ablation doh seed 53 (2s)
+17:44:15 | ablation doh seed 71 (1s)
+17:44:20 | ablation unsw seed 11 (4s)
+17:44:20 | ablation unsw seed 23 (1s)
+17:44:21 | ablation unsw seed 37 (1s)
+17:44:22 | ablation unsw seed 53 (1s)
+17:44:23 | ablation unsw seed 71 (1s)
+17:44:23 | 
+   dataset variant  attempted  nominal  verified  spurious    CSR    SVR  support_eps_median  l1_median  margin_logit_median  n_fwd_median
+0      cic       A        500      500       500         0  1.000  0.000                 7.0     10.689                0.280          29.0
+1      cic      A0        500      500       500         0  1.000  0.000                19.0     20.737                1.449          11.0
+2      cic       B        500      500       500         0  1.000  0.000                 7.0     10.689                0.280          29.0
+3      cic       C        500      500       500         0  1.000  0.000                 7.0     10.689                0.280          29.0
+4      cic       D        500      500       500         0  1.000  0.000                 6.0     10.470                0.197          30.0
+5      doh       A        500      500       500         0  1.000  0.000                10.0     26.152                0.282          36.0
+6      doh      A0        500      500       500         0  1.000  0.000                20.0     38.686                0.782          16.0
+7      doh       B        500      500       500         0  1.000  0.000                10.0     26.125                0.291          36.0
+8      doh       C        500      500       500         0  1.000  0.000                10.0     25.855                0.288          36.0
+9      doh       D        500      500       500         0  1.000  0.000                 9.0     25.184                0.148          38.0
+10    unsw       A        500      499       499         0  0.998  0.000                 5.0     10.890                0.201          27.0
+11    unsw      A0        500      499       499         0  0.998  0.000                14.0     19.521                0.234          13.0
+12    unsw       B        500      499       498         1  0.996  0.002                 5.0     10.862                0.201          27.0
+13    unsw       C        500      499       499         0  0.998  0.000                 5.0     10.890                0.198          27.0
+14    unsw       D        500      499       499         0  0.998  0.000                 4.0      9.629                0.130          25.0
+17:44:23 | done in 2158s

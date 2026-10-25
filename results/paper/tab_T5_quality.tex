@@ -1,0 +1,29 @@
+\begin{table*}[t]
+\centering\small
+\caption{Matched ablation on the 500 registered alerts per dataset. CSR over all alerts; $s_\epsilon$ (number of changed features, $\epsilon=10^{-8}$), $L_1$ deviation, distance to the five nearest training-benign flows (kNN) and logit margin are medians (mean $s_\epsilon$ also shown) over verified successes; 1-feat.: \% of verified counterfactuals with a single changed feature; $N_f$ / $N_b$: median forward / backward evaluations of the whole explanation from the alert (for D and FlowSCE including the search that produced their starting point). The stale-context variant B is reported in Table~\ref{tab:main}.}
+\label{tab:quality}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llrrrrrrrrr@{}}
+\toprule
+Dataset & Variant & CSR & $s_\epsilon$ & mean $s_\epsilon$ & 1-feat.\ (\%) & $L_1$ & kNN & Margin & $N_f$ & $N_b$ \\
+\midrule
+CIC-IDS2018 & A0: search only & 1.000 & 19 & 18.53 & 0.0 & 20.74 & 22.60 & 1.449 & 11 & 5 \\
+ & A: one restoration pass & 1.000 & 7 & 6.77 & 0.2 & 10.69 & 14.71 & 0.280 & 29 & 5 \\
+ & C: detached gradient & 1.000 & 7 & 6.77 & 0.2 & 10.69 & 14.71 & 0.280 & 29 & 5 \\
+ & D: repeated restoration & 1.000 & 6 & 6.44 & 0.2 & 10.47 & 14.62 & 0.197 & 41 & 5 \\
+ & \textbf{FlowSCE} & 1.000 & 1 & 1.07 & 97.8 & 6.04 & 11.82 & 1.182 & 1124 & 1045 \\
+\midrule
+DoHBrw-2020 & A0: search only & 1.000 & 20 & 19.83 & 0.0 & 38.69 & 31.22 & 0.782 & 16 & 10 \\
+ & A: one restoration pass & 1.000 & 10 & 10.03 & 3.2 & 26.15 & 23.63 & 0.282 & 36 & 10 \\
+ & C: detached gradient & 1.000 & 10 & 10.07 & 3.4 & 25.86 & 23.57 & 0.288 & 36 & 10 \\
+ & D: repeated restoration & 1.000 & 9 & 8.65 & 3.2 & 25.18 & 22.76 & 0.148 & 56 & 10 \\
+ & \textbf{FlowSCE} & 1.000 & 1 & 1.29 & 81.0 & 17.57 & 20.22 & 1.128 & 1564 & 1474 \\
+\midrule
+UNSW-NB15 & A0: search only & 0.998 & 14 & 13.37 & 0.0 & 19.52 & 19.83 & 0.234 & 13 & 7 \\
+ & A: one restoration pass & 0.998 & 5 & 5.36 & 0.8 & 10.89 & 12.73 & 0.201 & 27 & 7 \\
+ & C: detached gradient & 0.998 & 5 & 5.36 & 0.8 & 10.89 & 12.74 & 0.198 & 27 & 7 \\
+ & D: repeated restoration & 0.998 & 4 & 4.61 & 6.2 & 9.63 & 11.35 & 0.130 & 38 & 7 \\
+ & \textbf{FlowSCE} & 0.998 & 1 & 1.00 & 99.6 & 6.97 & 10.44 & 1.119 & 843 & 778 \\
+\bottomrule
+\end{tabular}}
+\end{table*}

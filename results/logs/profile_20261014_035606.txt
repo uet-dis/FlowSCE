@@ -1,0 +1,105 @@
+env {'python': '3.11.7', 'torch': '2.2.2+cu121', 'numpy': '1.26.4', 'pandas': '3.0.6', 'sklearn': '1.9.1', 'device': 'cuda', 'gpu': 'NVIDIA RTX 5880 Ada Generation'}
+
+######## cic: N=662 flows=12005 unique host pairs=1297 F=32 mutable=21
+  CANDICE-style            seq    1.09s/q (n_fwd    112) | fast   0.041s/q | match 1.00
+  DiCE-style-noposthoc     seq    0.57s/q (n_fwd     72) | fast   0.030s/q | match 1.00
+  FlowSCE single (A)       seq    0.02s/q (n_fwd     21) | fast   0.006s/q | match 1.00
+  FlowSCE repeated (D)     seq    0.02s/q (n_fwd     28) | fast   0.008s/q | match 1.00
+  DiCE post-hoc            seq    0.05s/q (n_fwd     66) | fast   0.021s/q | match 1.00
+  LBS-adapted              seq    0.09s/q (n_fwd    118) | fast   0.037s/q | match 1.00
+
+######## doh: N=21 flows=9963 unique host pairs=98 F=21 mutable=20
+  CANDICE-style            seq    0.71s/q (n_fwd    120) | fast   0.031s/q | match 1.00
+  DiCE-style-noposthoc     seq    0.87s/q (n_fwd    163) | fast   0.062s/q | match 1.00
+  FlowSCE single (A)       seq    0.02s/q (n_fwd     23) | fast   0.005s/q | match 1.00
+  FlowSCE repeated (D)     seq    0.03s/q (n_fwd     38) | fast   0.010s/q | match 1.00
+  DiCE post-hoc            seq    0.05s/q (n_fwd     72) | fast   0.020s/q | match 1.00
+  LBS-adapted              seq    0.15s/q (n_fwd    186) | fast   0.069s/q | match 1.00
+
+######## unsw: N=45 flows=12011 unique host pairs=165 F=48 mutable=15
+  CANDICE-style            seq    0.59s/q (n_fwd    118) | fast   0.033s/q | match 1.00
+  DiCE-style-noposthoc     seq    2.97s/q (n_fwd    644) | fast   0.500s/q | match 1.00
+  FlowSCE single (A)       seq    0.01s/q (n_fwd     16) | fast   0.004s/q | match 1.00
+  FlowSCE repeated (D)     seq    0.02s/q (n_fwd     24) | fast   0.006s/q | match 1.00
+  DiCE post-hoc            seq    0.04s/q (n_fwd     52) | fast   0.015s/q | match 1.00
+  LBS-adapted              seq    0.23s/q (n_fwd    294) | fast   0.144s/q | match 1.00
+
+[A] Oracle micro-benchmark (ms)
+dataset                      impl    B  ms_per_call  ms_per_row_fwd  ms_per_row_fwd_bwd
+    cic          sequential (lib)    1       0.7702          0.7702              9.5788
+    cic batched+compressed (fast)    1       0.8126          0.8126              3.5426
+    cic batched+compressed (fast)   64       2.4407          0.0381              0.1010
+    cic batched+compressed (fast)  256      11.8997          0.0465              0.1134
+    cic batched+compressed (fast) 1024      49.1895          0.0480              0.1152
+    doh          sequential (lib)    1       0.7466          0.7466              5.3666
+    doh batched+compressed (fast)    1       0.8087          0.8087              3.4194
+    doh batched+compressed (fast)   64       0.8406          0.0131              0.0576
+    doh batched+compressed (fast)  256       0.8627          0.0034              0.0153
+    doh batched+compressed (fast) 1024       2.1270          0.0021              0.0057
+   unsw          sequential (lib)    1       0.7490          0.7490              4.3574
+   unsw batched+compressed (fast)    1       0.8167          0.8167              3.3291
+   unsw batched+compressed (fast)   64       0.8368          0.0131              0.0583
+   unsw batched+compressed (fast)  256       1.0245          0.0040              0.0158
+   unsw batched+compressed (fast) 1024       3.7848          0.0037              0.0097
+
+[B+C] Per method / dataset
+dataset               method          queries  seq_s_per_query  seq_n_fwd  seq_n_bwd  fast_s_per_query  fast_CSR  fast_n_fwd  match_seq_vs_fast
+    cic        CANDICE-style     A0 succeeded            1.094     112.25      93.00             0.041       1.0       110.8                1.0
+    cic        CANDICE-style A0 failed (hard)              NaN        NaN        NaN             0.041       NaN         NaN                1.0
+    cic DiCE-style-noposthoc     A0 succeeded            0.569      72.25      15.00             0.030       1.0        69.0                1.0
+    cic DiCE-style-noposthoc A0 failed (hard)              NaN        NaN        NaN             0.030       NaN         NaN                1.0
+    cic   FlowSCE single (A)     A0 succeeded            0.016      20.75       0.00             0.006       1.0        20.6                1.0
+    cic   FlowSCE single (A) A0 failed (hard)              NaN        NaN        NaN             0.006       NaN         NaN                1.0
+    cic FlowSCE repeated (D)     A0 succeeded            0.021      28.00       0.00             0.008       1.0        29.4                1.0
+    cic FlowSCE repeated (D) A0 failed (hard)              NaN        NaN        NaN             0.008       NaN         NaN                1.0
+    cic        DiCE post-hoc     A0 succeeded            0.050      66.00       0.00             0.021       1.0        66.0                1.0
+    cic        DiCE post-hoc A0 failed (hard)              NaN        NaN        NaN             0.021       NaN         NaN                1.0
+    cic          LBS-adapted     A0 succeeded            0.093     118.50       0.00             0.037       1.0       124.6                1.0
+    cic          LBS-adapted A0 failed (hard)              NaN        NaN        NaN             0.037       NaN         NaN                1.0
+    doh        CANDICE-style     A0 succeeded            0.714     119.75     106.50             0.031       1.0       112.0                1.0
+    doh        CANDICE-style A0 failed (hard)              NaN        NaN        NaN             0.031       NaN         NaN                1.0
+    doh DiCE-style-noposthoc     A0 succeeded            0.870     163.25      38.00             0.062       1.0       142.4                1.0
+    doh DiCE-style-noposthoc A0 failed (hard)              NaN        NaN        NaN             0.062       NaN         NaN                1.0
+    doh   FlowSCE single (A)     A0 succeeded            0.017      23.00       0.00             0.005       1.0        23.0                1.0
+    doh   FlowSCE single (A) A0 failed (hard)              NaN        NaN        NaN             0.005       NaN         NaN                1.0
+    doh FlowSCE repeated (D)     A0 succeeded            0.029      38.25       0.00             0.010       1.0        37.6                1.0
+    doh FlowSCE repeated (D) A0 failed (hard)              NaN        NaN        NaN             0.010       NaN         NaN                1.0
+    doh        DiCE post-hoc     A0 succeeded            0.055      71.75       0.00             0.020       1.0        75.0                1.0
+    doh        DiCE post-hoc A0 failed (hard)              NaN        NaN        NaN             0.020       NaN         NaN                1.0
+    doh          LBS-adapted     A0 succeeded            0.146     186.50       0.00             0.069       1.0       175.2                1.0
+    doh          LBS-adapted A0 failed (hard)              NaN        NaN        NaN             0.069       NaN         NaN                1.0
+   unsw        CANDICE-style     A0 succeeded            0.586     118.50     105.25             0.033       1.0       113.2                1.0
+   unsw        CANDICE-style A0 failed (hard)              NaN        NaN        NaN             0.033       NaN         NaN                1.0
+   unsw DiCE-style-noposthoc     A0 succeeded            2.969     643.75     158.25             0.500       1.0       545.2                1.0
+   unsw DiCE-style-noposthoc A0 failed (hard)              NaN        NaN        NaN             0.500       NaN         NaN                1.0
+   unsw   FlowSCE single (A)     A0 succeeded            0.012      16.25       0.00             0.004       1.0        16.2                1.0
+   unsw   FlowSCE single (A) A0 failed (hard)              NaN        NaN        NaN             0.004       NaN         NaN                1.0
+   unsw FlowSCE repeated (D)     A0 succeeded            0.018      23.75       0.00             0.006       1.0        23.0                1.0
+   unsw FlowSCE repeated (D) A0 failed (hard)              NaN        NaN        NaN             0.006       NaN         NaN                1.0
+   unsw        DiCE post-hoc     A0 succeeded            0.040      52.50       0.00             0.015       1.0        50.2                1.0
+   unsw        DiCE post-hoc A0 failed (hard)              NaN        NaN        NaN             0.015       NaN         NaN                1.0
+   unsw          LBS-adapted     A0 succeeded            0.230     293.75       0.00             0.144       1.0       255.2                1.0
+   unsw          LBS-adapted A0 failed (hard)              NaN        NaN        NaN             0.144       NaN         NaN                1.0
+
+Extrapolated cost for 100 queries × 5 seeds (hours)
+dataset               method   seq  fast  seq_h_full  fast_h_full  speedup
+    cic        CANDICE-style 1.094 0.041       0.152        0.006   26.435
+    cic        DiCE post-hoc 0.050 0.021       0.007        0.003    2.410
+    cic DiCE-style-noposthoc 0.569 0.030       0.079        0.004   19.094
+    cic FlowSCE repeated (D) 0.021 0.008       0.003        0.001    2.693
+    cic   FlowSCE single (A) 0.016 0.006       0.002        0.001    2.724
+    cic          LBS-adapted 0.093 0.037       0.013        0.005    2.513
+    doh        CANDICE-style 0.714 0.031       0.099        0.004   23.175
+    doh        DiCE post-hoc 0.055 0.020       0.008        0.003    2.694
+    doh DiCE-style-noposthoc 0.870 0.062       0.121        0.009   13.969
+    doh FlowSCE repeated (D) 0.029 0.010       0.004        0.001    2.996
+    doh   FlowSCE single (A) 0.017 0.005       0.002        0.001    3.198
+    doh          LBS-adapted 0.146 0.069       0.020        0.010    2.123
+   unsw        CANDICE-style 0.586 0.033       0.081        0.005   17.703
+   unsw        DiCE post-hoc 0.040 0.015       0.006        0.002    2.769
+   unsw DiCE-style-noposthoc 2.969 0.500       0.412        0.069    5.935
+   unsw FlowSCE repeated (D) 0.018 0.006       0.002        0.001    3.116
+   unsw   FlowSCE single (A) 0.012 0.004       0.002        0.001    2.936
+   unsw          LBS-adapted 0.230 0.144       0.032        0.020    1.595
+
+saved results/logs/profile_20261014_035606.*

@@ -1,0 +1,64 @@
+{
+ "doh": [
+  {
+   "relation": "FlowSentRate = FlowBytesSent / Duration",
+   "documentation": "DoHMeter: bytes per second, Duration in seconds",
+   "rows_tested": 49734,
+   "median_ratio": 1.0,
+   "share_within_1pct": 1.0,
+   "holds": true
+  },
+  {
+   "relation": "FlowReceivedRate = FlowBytesReceived / Duration",
+   "documentation": "DoHMeter: bytes per second",
+   "rows_tested": 49727,
+   "median_ratio": 1.0,
+   "share_within_1pct": 1.0,
+   "holds": true
+  }
+ ],
+ "cic": [
+  {
+   "relation": "SRC_TO_DST_AVG_THROUGHPUT = 8\u00b7IN_BYTES / (FLOW_DURATION_MILLISECONDS/1000)",
+   "documentation": "NetFlow v3: bits/s; duration in ms",
+   "rows_tested": 60000,
+   "median_ratio": 1.000548233861037,
+   "share_within_1pct": 0.6528,
+   "holds": false
+  },
+  {
+   "relation": "DST_TO_SRC_AVG_THROUGHPUT = 8\u00b7OUT_BYTES / (FLOW_DURATION_MILLISECONDS/1000)",
+   "documentation": "NetFlow v3: bits/s",
+   "rows_tested": 58832,
+   "median_ratio": 1.0003338171887672,
+   "share_within_1pct": 0.6500373946151754,
+   "holds": false
+  },
+  {
+   "relation": "SRC_TO_DST_SECOND_BYTES = IN_BYTES / (FLOW_DURATION_MILLISECONDS/1000)",
+   "documentation": "NetFlow v3 doc: 'Src to dst Bytes/sec'",
+   "rows_tested": 22988,
+   "median_ratio": 1577.7126099706745,
+   "share_within_1pct": 0.0,
+   "holds": false
+  }
+ ],
+ "unsw": [
+  {
+   "relation": "Sload = 8\u00b7sbytes / dur",
+   "documentation": "NUSW-NB15_features: 'Source bits per second'",
+   "rows_tested": 59847,
+   "median_ratio": 1.9999999700342472,
+   "share_within_1pct": 0.03642622019483015,
+   "holds": false
+  },
+  {
+   "relation": "Dload = 8\u00b7dbytes / dur",
+   "documentation": "NUSW-NB15_features: 'Destination bits per second'",
+   "rows_tested": 32407,
+   "median_ratio": 1.0587255150980586,
+   "share_within_1pct": 0.06751627734748665,
+   "holds": false
+  }
+ ]
+}

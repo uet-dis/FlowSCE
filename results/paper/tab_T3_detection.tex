@@ -1,0 +1,43 @@
+\begin{table*}[t]
+\centering\footnotesize
+\caption{Detection on the test partitions (mean $\pm$ s.d.\ over five seeds, threshold 0.5). Precision, recall, F1 and FPR refer to the attack class. $^\dagger$Re-implementations trained on the same split and preprocessing (CANDICE: $\beta$-TCVAE encoder with SVM / random forest / MLP on the flow attributes; E-GraphSAGE: mean aggregation over hosts). The explanations of Section~\ref{sec:results} use the first model ($^\ast$architecture and training settings selected on validation macro-F1: GAT context with one layer, learning rate $3\times10^{-3}$ and dropout 0.1 on CIC-IDS2018 and DoHBrw-2020; GraphSAGE-mean context with gates on UNSW-NB15). Flip: \% of test predictions that change when the rows of $X_V$ are permuted across hosts (models that read host context).}
+\label{tab:detector}
+\begin{tabular}{@{}llrrrrrrr@{}}
+\toprule
+Dataset & Model & Accuracy & Precision & Recall & F1 & Macro-F1 & FPR & Flip (\%) \\
+\midrule
+CIC-IDS2018 & FlowSCE detector (tuned)$^\ast$ & 0.9999 $\pm$ 0.0001 & 1.0000 $\pm$ 0.0000 & 0.9999 $\pm$ 0.0001 & 0.9999 $\pm$ 0.0001 & 0.9999 $\pm$ 0.0001 & 0.0001 $\pm$ 0.0001 & 23.6 \\
+ & FlowSCE detector (reduced context) & 0.9989 $\pm$ 0.0005 & 0.9993 $\pm$ 0.0004 & 0.9992 $\pm$ 0.0005 & 0.9993 $\pm$ 0.0003 & 0.9985 $\pm$ 0.0006 & 0.0021 $\pm$ 0.0011 & 0.0 \\
+ & Reduced context + gates & 0.9990 $\pm$ 0.0005 & 0.9994 $\pm$ 0.0002 & 0.9992 $\pm$ 0.0006 & 0.9993 $\pm$ 0.0003 & 0.9986 $\pm$ 0.0006 & 0.0017 $\pm$ 0.0005 & 0.0 \\
+ & Full context & 0.9995 $\pm$ 0.0003 & 0.9993 $\pm$ 0.0004 & 1.0000 $\pm$ 0.0000 & 0.9996 $\pm$ 0.0002 & 0.9993 $\pm$ 0.0004 & 0.0021 $\pm$ 0.0012 & 0.0 \\
+ & Full context + gates & 0.9993 $\pm$ 0.0001 & 0.9993 $\pm$ 0.0003 & 0.9997 $\pm$ 0.0003 & 0.9995 $\pm$ 0.0001 & 0.9990 $\pm$ 0.0002 & 0.0021 $\pm$ 0.0008 & 0.0 \\
+ & Edge-only (no context) & 0.9993 $\pm$ 0.0005 & 1.0000 $\pm$ 0.0000 & 0.9991 $\pm$ 0.0007 & 0.9996 $\pm$ 0.0004 & 0.9991 $\pm$ 0.0007 & 0.0001 $\pm$ 0.0001 & -- \\
+ & E-GraphSAGE$^\dagger$ & 1.0000 $\pm$ 0.0001 & 0.9999 $\pm$ 0.0001 & 1.0000 $\pm$ 0.0000 & 1.0000 $\pm$ 0.0001 & 0.9999 $\pm$ 0.0001 & 0.0002 $\pm$ 0.0004 & 70.2 \\
+ & CANDICE-SVM$^\dagger$ & 0.9950 $\pm$ 0.0023 & 0.9950 $\pm$ 0.0034 & 0.9983 $\pm$ 0.0011 & 0.9966 $\pm$ 0.0015 & 0.9932 $\pm$ 0.0031 & 0.0151 $\pm$ 0.0105 & -- \\
+ & CANDICE-RF$^\dagger$ & 0.9997 $\pm$ 0.0002 & 1.0000 $\pm$ 0.0001 & 0.9997 $\pm$ 0.0002 & 0.9998 $\pm$ 0.0001 & 0.9996 $\pm$ 0.0002 & 0.0001 $\pm$ 0.0002 & -- \\
+ & CANDICE-MLP$^\dagger$ & 0.9973 $\pm$ 0.0008 & 0.9976 $\pm$ 0.0009 & 0.9988 $\pm$ 0.0005 & 0.9982 $\pm$ 0.0005 & 0.9964 $\pm$ 0.0010 & 0.0073 $\pm$ 0.0028 & -- \\
+\midrule
+DoHBrw-2020 & FlowSCE detector (tuned)$^\ast$ & 0.9991 $\pm$ 0.0006 & 0.9988 $\pm$ 0.0011 & 0.9997 $\pm$ 0.0005 & 0.9992 $\pm$ 0.0005 & 0.9990 $\pm$ 0.0006 & 0.0018 $\pm$ 0.0017 & 38.8 \\
+ & FlowSCE detector (reduced context) & 0.9974 $\pm$ 0.0022 & 0.9978 $\pm$ 0.0022 & 0.9979 $\pm$ 0.0016 & 0.9979 $\pm$ 0.0018 & 0.9973 $\pm$ 0.0023 & 0.0033 $\pm$ 0.0034 & 35.3 \\
+ & Reduced context + gates & 0.9980 $\pm$ 0.0017 & 0.9987 $\pm$ 0.0009 & 0.9979 $\pm$ 0.0020 & 0.9983 $\pm$ 0.0014 & 0.9979 $\pm$ 0.0018 & 0.0019 $\pm$ 0.0013 & 35.4 \\
+ & Full context & 0.9878 $\pm$ 0.0187 & 0.9821 $\pm$ 0.0293 & 0.9987 $\pm$ 0.0013 & 0.9901 $\pm$ 0.0149 & 0.9870 $\pm$ 0.0199 & 0.0288 $\pm$ 0.0480 & 35.9 \\
+ & Full context + gates & 0.9983 $\pm$ 0.0010 & 0.9982 $\pm$ 0.0012 & 0.9989 $\pm$ 0.0010 & 0.9986 $\pm$ 0.0009 & 0.9982 $\pm$ 0.0011 & 0.0027 $\pm$ 0.0018 & 41.9 \\
+ & Edge-only (no context) & 0.9938 $\pm$ 0.0008 & 0.9964 $\pm$ 0.0011 & 0.9933 $\pm$ 0.0006 & 0.9948 $\pm$ 0.0007 & 0.9935 $\pm$ 0.0009 & 0.0054 $\pm$ 0.0016 & -- \\
+ & E-GraphSAGE$^\dagger$ & 0.9998 $\pm$ 0.0005 & 0.9996 $\pm$ 0.0008 & 1.0000 $\pm$ 0.0000 & 0.9998 $\pm$ 0.0004 & 0.9998 $\pm$ 0.0005 & 0.0006 $\pm$ 0.0012 & 55.0 \\
+ & CANDICE-SVM$^\dagger$ & 0.8927 $\pm$ 0.0235 & 0.8804 $\pm$ 0.0198 & 0.9511 $\pm$ 0.0182 & 0.9144 $\pm$ 0.0185 & 0.8853 $\pm$ 0.0253 & 0.1959 $\pm$ 0.0339 & -- \\
+ & CANDICE-RF$^\dagger$ & 0.9716 $\pm$ 0.0029 & 0.9691 $\pm$ 0.0034 & 0.9842 $\pm$ 0.0013 & 0.9766 $\pm$ 0.0023 & 0.9703 $\pm$ 0.0030 & 0.0475 $\pm$ 0.0054 & -- \\
+ & CANDICE-MLP$^\dagger$ & 0.9118 $\pm$ 0.0105 & 0.9053 $\pm$ 0.0099 & 0.9533 $\pm$ 0.0083 & 0.9287 $\pm$ 0.0084 & 0.9065 $\pm$ 0.0112 & 0.1511 $\pm$ 0.0167 & -- \\
+\midrule
+UNSW-NB15 & FlowSCE detector (tuned)$^\ast$ & 0.9926 $\pm$ 0.0002 & 0.9860 $\pm$ 0.0003 & 0.9995 $\pm$ 0.0001 & 0.9927 $\pm$ 0.0002 & 0.9926 $\pm$ 0.0002 & 0.0142 $\pm$ 0.0003 & 44.9 \\
+ & FlowSCE detector (reduced context) & 0.9890 $\pm$ 0.0009 & 0.9800 $\pm$ 0.0020 & 0.9984 $\pm$ 0.0010 & 0.9891 $\pm$ 0.0008 & 0.9890 $\pm$ 0.0009 & 0.0204 $\pm$ 0.0021 & 41.5 \\
+ & Reduced context + gates & 0.9883 $\pm$ 0.0036 & 0.9792 $\pm$ 0.0060 & 0.9979 $\pm$ 0.0016 & 0.9884 $\pm$ 0.0035 & 0.9883 $\pm$ 0.0036 & 0.0213 $\pm$ 0.0063 & 39.9 \\
+ & Full context & 0.9800 $\pm$ 0.0216 & 0.9646 $\pm$ 0.0386 & 0.9980 $\pm$ 0.0034 & 0.9807 $\pm$ 0.0202 & 0.9799 $\pm$ 0.0217 & 0.0381 $\pm$ 0.0440 & 45.8 \\
+ & Full context + gates & 0.9883 $\pm$ 0.0060 & 0.9778 $\pm$ 0.0114 & 0.9995 $\pm$ 0.0004 & 0.9885 $\pm$ 0.0058 & 0.9883 $\pm$ 0.0060 & 0.0228 $\pm$ 0.0121 & 45.0 \\
+ & Edge-only (no context) & 0.9926 $\pm$ 0.0001 & 0.9860 $\pm$ 0.0001 & 0.9994 $\pm$ 0.0003 & 0.9927 $\pm$ 0.0001 & 0.9926 $\pm$ 0.0001 & 0.0142 $\pm$ 0.0001 & -- \\
+ & E-GraphSAGE$^\dagger$ & 0.9654 $\pm$ 0.0024 & 0.9417 $\pm$ 0.0096 & 0.9923 $\pm$ 0.0074 & 0.9663 $\pm$ 0.0021 & 0.9654 $\pm$ 0.0024 & 0.0616 $\pm$ 0.0113 & 51.5 \\
+ & CANDICE-SVM$^\dagger$ & 0.9506 $\pm$ 0.0257 & 0.9271 $\pm$ 0.0364 & 0.9793 $\pm$ 0.0110 & 0.9523 $\pm$ 0.0242 & 0.9505 $\pm$ 0.0258 & 0.0781 $\pm$ 0.0410 & -- \\
+ & CANDICE-RF$^\dagger$ & 0.9911 $\pm$ 0.0010 & 0.9850 $\pm$ 0.0010 & 0.9974 $\pm$ 0.0013 & 0.9912 $\pm$ 0.0010 & 0.9911 $\pm$ 0.0010 & 0.0152 $\pm$ 0.0010 & -- \\
+ & CANDICE-MLP$^\dagger$ & 0.9740 $\pm$ 0.0205 & 0.9590 $\pm$ 0.0358 & 0.9917 $\pm$ 0.0063 & 0.9748 $\pm$ 0.0192 & 0.9740 $\pm$ 0.0206 & 0.0437 $\pm$ 0.0408 & -- \\
+\bottomrule
+\end{tabular}
+\end{table*}

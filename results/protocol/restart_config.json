@@ -1,0 +1,56 @@
+{
+  "schedule": [
+    [
+      0.5,
+      "main"
+    ],
+    [
+      0.5,
+      "free"
+    ],
+    [
+      1.0,
+      "main"
+    ],
+    [
+      1.0,
+      "free"
+    ],
+    [
+      2.0,
+      "main"
+    ],
+    [
+      2.0,
+      "free"
+    ],
+    [
+      4.0,
+      "main"
+    ],
+    [
+      4.0,
+      "free"
+    ]
+  ],
+  "free": {
+    "lam1": 0.0,
+    "lam2": 0.0,
+    "lr": 0.3
+  },
+  "budget": "cfg.max_fwd (shared)",
+  "validation": {
+    "cic": {
+      "CSR_plain": 1.0,
+      "CSR_restart": 1.0
+    },
+    "doh": {
+      "CSR_plain": 1.0,
+      "CSR_restart": 1.0
+    },
+    "unsw": {
+      "CSR_plain": 0.996,
+      "CSR_restart": 0.996
+    }
+  }
+}

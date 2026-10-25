@@ -1,0 +1,27 @@
+13:00:04 | data cic: split {'train': 42000, 'val': 5995, 'test': 12005} | attack rate {'train': 0.75, 'val': 0.75, 'test': 0.75} | test vectors also in train after preprocessing 0.0491 | F = 32
+13:00:10 | data doh: split {'train': 34859, 'val': 4985, 'test': 9963} | attack rate {'train': 0.602, 'val': 0.602, 'test': 0.602} | test vectors also in train after preprocessing 0.0080 | F = 21
+13:00:16 | data unsw: split {'train': 41995, 'val': 5994, 'test': 12011} | attack rate {'train': 0.5, 'val': 0.5, 'test': 0.5} | test vectors also in train after preprocessing 0.1907 | F = 48
+13:00:17 | stages 1-3 done (18s)
+13:00:18 | ablation cic seed 11 (1s)
+13:00:19 | ablation cic seed 23 (1s)
+13:00:20 | ablation cic seed 37 (1s)
+13:00:21 | ablation cic seed 53 (1s)
+13:00:23 | ablation cic seed 71 (1s)
+13:00:23 | 
+   dataset variant  attempted  nominal  verified  spurious    CSR    SVR  support_eps_median  l1_median  margin_logit_median  n_fwd_median
+0      cic       A        500      500       500         0  1.000  0.000                 7.0      9.100                0.168          29.0
+1      cic      A0        500      500       500         0  1.000  0.000                18.0     16.519                1.121          11.0
+2      cic       B        500      500       500         0  1.000  0.000                 7.0      9.100                0.168          29.0
+3      cic       C        500      500       500         0  1.000  0.000                 7.0      9.100                0.168          29.0
+4      cic       D        500      500       500         0  1.000  0.000                 7.0      8.887                0.131          30.0
+5      doh       A        500      500       500         0  1.000  0.000                 7.0      8.228                0.292          31.0
+6      doh      A0        500      500       500         0  1.000  0.000                20.0     15.283                1.279          11.0
+7      doh       B        500      500       499         1  0.998  0.002                 7.0      8.219                0.288          31.0
+8      doh       C        500      500       500         0  1.000  0.000                 7.0      8.220                0.296          31.0
+9      doh       D        500      500       500         0  1.000  0.000                 7.0      7.648                0.172          34.0
+10    unsw       A        500      500       500         0  1.000  0.000                 6.0      9.597                0.107          26.0
+11    unsw      A0        500      500       500         0  1.000  0.000                13.0     13.707                0.187          13.0
+12    unsw       B        500      500       500         0  1.000  0.000                 6.0      9.597                0.105          26.0
+13    unsw       C        500      500       500         0  1.000  0.000                 6.0      9.597                0.106          26.0
+14    unsw       D        500      500       500         0  1.000  0.000                 6.0      9.208                0.088          24.0
+13:00:23 | done in 24s

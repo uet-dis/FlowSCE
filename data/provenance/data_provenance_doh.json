@@ -1,0 +1,67 @@
+{
+ "dataset": "doh",
+ "release": "CIRA-CIC-DoHBrw-2020 (DoHMeter CSVs, layer 2: benign / malicious DoH)",
+ "url": "https://www.unb.ca/cic/datasets/dohbrw-2020.html",
+ "zip": "Total_CSVs.zip",
+ "members": [
+  {
+   "member": "l2-benign.csv",
+   "sha256": "f5a96b741f1a2eeed65fe8f909c062205067a11ec0d2a2a0943e7748aa5191ff",
+   "bytes": 11444070,
+   "uncompressed_size": 11444070,
+   "data_rows": 19807,
+   "class_counts": {
+    "Benign": 19807
+   }
+  },
+  {
+   "member": "l2-malicious.csv",
+   "sha256": "fcee1ecf8c73ae144565f934c1aedfff40b9d99ad7ddde9c7a764c7e9bd772fa",
+   "bytes": 155233148,
+   "uncompressed_size": 155233148,
+   "data_rows": 249836,
+   "class_counts": {
+    "Malicious": 249836
+   }
+  }
+ ],
+ "subset_file": "data/cira_cic_dohbrw2020_l2_49807.parquet",
+ "subset_rows": 49807,
+ "subset_class_counts": {
+  "Malicious": 30000,
+  "Benign": 19807
+ },
+ "matched_rows": 49807,
+ "full_match_rows": 49807,
+ "unmatched_rows": 0,
+ "rows_with_duplicate_source_candidates": 0,
+ "subset_rows_per_source_file": {
+  "l2-benign.csv": 19807,
+  "l2-malicious.csv": 30000
+ },
+ "source_rows_file": "data/source_rows/source_rows_doh.csv.gz",
+ "key_columns": [
+  "SourceIP",
+  "DestinationIP",
+  "SourcePort",
+  "DestinationPort",
+  "TimeStamp",
+  "Duration",
+  "FlowBytesSent",
+  "FlowBytesReceived"
+ ],
+ "note": "source_row = 0-based data row index in the member file (header excluded). The subsets are documented by these row lists.",
+ "source_class_counts": {
+  "Benign": 19807,
+  "Malicious": 249836
+ },
+ "sampling_ratio_by_class": {
+  "Benign": 1.0,
+  "Malicious": 0.1200787716742183
+ },
+ "data_quality_notes": [
+  "file name says 40k but the subset has 49,807 rows = all 19,807 benign + 30,000 malicious rows of the layer-2 CSVs",
+  "layer-1 files (l1-doh / l1-nondoh) were not used"
+ ],
+ "subset_content_sha256": "32cb81bc33e97005e352ecc6c5b87ba2af71bd50935e7177aaaec6a8f8a3f8a6"
+}

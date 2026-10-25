@@ -1,0 +1,4 @@
+16:45:17 | data cic: split {'train': 42000, 'val': 5995, 'test': 12005} | attack rate {'train': 0.75, 'val': 0.75, 'test': 0.75} | test vectors also in train after preprocessing 0.0491 | F = 32
+16:45:23 | data doh: split {'train': 34859, 'val': 4985, 'test': 9963} | attack rate {'train': 0.602, 'val': 0.602, 'test': 0.602} | test vectors also in train after preprocessing 0.0080 | F = 21
+16:45:29 | data unsw: split {'train': 41995, 'val': 5994, 'test': 12011} | attack rate {'train': 0.5, 'val': 0.5, 'test': 0.5} | test vectors also in train after preprocessing 0.1907 | F = 48
+16:45:29 | stages 1-3 done (18s)

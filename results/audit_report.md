@@ -1,0 +1,222 @@
+# Audit report
+
+- [PASS] explain_config: in-loop projection enabled for every dataset
+- [PASS] cic: data and graph manifests
+- [PASS] doh: data and graph manifests
+- [PASS] unsw: data and graph manifests
+- [PASS] checkpoints: 120
+- [PASS] accuracy = ρ·recall + (1−ρ)·specificity on every checkpoint (max gap 1.1e-16)
+- [PASS] detector cic/candice_mlp: min macro-F1 0.9952
+- [PASS] detector cic/candice_rf: min macro-F1 0.9994
+- [PASS] detector cic/candice_svm: min macro-F1 0.9881
+- [PASS] detector cic/edge: min macro-F1 0.9981
+- [PASS] detector cic/egraphsage: min macro-F1 0.9997
+- [PASS] detector cic/flow: min macro-F1 0.9977
+- [PASS] detector cic/flow_full: min macro-F1 0.9988
+- [PASS] detector cic/flow_full_gate: min macro-F1 0.9988
+- [PASS] detector cic/flow_gate: min macro-F1 0.9980
+- [PASS] detector cic/tuned: min macro-F1 0.9997
+- [WARN] detector doh/candice_mlp: min macro-F1 0.8940
+- [WARN] detector doh/candice_rf: min macro-F1 0.9662
+- [WARN] detector doh/candice_svm: min macro-F1 0.8457
+- [PASS] detector doh/edge: min macro-F1 0.9926
+- [PASS] detector doh/egraphsage: min macro-F1 0.9988
+- [PASS] detector doh/flow: min macro-F1 0.9939
+- [WARN] detector doh/flow_full: min macro-F1 0.9517
+- [PASS] detector doh/flow_full_gate: min macro-F1 0.9969
+- [PASS] detector doh/flow_gate: min macro-F1 0.9957
+- [PASS] detector doh/tuned: min macro-F1 0.9981
+- [WARN] detector unsw/candice_mlp: min macro-F1 0.9380
+- [PASS] detector unsw/candice_rf: min macro-F1 0.9895
+- [WARN] detector unsw/candice_svm: min macro-F1 0.9220
+- [PASS] detector unsw/edge: min macro-F1 0.9924
+- [WARN] detector unsw/egraphsage: min macro-F1 0.9630
+- [PASS] detector unsw/flow: min macro-F1 0.9877
+- [WARN] detector unsw/flow_full: min macro-F1 0.9413
+- [WARN] detector unsw/flow_full_gate: min macro-F1 0.9778
+- [PASS] detector unsw/flow_gate: min macro-F1 0.9823
+- [PASS] detector unsw/tuned: min macro-F1 0.9923
+- [PASS] registry: 1500 queries
+- [PASS] RQ1 cic: rebuild 8.9e-16, gradient vs FD 2.9e-09, original score 9.5e-07
+- [PASS] RQ1 doh: rebuild 2.2e-16, gradient vs FD 5.0e-08, original score 2.7e-06
+- [PASS] RQ1 unsw: rebuild 1.8e-15, gradient vs FD 1.3e-09, original score 1.4e-06
+- [PASS] ablation ledger present
+- [PASS] cic: 500 rows for each of A0/A/B/C/D
+- [PASS] cic/A0: no spurious validity
+- [PASS] cic/A: no spurious validity
+- [PASS] cic/C: no spurious validity
+- [PASS] cic/D: no spurious validity
+- [PASS] cic: s(A) ≤ s(A0) on every jointly valid query
+- [PASS] cic: s(D) ≤ s(A) on 1.000 of queries
+- [PASS] cic: valid outputs have margin > 0 and no NaN
+- [PASS] cic/D: every run reports its stop reason (0 budget stops)
+- [PASS] cic: ablation uses exactly the registered query set
+- [PASS] doh: 500 rows for each of A0/A/B/C/D
+- [PASS] doh/A0: no spurious validity
+- [PASS] doh/A: no spurious validity
+- [PASS] doh/C: no spurious validity
+- [PASS] doh/D: no spurious validity
+- [PASS] doh: s(A) ≤ s(A0) on every jointly valid query
+- [PASS] doh: s(D) ≤ s(A) on 1.000 of queries
+- [PASS] doh: valid outputs have margin > 0 and no NaN
+- [PASS] doh/D: every run reports its stop reason (0 budget stops)
+- [PASS] doh: ablation uses exactly the registered query set
+- [PASS] unsw: 500 rows for each of A0/A/B/C/D
+- [PASS] unsw/A0: no spurious validity
+- [PASS] unsw/A: no spurious validity
+- [PASS] unsw/C: no spurious validity
+- [PASS] unsw/D: no spurious validity
+- [PASS] unsw: s(A) ≤ s(A0) on every jointly valid query
+- [PASS] unsw: s(D) ≤ s(A) on 1.000 of queries
+- [PASS] unsw: valid outputs have margin > 0 and no NaN
+- [PASS] unsw/D: every run reports its stop reason (0 budget stops)
+- [PASS] unsw: ablation uses exactly the registered query set
+- [PASS] time-window sweep: no spurious validity for A and C
+- [PASS] time-window sweep: every retrained detector has macro-F1 >= 0.95
+- [PASS] detector models present: ['candice_mlp', 'candice_rf', 'candice_svm', 'edge', 'egraphsage', 'flow', 'flow_full', 'flow_full_gate', 'flow_gate', 'tuned']
+- [PASS] detector candice_mlp: 15 checkpoints (datasets × seeds)
+- [PASS] detector candice_rf: 15 checkpoints (datasets × seeds)
+- [PASS] detector candice_svm: 15 checkpoints (datasets × seeds)
+- [PASS] detector edge: 15 checkpoints (datasets × seeds)
+- [PASS] detector egraphsage: 15 checkpoints (datasets × seeds)
+- [PASS] detector flow: 15 checkpoints (datasets × seeds)
+- [PASS] detector flow_full: 15 checkpoints (datasets × seeds)
+- [PASS] detector flow_full_gate: 15 checkpoints (datasets × seeds)
+- [PASS] detector flow_gate: 15 checkpoints (datasets × seeds)
+- [PASS] detector tuned: 15 checkpoints (datasets × seeds)
+- [PASS] graph statistics for every test graph
+- [PASS] legacy update rule measured on every dataset (self-loops or a note)
+- [PASS] reference verification: 31 groups / 414 cases PASS, 25 contract tests OK
+- [PASS] reference verification: rebuild 2.2e-16, finite differences 3.2e-11
+- [PASS] FlowSCE: no spurious validity
+- [PASS] FlowSCE: s_eps <= s_eps(A) on every alert (1.000)
+- [PASS] FlowSCE: margin >= min(margin(A), ln 3) on every alert (1.000)
+- [PASS] cic/FlowSCE: all 500 registered alerts, CSR equals that of its seed A0 (1.000)
+- [PASS] doh/FlowSCE: all 500 registered alerts, CSR equals that of its seed A0 (1.000)
+- [PASS] unsw/FlowSCE: all 500 registered alerts, CSR equals that of its seed A0 (0.998)
+- [PASS] generators: no spurious validity through the shared oracle
+- [PASS] generator cic/CANDICE: the registered query set
+- [PASS] generator cic/CANDICE: forward budget respected (max 2505 incl. final assessment)
+- [PASS] generator cic/CANDICE (tuned λ): the registered query set
+- [PASS] generator cic/CANDICE (tuned λ): forward budget respected (max 2505 incl. final assessment)
+- [PASS] generator cic/DiCE: the registered query set
+- [PASS] generator cic/DiCE: forward budget respected (max 4045 incl. final assessment)
+- [PASS] generator cic/FlowSCE (A0): the registered query set
+- [PASS] generator cic/FlowSCE (A0): forward budget respected (max 23 incl. final assessment)
+- [PASS] generator doh/CANDICE: the registered query set
+- [PASS] generator doh/CANDICE: forward budget respected (max 2505 incl. final assessment)
+- [PASS] generator doh/CANDICE (tuned λ): the registered query set
+- [PASS] generator doh/CANDICE (tuned λ): forward budget respected (max 2505 incl. final assessment)
+- [PASS] generator doh/DiCE: the registered query set
+- [PASS] generator doh/DiCE: forward budget respected (max 4045 incl. final assessment)
+- [PASS] generator doh/FlowSCE (A0): the registered query set
+- [PASS] generator doh/FlowSCE (A0): forward budget respected (max 80 incl. final assessment)
+- [PASS] generator unsw/CANDICE: the registered query set
+- [PASS] generator unsw/CANDICE: forward budget respected (max 2505 incl. final assessment)
+- [PASS] generator unsw/CANDICE (tuned λ): the registered query set
+- [PASS] generator unsw/CANDICE (tuned λ): forward budget respected (max 2505 incl. final assessment)
+- [PASS] generator unsw/DiCE: the registered query set
+- [PASS] generator unsw/DiCE: forward budget respected (max 4045 incl. final assessment)
+- [PASS] generator unsw/FlowSCE (A0): the registered query set
+- [PASS] generator unsw/FlowSCE (A0): forward budget respected (max 502 incl. final assessment)
+- [PASS] minimizers: no spurious validity of FlowSCE (0)
+- [WARN] minimizers: spurious validity of baselines ['DiCE post-hoc'] on 1 alerts (max |q_reconstructed| 1.5e-07: a candidate placed at the decision threshold)
+- [PASS] minimizer CANDICE/cic/DiCE post-hoc: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/cic/FlowSCE: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/cic/FlowSCE repeated (D): validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/cic/FlowSCE single (A): validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/cic/LBS-adapted: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/cic/RHC: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/cic/none: validity of the seed preserved (1.000)
+- [PASS] RHC CANDICE/cic: budget = oracle calls of LBS on the same seed
+- [PASS] minimizer CANDICE/doh/DiCE post-hoc: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/doh/FlowSCE: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/doh/FlowSCE repeated (D): validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/doh/FlowSCE single (A): validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/doh/LBS-adapted: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/doh/RHC: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/doh/none: validity of the seed preserved (1.000)
+- [PASS] RHC CANDICE/doh: budget = oracle calls of LBS on the same seed
+- [PASS] minimizer CANDICE/unsw/DiCE post-hoc: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/unsw/FlowSCE: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/unsw/FlowSCE repeated (D): validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/unsw/FlowSCE single (A): validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/unsw/LBS-adapted: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/unsw/RHC: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE/unsw/none: validity of the seed preserved (1.000)
+- [PASS] RHC CANDICE/unsw: budget = oracle calls of LBS on the same seed
+- [PASS] minimizer CANDICE (tuned λ)/cic/DiCE post-hoc: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/cic/FlowSCE: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/cic/FlowSCE repeated (D): validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/cic/FlowSCE single (A): validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/cic/LBS-adapted: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/cic/RHC: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/cic/none: validity of the seed preserved (1.000)
+- [PASS] RHC CANDICE (tuned λ)/cic: budget = oracle calls of LBS on the same seed
+- [PASS] minimizer CANDICE (tuned λ)/doh/DiCE post-hoc: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/doh/FlowSCE: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/doh/FlowSCE repeated (D): validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/doh/FlowSCE single (A): validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/doh/LBS-adapted: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/doh/RHC: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/doh/none: validity of the seed preserved (1.000)
+- [PASS] RHC CANDICE (tuned λ)/doh: budget = oracle calls of LBS on the same seed
+- [PASS] minimizer CANDICE (tuned λ)/unsw/DiCE post-hoc: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/unsw/FlowSCE: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/unsw/FlowSCE repeated (D): validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/unsw/FlowSCE single (A): validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/unsw/LBS-adapted: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/unsw/RHC: validity of the seed preserved (1.000)
+- [PASS] minimizer CANDICE (tuned λ)/unsw/none: validity of the seed preserved (1.000)
+- [PASS] RHC CANDICE (tuned λ)/unsw: budget = oracle calls of LBS on the same seed
+- [PASS] minimizer DiCE/cic/DiCE post-hoc: validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/cic/FlowSCE: validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/cic/FlowSCE repeated (D): validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/cic/FlowSCE single (A): validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/cic/LBS-adapted: validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/cic/RHC: validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/cic/none: validity of the seed preserved (1.000)
+- [PASS] RHC DiCE/cic: budget = oracle calls of LBS on the same seed
+- [PASS] minimizer DiCE/doh/DiCE post-hoc: validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/doh/FlowSCE: validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/doh/FlowSCE repeated (D): validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/doh/FlowSCE single (A): validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/doh/LBS-adapted: validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/doh/RHC: validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/doh/none: validity of the seed preserved (1.000)
+- [PASS] RHC DiCE/doh: budget = oracle calls of LBS on the same seed
+- [PASS] minimizer DiCE/unsw/DiCE post-hoc: validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/unsw/FlowSCE: validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/unsw/FlowSCE repeated (D): validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/unsw/FlowSCE single (A): validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/unsw/LBS-adapted: validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/unsw/RHC: validity of the seed preserved (1.000)
+- [PASS] minimizer DiCE/unsw/none: validity of the seed preserved (1.000)
+- [PASS] RHC DiCE/unsw: budget = oracle calls of LBS on the same seed
+- [PASS] minimizer FlowSCE (A0)/cic/DiCE post-hoc: validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/cic/FlowSCE: validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/cic/FlowSCE repeated (D): validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/cic/FlowSCE single (A): validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/cic/LBS-adapted: validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/cic/RHC: validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/cic/none: validity of the seed preserved (1.000)
+- [PASS] RHC FlowSCE (A0)/cic: budget = oracle calls of LBS on the same seed
+- [WARN] minimizer FlowSCE (A0)/doh/DiCE post-hoc: validity of the seed preserved (0.998)
+- [PASS] minimizer FlowSCE (A0)/doh/FlowSCE: validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/doh/FlowSCE repeated (D): validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/doh/FlowSCE single (A): validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/doh/LBS-adapted: validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/doh/RHC: validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/doh/none: validity of the seed preserved (1.000)
+- [PASS] RHC FlowSCE (A0)/doh: budget = oracle calls of LBS on the same seed
+- [PASS] minimizer FlowSCE (A0)/unsw/DiCE post-hoc: validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/unsw/FlowSCE: validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/unsw/FlowSCE repeated (D): validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/unsw/FlowSCE single (A): validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/unsw/LBS-adapted: validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/unsw/RHC: validity of the seed preserved (1.000)
+- [PASS] minimizer FlowSCE (A0)/unsw/none: validity of the seed preserved (1.000)
+- [PASS] RHC FlowSCE (A0)/unsw: budget = oracle calls of LBS on the same seed
+- [PASS] uncertainty_ablation.csv: every estimate inside its 95% interval, every interval with n > 0
+- [PASS] uncertainty_generator.csv: every estimate inside its 95% interval, every interval with n > 0
+- [PASS] uncertainty_minimizer.csv: every estimate inside its 95% interval, every interval with n > 0

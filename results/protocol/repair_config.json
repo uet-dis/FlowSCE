@@ -1,0 +1,50 @@
+{
+  "cic": {
+    "A": {
+      "T_rep": 25,
+      "val_supp_mean": 1.176,
+      "val_nfwd_median": 70.5,
+      "best_supp_mean": 1.176,
+      "supp_tol": 0.05
+    },
+    "zero": {
+      "T_rep": 25,
+      "val_supp_mean": 1.144,
+      "val_nfwd_median": 76.5,
+      "best_supp_mean": 1.144,
+      "supp_tol": 0.05
+    }
+  },
+  "doh": {
+    "A": {
+      "T_rep": 25,
+      "val_supp_mean": 1.58,
+      "val_nfwd_median": 100.5,
+      "best_supp_mean": 1.564,
+      "supp_tol": 0.05
+    },
+    "zero": {
+      "T_rep": 25,
+      "val_supp_mean": 1.524,
+      "val_nfwd_median": 106.5,
+      "best_supp_mean": 1.5,
+      "supp_tol": 0.05
+    }
+  },
+  "unsw": {
+    "A": {
+      "T_rep": 10,
+      "val_supp_mean": 2.3092369477911645,
+      "val_nfwd_median": 66.0,
+      "best_supp_mean": 2.3092369477911645,
+      "supp_tol": 0.05
+    },
+    "zero": {
+      "T_rep": 10,
+      "val_supp_mean": 2.1566265060240966,
+      "val_nfwd_median": 64.0,
+      "best_supp_mean": 2.1566265060240966,
+      "supp_tol": 0.05
+    }
+  }
+}

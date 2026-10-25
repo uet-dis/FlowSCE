@@ -1,0 +1,6 @@
+env {'python': '3.11.7', 'torch': '2.2.2+cu121', 'numpy': '1.26.4', 'pandas': '3.0.6', 'sklearn': '1.9.1', 'device': 'cuda', 'gpu': 'NVIDIA RTX 5880 Ada Generation'}
+
+######## cic: N=662 flows=12005 unique host pairs=1297 F=32 mutable=21
+  CANDICE (tuned λ)        seq    0.46s/q (n_fwd     85) | fast   0.019s/q | match 1.00
+  FlowSCE single (A)       seq    0.01s/q (n_fwd     22) | fast   0.005s/q | match 1.00
+  FlowSCE repeated (D)     seq    0.02s/q (n_fwd     32) | fast   0.007s/q | match 1.00

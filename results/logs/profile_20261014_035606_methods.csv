@@ -1,0 +1,37 @@
+dataset,method,queries,seq_s_per_query,seq_n_fwd,seq_n_bwd,fast_s_per_query,fast_CSR,fast_n_fwd,match_seq_vs_fast
+cic,CANDICE-style,A0 succeeded,1.0939443867828231,112.25,93.0,0.04138266779482365,1.0,110.8,1.0
+cic,CANDICE-style,A0 failed (hard),,,,0.04138266779482365,,,1.0
+cic,DiCE-style-noposthoc,A0 succeeded,0.5693555104953703,72.25,15.0,0.0298180237878114,1.0,69.0,1.0
+cic,DiCE-style-noposthoc,A0 failed (hard),,,,0.0298180237878114,,,1.0
+cic,FlowSCE single (A),A0 succeeded,0.01559776469366625,20.75,0.0,0.00572559020947665,1.0,20.6,1.0
+cic,FlowSCE single (A),A0 failed (hard),,,,0.00572559020947665,,,1.0
+cic,FlowSCE repeated (D),A0 succeeded,0.02091928999288939,28.0,0.0,0.007767074997536838,1.0,29.4,1.0
+cic,FlowSCE repeated (D),A0 failed (hard),,,,0.007767074997536838,,,1.0
+cic,DiCE post-hoc,A0 succeeded,0.05030506325419992,66.0,0.0,0.020870127202942967,1.0,66.0,1.0
+cic,DiCE post-hoc,A0 failed (hard),,,,0.020870127202942967,,,1.0
+cic,LBS-adapted,A0 succeeded,0.09312667374615557,118.5,0.0,0.03705846460070461,1.0,124.6,1.0
+cic,LBS-adapted,A0 failed (hard),,,,0.03705846460070461,,,1.0
+doh,CANDICE-style,A0 succeeded,0.713873689470347,119.75,106.5,0.03080370118841529,1.0,112.0,1.0
+doh,CANDICE-style,A0 failed (hard),,,,0.03080370118841529,,,1.0
+doh,DiCE-style-noposthoc,A0 succeeded,0.8699881692591589,163.25,38.0,0.06228110920637846,1.0,142.4,1.0
+doh,DiCE-style-noposthoc,A0 failed (hard),,,,0.06228110920637846,,,1.0
+doh,FlowSCE single (A),A0 succeeded,0.01732081497902982,23.0,0.0,0.005415956582874059,1.0,23.0,1.0
+doh,FlowSCE single (A),A0 failed (hard),,,,0.005415956582874059,,,1.0
+doh,FlowSCE repeated (D),A0 succeeded,0.028577034710906446,38.25,0.0,0.009539785794913769,1.0,37.6,1.0
+doh,FlowSCE repeated (D),A0 failed (hard),,,,0.009539785794913769,,,1.0
+doh,DiCE post-hoc,A0 succeeded,0.05455883772810921,71.75,0.0,0.020252874586731195,1.0,75.0,1.0
+doh,DiCE post-hoc,A0 failed (hard),,,,0.020252874586731195,,,1.0
+doh,LBS-adapted,A0 succeeded,0.1460689193336293,186.5,0.0,0.06880195578560233,1.0,175.2,1.0
+doh,LBS-adapted,A0 failed (hard),,,,0.06880195578560233,,,1.0
+unsw,CANDICE-style,A0 succeeded,0.5864916137652472,118.5,105.25,0.03312913158442825,1.0,113.2,1.0
+unsw,CANDICE-style,A0 failed (hard),,,,0.03312913158442825,,,1.0
+unsw,DiCE-style-noposthoc,A0 succeeded,2.968827497505117,643.75,158.25,0.5002589124022052,1.0,545.2,1.0
+unsw,DiCE-style-noposthoc,A0 failed (hard),,,,0.5002589124022052,,,1.0
+unsw,FlowSCE single (A),A0 succeeded,0.012478498771088198,16.25,0.0,0.004250843799673021,1.0,16.2,1.0
+unsw,FlowSCE single (A),A0 failed (hard),,,,0.004250843799673021,,,1.0
+unsw,FlowSCE repeated (D),A0 succeeded,0.017973884474486113,23.75,0.0,0.005768944602459669,1.0,23.0,1.0
+unsw,FlowSCE repeated (D),A0 failed (hard),,,,0.005768944602459669,,,1.0
+unsw,DiCE post-hoc,A0 succeeded,0.04018525325227529,52.5,0.0,0.014514368586242199,1.0,50.2,1.0
+unsw,DiCE post-hoc,A0 failed (hard),,,,0.014514368586242199,,,1.0
+unsw,LBS-adapted,A0 succeeded,0.23016767320223153,293.75,0.0,0.14430584921501577,1.0,255.2,1.0
+unsw,LBS-adapted,A0 failed (hard),,,,0.14430584921501577,,,1.0

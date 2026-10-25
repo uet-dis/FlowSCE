@@ -1,0 +1,318 @@
+
+====================================================================================================
+§1 baseline_config
+====================================================================================================
+{
+  "cic": {
+    "candice": {
+      "lam1": 0.005,
+      "lam2": 0.005,
+      "lr": 0.05
+    },
+    "dice": {
+      "lam_prox": 0.05,
+      "lam_div": 1.0,
+      "lr": 0.1
+    }
+  },
+  "doh": {
+    "candice": {
+      "lam1": 0.005,
+      "lam2": 0.005,
+      "lr": 0.05
+    },
+    "dice": {
+      "lam_prox": 0.05,
+      "lam_div": 1.0,
+      "lr": 0.1
+    }
+  },
+  "unsw": {
+    "candice": {
+      "lam1": 0.005,
+      "lam2": 0.005,
+      "lr": 0.1
+    },
+    "dice": {
+      "lam_prox": 0.05,
+      "lam_div": 1.0,
+      "lr": 0.1
+    }
+  }
+}
+
+====================================================================================================
+§2 Generator comparison
+====================================================================================================
+  dataset                method  attempted  verified    CSR  support_eps_median  support_exact_median  l1_median  mahal_median  knn_benign_median  margin_logit_median  n_fwd_median  n_bwd_median
+0     cic         CANDICE-style        500       499  0.998                17.0                  19.0     13.391        13.367             15.698                0.242         145.0         128.0
+1     cic  DiCE-style-noposthoc        500       500  1.000                17.0                  19.0     11.336        16.674             14.795                0.511         124.0          28.0
+2     cic      FlowSCE-gen (A0)        500       500  1.000                18.0                  20.0     15.667        16.580             18.015                1.147          12.0           5.0
+3     doh         CANDICE-style        500       500  1.000                20.0                  20.0     10.936         7.349             10.360                0.256         121.5         107.5
+4     doh  DiCE-style-noposthoc        500       494  0.988                20.0                  20.0      9.753         7.026              8.664                0.649         119.0          27.0
+5     doh      FlowSCE-gen (A0)        500       500  1.000                20.0                  20.0     15.283         9.681             13.739                1.279          11.0           5.0
+6    unsw         CANDICE-style        500       496  0.992                12.0                  13.0     11.716        18.368             12.212                0.055         114.5         100.0
+7    unsw  DiCE-style-noposthoc        500       473  0.946                12.0                  12.0     10.093        32.352             11.086                0.082         163.0          38.0
+8    unsw      FlowSCE-gen (A0)        500       500  1.000                13.0                  13.0     13.707        31.299             14.914                0.187          13.0           7.0
+
+====================================================================================================
+§3 Minimizer comparison (same A0 seed)
+====================================================================================================
+   dataset                method  attempted  verified  CSR  support_eps_median  support_exact_median  l1_median  mahal_median  knn_benign_median  margin_logit_median  n_fwd_median  n_bwd_median
+0      cic         DiCE post-hoc        500       500  1.0                 8.0                   8.0      9.611        13.918             14.430                0.006          63.0           0.0
+1      cic  FlowSCE repeated (D)        500       500  1.0                 7.0                   8.0      8.785        14.271             14.051                0.119          28.0           0.0
+2      cic    FlowSCE single (A)        500       500  1.0                 7.0                   8.0      8.885        14.346             14.088                0.155          21.0           0.0
+3      cic           LBS-adapted        500       500  1.0                 1.0                   1.0      6.166        12.220             12.792                0.905         126.0           0.0
+4      cic             none (A0)        500       500  1.0                18.0                  20.0     15.667        16.580             18.015                1.147           3.0           0.0
+5      doh         DiCE post-hoc        500       500  1.0                 9.0                   9.0      8.430         7.764              9.583                0.006          68.0           0.0
+6      doh  FlowSCE repeated (D)        500       500  1.0                 7.0                   7.0      7.648         7.820              8.965                0.172          32.0           0.0
+7      doh    FlowSCE single (A)        500       500  1.0                 7.0                   7.0      8.228         8.071              9.473                0.292          23.0           0.0
+8      doh           LBS-adapted        500       500  1.0                 1.0                   1.0      8.576        14.105             11.135                0.809         159.0           0.0
+9      doh             none (A0)        500       500  1.0                20.0                  20.0     15.283         9.681             13.739                1.279           3.0           0.0
+10    unsw         DiCE post-hoc        500       500  1.0                 7.0                   7.0      9.144        31.235             11.040                0.003          50.0           0.0
+11    unsw  FlowSCE repeated (D)        500       500  1.0                 6.0                   6.0      9.208        33.237             10.856                0.088          22.0           0.0
+12    unsw    FlowSCE single (A)        500       500  1.0                 6.0                   6.0      9.597        32.775             10.901                0.107          16.0           0.0
+13    unsw           LBS-adapted        500       500  1.0                 2.0                   2.0      7.060        43.817             10.073                0.184         176.0           0.0
+14    unsw             none (A0)        500       500  1.0                13.0                  13.0     13.707        31.299             14.914                0.187           3.0           0.0
+
+====================================================================================================
+§4 baseline_comparison
+====================================================================================================
+             comparison dataset                method  attempted  verified    CSR  support_eps_median  support_exact_median  l1_median  mahal_median  knn_benign_median  margin_logit_median  n_fwd_median  n_bwd_median
+0             generator     cic         CANDICE-style        500       499  0.998                17.0                  19.0     13.391        13.367             15.698                0.242         145.0         128.0
+1             generator     cic  DiCE-style-noposthoc        500       500  1.000                17.0                  19.0     11.336        16.674             14.795                0.511         124.0          28.0
+2             generator     cic      FlowSCE-gen (A0)        500       500  1.000                18.0                  20.0     15.667        16.580             18.015                1.147          12.0           5.0
+3             generator     doh         CANDICE-style        500       500  1.000                20.0                  20.0     10.936         7.349             10.360                0.256         121.5         107.5
+4             generator     doh  DiCE-style-noposthoc        500       494  0.988                20.0                  20.0      9.753         7.026              8.664                0.649         119.0          27.0
+5             generator     doh      FlowSCE-gen (A0)        500       500  1.000                20.0                  20.0     15.283         9.681             13.739                1.279          11.0           5.0
+6             generator    unsw         CANDICE-style        500       496  0.992                12.0                  13.0     11.716        18.368             12.212                0.055         114.5         100.0
+7             generator    unsw  DiCE-style-noposthoc        500       473  0.946                12.0                  12.0     10.093        32.352             11.086                0.082         163.0          38.0
+8             generator    unsw      FlowSCE-gen (A0)        500       500  1.000                13.0                  13.0     13.707        31.299             14.914                0.187          13.0           7.0
+9   minimizer_same_seed     cic         DiCE post-hoc        500       500  1.000                 8.0                   8.0      9.611        13.918             14.430                0.006          63.0           0.0
+10  minimizer_same_seed     cic  FlowSCE repeated (D)        500       500  1.000                 7.0                   8.0      8.785        14.271             14.051                0.119          28.0           0.0
+11  minimizer_same_seed     cic    FlowSCE single (A)        500       500  1.000                 7.0                   8.0      8.885        14.346             14.088                0.155          21.0           0.0
+12  minimizer_same_seed     cic           LBS-adapted        500       500  1.000                 1.0                   1.0      6.166        12.220             12.792                0.905         126.0           0.0
+13  minimizer_same_seed     cic             none (A0)        500       500  1.000                18.0                  20.0     15.667        16.580             18.015                1.147           3.0           0.0
+14  minimizer_same_seed     doh         DiCE post-hoc        500       500  1.000                 9.0                   9.0      8.430         7.764              9.583                0.006          68.0           0.0
+15  minimizer_same_seed     doh  FlowSCE repeated (D)        500       500  1.000                 7.0                   7.0      7.648         7.820              8.965                0.172          32.0           0.0
+16  minimizer_same_seed     doh    FlowSCE single (A)        500       500  1.000                 7.0                   7.0      8.228         8.071              9.473                0.292          23.0           0.0
+17  minimizer_same_seed     doh           LBS-adapted        500       500  1.000                 1.0                   1.0      8.576        14.105             11.135                0.809         159.0           0.0
+18  minimizer_same_seed     doh             none (A0)        500       500  1.000                20.0                  20.0     15.283         9.681             13.739                1.279           3.0           0.0
+19  minimizer_same_seed    unsw         DiCE post-hoc        500       500  1.000                 7.0                   7.0      9.144        31.235             11.040                0.003          50.0           0.0
+20  minimizer_same_seed    unsw  FlowSCE repeated (D)        500       500  1.000                 6.0                   6.0      9.208        33.237             10.856                0.088          22.0           0.0
+21  minimizer_same_seed    unsw    FlowSCE single (A)        500       500  1.000                 6.0                   6.0      9.597        32.775             10.901                0.107          16.0           0.0
+22  minimizer_same_seed    unsw           LBS-adapted        500       500  1.000                 2.0                   2.0      7.060        43.817             10.073                0.184         176.0           0.0
+23  minimizer_same_seed    unsw             none (A0)        500       500  1.000                13.0                  13.0     13.707        31.299             14.914                0.187           3.0           0.0
+24             pipeline     cic      FlowSCE full (A)        500       500  1.000                 7.0                   8.0      8.885        14.346             14.088                0.155          30.0           5.0
+25             pipeline     doh      FlowSCE full (A)        500       500  1.000                 7.0                   7.0      8.228         8.071              9.473                0.292          31.0           5.0
+26             pipeline    unsw      FlowSCE full (A)        500       500  1.000                 6.0                   6.0      9.597        32.775             10.901                0.107          26.0           7.0
+
+====================================================================================================
+§5 Detector mean ± std
+====================================================================================================
+                  accuracy          recall         specificity         macro_f1             fpr        
+                      mean     std    mean     std        mean     std     mean     std    mean     std
+dataset kind                                                                                           
+cic     edge        0.9993  0.0005  0.9991  0.0007      0.9999  0.0001   0.9991  0.0007  0.0001  0.0001
+        flow        0.9989  0.0005  0.9992  0.0005      0.9979  0.0011   0.9985  0.0006  0.0021  0.0011
+        flow_gate   0.9990  0.0005  0.9992  0.0006      0.9983  0.0005   0.9986  0.0006  0.0017  0.0005
+doh     edge        0.9938  0.0008  0.9933  0.0006      0.9946  0.0016   0.9935  0.0009  0.0054  0.0016
+        flow        0.9974  0.0022  0.9979  0.0016      0.9967  0.0034   0.9973  0.0023  0.0033  0.0034
+        flow_gate   0.9980  0.0017  0.9979  0.0020      0.9981  0.0013   0.9979  0.0018  0.0019  0.0013
+unsw    edge        0.9926  0.0001  0.9994  0.0003      0.9858  0.0001   0.9926  0.0001  0.0142  0.0001
+        flow        0.9890  0.0009  0.9984  0.0010      0.9796  0.0021   0.9890  0.0009  0.0204  0.0021
+        flow_gate   0.9883  0.0036  0.9979  0.0016      0.9787  0.0063   0.9883  0.0036  0.0213  0.0063
+
+====================================================================================================
+§5 Paired cluster bootstrap
+====================================================================================================
+    dataset                     a                     b        metric  n_pairs  n_checkpoints  estimate    ci_low   ci_high
+0       cic      FlowSCE full (A)         CANDICE-style       CSR (v)      500              5    0.0020    0.0000    0.0063
+1       cic      FlowSCE full (A)         CANDICE-style   support_eps      499              5  -10.5180  -10.7682  -10.2651
+2       cic      FlowSCE full (A)         CANDICE-style            l1      499              5   -4.2698   -4.6924   -3.8614
+3       cic      FlowSCE full (A)         CANDICE-style         mahal      499              5    0.7147   -0.1423    1.5584
+4       cic      FlowSCE full (A)         CANDICE-style    knn_benign      499              5   -2.0027   -2.2935   -1.7205
+5       cic      FlowSCE full (A)         CANDICE-style  margin_logit      499              5   -0.0841   -0.1499   -0.0200
+6       cic      FlowSCE full (A)         CANDICE-style         n_fwd      499              5 -122.5811 -129.4981 -115.4381
+7       cic      FlowSCE full (A)  DiCE-style-noposthoc       CSR (v)      500              5    0.0000    0.0000    0.0000
+8       cic      FlowSCE full (A)  DiCE-style-noposthoc   support_eps      500              5   -9.5040   -9.7434   -9.2568
+9       cic      FlowSCE full (A)  DiCE-style-noposthoc            l1      500              5   -2.2694   -2.4807   -2.0507
+10      cic      FlowSCE full (A)  DiCE-style-noposthoc         mahal      500              5   -3.2910   -4.2007   -2.3999
+11      cic      FlowSCE full (A)  DiCE-style-noposthoc    knn_benign      500              5   -0.6476   -0.9742   -0.3172
+12      cic      FlowSCE full (A)  DiCE-style-noposthoc  margin_logit      500              5   -0.3587   -0.4257   -0.2951
+13      cic      FlowSCE full (A)  DiCE-style-noposthoc         n_fwd      500              5 -580.6060 -679.9805 -487.8176
+14      cic      FlowSCE-gen (A0)         CANDICE-style       CSR (v)      500              5    0.0020    0.0000    0.0063
+15      cic      FlowSCE-gen (A0)         CANDICE-style   support_eps      499              5    0.5106    0.3956    0.6365
+16      cic      FlowSCE-gen (A0)         CANDICE-style            l1      499              5    3.1786    2.8862    3.4659
+17      cic      FlowSCE-gen (A0)         CANDICE-style         mahal      499              5    2.7588    2.1579    3.3310
+18      cic      FlowSCE-gen (A0)         CANDICE-style    knn_benign      499              5    2.3095    2.0130    2.5928
+19      cic      FlowSCE-gen (A0)         CANDICE-style  margin_logit      499              5    0.8020    0.7318    0.8761
+20      cic      FlowSCE-gen (A0)         CANDICE-style         n_fwd      499              5 -140.7069 -147.6933 -133.4376
+21      cic      FlowSCE-gen (A0)  DiCE-style-noposthoc       CSR (v)      500              5    0.0000    0.0000    0.0000
+22      cic      FlowSCE-gen (A0)  DiCE-style-noposthoc   support_eps      500              5    1.5140    1.3655    1.6692
+23      cic      FlowSCE-gen (A0)  DiCE-style-noposthoc            l1      500              5    5.1735    4.6147    5.7598
+24      cic      FlowSCE-gen (A0)  DiCE-style-noposthoc         mahal      500              5   -1.2509   -2.0175   -0.4936
+25      cic      FlowSCE-gen (A0)  DiCE-style-noposthoc    knn_benign      500              5    3.6623    3.1837    4.1592
+26      cic      FlowSCE-gen (A0)  DiCE-style-noposthoc  margin_logit      500              5    0.5246    0.4335    0.6187
+27      cic      FlowSCE-gen (A0)  DiCE-style-noposthoc         n_fwd      500              5 -598.7360 -698.2059 -505.9182
+28      cic  FlowSCE repeated (D)           LBS-adapted       CSR (v)      500              5    0.0000    0.0000    0.0000
+29      cic  FlowSCE repeated (D)           LBS-adapted   support_eps      500              5    5.7660    5.4765    6.0411
+30      cic  FlowSCE repeated (D)           LBS-adapted            l1      500              5    1.9473    1.6716    2.2017
+31      cic  FlowSCE repeated (D)           LBS-adapted         mahal      500              5    0.4970   -0.4414    1.4057
+32      cic  FlowSCE repeated (D)           LBS-adapted    knn_benign      500              5    0.3010   -0.0796    0.6756
+33      cic  FlowSCE repeated (D)           LBS-adapted  margin_logit      500              5   -0.8767   -0.9531   -0.7977
+34      cic  FlowSCE repeated (D)           LBS-adapted         n_fwd      500              5 -151.8000 -190.1176 -123.6632
+35      cic    FlowSCE single (A)         DiCE post-hoc       CSR (v)      500              5    0.0000    0.0000    0.0000
+36      cic    FlowSCE single (A)         DiCE post-hoc   support_eps      500              5   -1.2540   -1.3504   -1.1531
+37      cic    FlowSCE single (A)         DiCE post-hoc            l1      500              5   -0.5944   -0.7105   -0.4786
+38      cic    FlowSCE single (A)         DiCE post-hoc         mahal      500              5    0.5199    0.1518    0.8790
+39      cic    FlowSCE single (A)         DiCE post-hoc    knn_benign      500              5   -0.4742   -0.5787   -0.3681
+40      cic    FlowSCE single (A)         DiCE post-hoc  margin_logit      500              5    0.2521    0.2117    0.2925
+41      cic    FlowSCE single (A)         DiCE post-hoc         n_fwd      500              5  -43.2680  -44.8982  -41.5423
+42      cic    FlowSCE single (A)             none (A0)       CSR (v)      500              5    0.0000    0.0000    0.0000
+43      cic    FlowSCE single (A)             none (A0)   support_eps      500              5  -11.0180  -11.2946  -10.7429
+44      cic    FlowSCE single (A)             none (A0)            l1      500              5   -7.4429   -7.9930   -6.9233
+45      cic    FlowSCE single (A)             none (A0)         mahal      500              5   -2.0401   -2.9063   -1.1840
+46      cic    FlowSCE single (A)             none (A0)    knn_benign      500              5   -4.3099   -4.7287   -3.9078
+47      cic    FlowSCE single (A)             none (A0)  margin_logit      500              5   -0.8833   -0.9744   -0.7977
+48      cic    FlowSCE single (A)             none (A0)         n_fwd      500              5   18.1300   17.9015   18.3587
+49      cic                     A                     C       CSR (v)      500              5    0.0000    0.0000    0.0000
+50      cic                     A                     C   support_eps      500              5    0.0000    0.0000    0.0000
+51      cic                     A                     C            l1      500              5    0.0000    0.0000    0.0000
+52      cic                     A                     C         mahal      500              5    0.0000    0.0000    0.0000
+53      cic                     A                     C    knn_benign      500              5    0.0000    0.0000    0.0000
+54      cic                     A                     C  margin_logit      500              5   -0.0000   -0.0000    0.0000
+55      cic                     A                     C         n_fwd      500              5    0.0000    0.0000    0.0000
+56      cic                     A                     B       CSR (v)      500              5    0.0000    0.0000    0.0000
+57      cic                     A                     B   support_eps      500              5    0.0000    0.0000    0.0000
+58      cic                     A                     B            l1      500              5    0.0000    0.0000    0.0000
+59      cic                     A                     B         mahal      500              5    0.0000    0.0000    0.0000
+60      cic                     A                     B    knn_benign      500              5    0.0000    0.0000    0.0000
+61      cic                     A                     B  margin_logit      500              5   -0.0000   -0.0000    0.0000
+62      cic                     A                     B         n_fwd      500              5    0.0000    0.0000    0.0000
+63      doh      FlowSCE full (A)         CANDICE-style       CSR (v)      500              5    0.0000    0.0000    0.0000
+64      doh      FlowSCE full (A)         CANDICE-style   support_eps      500              5  -12.2760  -12.6777  -11.9210
+65      doh      FlowSCE full (A)         CANDICE-style            l1      500              5   -2.9317   -3.2482   -2.5832
+66      doh      FlowSCE full (A)         CANDICE-style         mahal      500              5    0.9387    0.6733    1.1941
+67      doh      FlowSCE full (A)         CANDICE-style    knn_benign      500              5   -1.0633   -1.3070   -0.8258
+68      doh      FlowSCE full (A)         CANDICE-style  margin_logit      500              5    0.1592    0.1054    0.2122
+69      doh      FlowSCE full (A)         CANDICE-style         n_fwd      500              5 -103.5520 -113.9506  -92.1293
+70      doh      FlowSCE full (A)  DiCE-style-noposthoc       CSR (v)      500              5    0.0120    0.0039    0.0222
+71      doh      FlowSCE full (A)  DiCE-style-noposthoc   support_eps      494              5  -12.3897  -12.7854  -12.0404
+72      doh      FlowSCE full (A)  DiCE-style-noposthoc            l1      494              5   -0.8672   -1.2604   -0.4855
+73      doh      FlowSCE full (A)  DiCE-style-noposthoc         mahal      494              5    1.2499    0.8426    1.6175
+74      doh      FlowSCE full (A)  DiCE-style-noposthoc    knn_benign      494              5    0.6443    0.2661    0.9949
+75      doh      FlowSCE full (A)  DiCE-style-noposthoc  margin_logit      494              5   -0.2319   -0.2979   -0.1704
+76      doh      FlowSCE full (A)  DiCE-style-noposthoc         n_fwd      494              5 -384.4672 -460.3340 -302.0832
+77      doh      FlowSCE-gen (A0)         CANDICE-style       CSR (v)      500              5    0.0000    0.0000    0.0000
+78      doh      FlowSCE-gen (A0)         CANDICE-style   support_eps      500              5    0.0940    0.0596    0.1343
+79      doh      FlowSCE-gen (A0)         CANDICE-style            l1      500              5    4.8418    4.4243    5.2660
+80      doh      FlowSCE-gen (A0)         CANDICE-style         mahal      500              5    3.0075    2.6891    3.3086
+81      doh      FlowSCE-gen (A0)         CANDICE-style    knn_benign      500              5    3.5748    3.2413    3.9007
+82      doh      FlowSCE-gen (A0)         CANDICE-style  margin_logit      500              5    1.1418    1.0200    1.2982
+83      doh      FlowSCE-gen (A0)         CANDICE-style         n_fwd      500              5 -123.3280 -133.7609 -111.9252
+84      doh      FlowSCE-gen (A0)  DiCE-style-noposthoc       CSR (v)      500              5    0.0120    0.0039    0.0222
+85      doh      FlowSCE-gen (A0)  DiCE-style-noposthoc   support_eps      494              5    0.0388   -0.0070    0.0995
+86      doh      FlowSCE-gen (A0)  DiCE-style-noposthoc            l1      494              5    6.8553    6.0259    7.6301
+87      doh      FlowSCE-gen (A0)  DiCE-style-noposthoc         mahal      494              5    3.3200    2.8826    3.7190
+88      doh      FlowSCE-gen (A0)  DiCE-style-noposthoc    knn_benign      494              5    5.3105    4.6737    5.8743
+89      doh      FlowSCE-gen (A0)  DiCE-style-noposthoc  margin_logit      494              5    0.7568    0.6273    0.9097
+90      doh      FlowSCE-gen (A0)  DiCE-style-noposthoc         n_fwd      494              5 -404.2528 -480.1188 -321.8683
+91      doh  FlowSCE repeated (D)           LBS-adapted       CSR (v)      500              5    0.0000    0.0000    0.0000
+92      doh  FlowSCE repeated (D)           LBS-adapted   support_eps      500              5    5.3660    4.9660    5.7280
+93      doh  FlowSCE repeated (D)           LBS-adapted            l1      500              5   -1.0449   -1.5117   -0.6128
+94      doh  FlowSCE repeated (D)           LBS-adapted         mahal      500              5   -6.1082   -6.8632   -5.3527
+95      doh  FlowSCE repeated (D)           LBS-adapted    knn_benign      500              5   -2.2756   -2.7685   -1.7909
+96      doh  FlowSCE repeated (D)           LBS-adapted  margin_logit      500              5   -0.7698   -0.8586   -0.6753
+97      doh  FlowSCE repeated (D)           LBS-adapted         n_fwd      500              5 -438.2960 -578.5884 -338.0809
+98      doh    FlowSCE single (A)         DiCE post-hoc       CSR (v)      500              5    0.0000    0.0000    0.0000
+99      doh    FlowSCE single (A)         DiCE post-hoc   support_eps      500              5   -1.5240   -1.6157   -1.4235
+100     doh    FlowSCE single (A)         DiCE post-hoc            l1      500              5   -0.3558   -0.4620   -0.2446
+101     doh    FlowSCE single (A)         DiCE post-hoc         mahal      500              5    0.2100    0.0498    0.3636
+102     doh    FlowSCE single (A)         DiCE post-hoc    knn_benign      500              5   -0.1832   -0.2919   -0.0765
+103     doh    FlowSCE single (A)         DiCE post-hoc  margin_logit      500              5    0.4006    0.3535    0.4448
+104     doh    FlowSCE single (A)         DiCE post-hoc         n_fwd      500              5  -44.8040  -46.7190  -42.5478
+105     doh    FlowSCE single (A)             none (A0)       CSR (v)      500              5    0.0000    0.0000    0.0000
+106     doh    FlowSCE single (A)             none (A0)   support_eps      500              5  -12.3700  -12.7895  -12.0018
+107     doh    FlowSCE single (A)             none (A0)            l1      500              5   -7.7735   -8.2944   -7.2138
+108     doh    FlowSCE single (A)             none (A0)         mahal      500              5   -2.0688   -2.3223   -1.8107
+109     doh    FlowSCE single (A)             none (A0)    knn_benign      500              5   -4.6381   -4.9778   -4.2749
+110     doh    FlowSCE single (A)             none (A0)  margin_logit      500              5   -0.9826   -1.1656   -0.8412
+111     doh    FlowSCE single (A)             none (A0)         n_fwd      500              5   19.7760   19.7171   19.8259
+112     doh                     A                     C       CSR (v)      500              5    0.0000    0.0000    0.0000
+113     doh                     A                     C   support_eps      500              5   -0.0100   -0.0476    0.0229
+114     doh                     A                     C            l1      500              5   -0.0135   -0.0641    0.0262
+115     doh                     A                     C         mahal      500              5    0.0016   -0.0313    0.0319
+116     doh                     A                     C    knn_benign      500              5   -0.0121   -0.0647    0.0362
+117     doh                     A                     C  margin_logit      500              5   -0.0029   -0.0141    0.0070
+118     doh                     A                     C         n_fwd      500              5    0.0020   -0.0049    0.0107
+119     doh                     A                     B       CSR (v)      500              5    0.0020    0.0000    0.0071
+120     doh                     A                     B   support_eps      499              5   -0.0121   -0.0469    0.0190
+121     doh                     A                     B            l1      499              5   -0.0030   -0.0367    0.0291
+122     doh                     A                     B         mahal      499              5    0.0292   -0.0318    0.1208
+123     doh                     A                     B    knn_benign      499              5    0.0159   -0.0118    0.0517
+124     doh                     A                     B  margin_logit      499              5   -0.0005   -0.0128    0.0108
+125     doh                     A                     B         n_fwd      499              5   -0.0020   -0.0062    0.0000
+126    unsw      FlowSCE full (A)         CANDICE-style       CSR (v)      500              5    0.0080    0.0018    0.0165
+127    unsw      FlowSCE full (A)         CANDICE-style   support_eps      496              5   -6.2081   -6.3704   -6.0452
+128    unsw      FlowSCE full (A)         CANDICE-style            l1      496              5   -2.2944   -2.5665   -2.0258
+129    unsw      FlowSCE full (A)         CANDICE-style         mahal      496              5   17.1997   15.4251   19.2770
+130    unsw      FlowSCE full (A)         CANDICE-style    knn_benign      496              5   -0.8869   -1.1224   -0.6523
+131    unsw      FlowSCE full (A)         CANDICE-style  margin_logit      496              5    0.1257    0.1004    0.1521
+132    unsw      FlowSCE full (A)         CANDICE-style         n_fwd      496              5 -146.2035 -166.6253 -127.7596
+133    unsw      FlowSCE full (A)  DiCE-style-noposthoc       CSR (v)      500              5    0.0540    0.0348    0.0757
+134    unsw      FlowSCE full (A)  DiCE-style-noposthoc   support_eps      473              5   -6.0278   -6.1782   -5.8800
+135    unsw      FlowSCE full (A)  DiCE-style-noposthoc            l1      473              5   -0.3559   -0.5653   -0.1507
+136    unsw      FlowSCE full (A)  DiCE-style-noposthoc         mahal      473              5   -1.0225   -3.1704    1.2285
+137    unsw      FlowSCE full (A)  DiCE-style-noposthoc    knn_benign      473              5    0.2023   -0.0013    0.4128
+138    unsw      FlowSCE full (A)  DiCE-style-noposthoc  margin_logit      473              5    0.0750    0.0503    0.0991
+139    unsw      FlowSCE full (A)  DiCE-style-noposthoc         n_fwd      473              5 -347.2472 -402.3650 -298.6319
+140    unsw      FlowSCE-gen (A0)         CANDICE-style       CSR (v)      500              5    0.0080    0.0018    0.0165
+141    unsw      FlowSCE-gen (A0)         CANDICE-style   support_eps      496              5    0.1790    0.1348    0.2239
+142    unsw      FlowSCE-gen (A0)         CANDICE-style            l1      496              5    2.4780    2.2666    2.7009
+143    unsw      FlowSCE-gen (A0)         CANDICE-style         mahal      496              5   15.5629   13.9314   17.4045
+144    unsw      FlowSCE-gen (A0)         CANDICE-style    knn_benign      496              5    2.4888    2.2669    2.7341
+145    unsw      FlowSCE-gen (A0)         CANDICE-style  margin_logit      496              5    0.1702    0.1533    0.1886
+146    unsw      FlowSCE-gen (A0)         CANDICE-style         n_fwd      496              5 -158.9130 -179.3312 -140.4603
+147    unsw      FlowSCE-gen (A0)  DiCE-style-noposthoc       CSR (v)      500              5    0.0540    0.0348    0.0757
+148    unsw      FlowSCE-gen (A0)  DiCE-style-noposthoc   support_eps      473              5    0.5015    0.4263    0.5770
+149    unsw      FlowSCE-gen (A0)  DiCE-style-noposthoc            l1      473              5    4.1944    3.9125    4.5090
+150    unsw      FlowSCE-gen (A0)  DiCE-style-noposthoc         mahal      473              5   -2.6254   -4.7171   -0.4476
+151    unsw      FlowSCE-gen (A0)  DiCE-style-noposthoc    knn_benign      473              5    3.4882    3.2432    3.7576
+152    unsw      FlowSCE-gen (A0)  DiCE-style-noposthoc  margin_logit      473              5    0.1370    0.1186    0.1574
+153    unsw      FlowSCE-gen (A0)  DiCE-style-noposthoc         n_fwd      473              5 -359.8995 -415.0780 -311.3228
+154    unsw  FlowSCE repeated (D)           LBS-adapted       CSR (v)      500              5    0.0000    0.0000    0.0000
+155    unsw  FlowSCE repeated (D)           LBS-adapted   support_eps      500              5    3.6920    3.5320    3.8509
+156    unsw  FlowSCE repeated (D)           LBS-adapted            l1      500              5    2.2209    1.9639    2.4814
+157    unsw  FlowSCE repeated (D)           LBS-adapted         mahal      500              5  -27.1070  -30.4251  -23.8084
+158    unsw  FlowSCE repeated (D)           LBS-adapted    knn_benign      500              5    1.2536    0.9475    1.5748
+159    unsw  FlowSCE repeated (D)           LBS-adapted  margin_logit      500              5   -0.1788   -0.2063   -0.1494
+160    unsw  FlowSCE repeated (D)           LBS-adapted         n_fwd      500              5 -345.2700 -399.7829 -295.2017
+161    unsw    FlowSCE single (A)         DiCE post-hoc       CSR (v)      500              5    0.0000    0.0000    0.0000
+162    unsw    FlowSCE single (A)         DiCE post-hoc   support_eps      500              5   -0.6280   -0.6925   -0.5663
+163    unsw    FlowSCE single (A)         DiCE post-hoc            l1      500              5    0.1111   -0.0309    0.2590
+164    unsw    FlowSCE single (A)         DiCE post-hoc         mahal      500              5    2.9909    2.0983    4.0465
+165    unsw    FlowSCE single (A)         DiCE post-hoc    knn_benign      500              5    0.2209    0.1068    0.3443
+166    unsw    FlowSCE single (A)         DiCE post-hoc  margin_logit      500              5    0.1760    0.1557    0.1973
+167    unsw    FlowSCE single (A)         DiCE post-hoc         n_fwd      500              5  -35.3200  -36.3858  -34.3579
+168    unsw    FlowSCE single (A)             none (A0)       CSR (v)      500              5    0.0000    0.0000    0.0000
+169    unsw    FlowSCE single (A)             none (A0)   support_eps      500              5   -6.3700   -6.5374   -6.2055
+170    unsw    FlowSCE single (A)             none (A0)            l1      500              5   -4.8268   -5.1555   -4.5223
+171    unsw    FlowSCE single (A)             none (A0)         mahal      500              5    1.5846    0.3610    2.8641
+172    unsw    FlowSCE single (A)             none (A0)    knn_benign      500              5   -3.4110   -3.6432   -3.1922
+173    unsw    FlowSCE single (A)             none (A0)  margin_logit      500              5   -0.0434   -0.0714   -0.0158
+174    unsw    FlowSCE single (A)             none (A0)         n_fwd      500              5   12.7220   12.6261   12.8256
+175    unsw                     A                     C       CSR (v)      500              5    0.0000    0.0000    0.0000
+176    unsw                     A                     C   support_eps      500              5   -0.0020   -0.0091    0.0049
+177    unsw                     A                     C            l1      500              5    0.0062   -0.0058    0.0236
+178    unsw                     A                     C         mahal      500              5   -0.1428   -0.5100    0.0306
+179    unsw                     A                     C    knn_benign      500              5    0.0100   -0.0040    0.0294
+180    unsw                     A                     C  margin_logit      500              5   -0.0006   -0.0027    0.0006
+181    unsw                     A                     C         n_fwd      500              5    0.0000   -0.0053    0.0057
+182    unsw                     A                     B       CSR (v)      500              5    0.0000    0.0000    0.0000
+183    unsw                     A                     B   support_eps      500              5   -0.0020   -0.0091    0.0049
+184    unsw                     A                     B            l1      500              5    0.0048   -0.0075    0.0226
+185    unsw                     A                     B         mahal      500              5   -0.1193   -0.4904    0.0715
+186    unsw                     A                     B    knn_benign      500              5    0.0086   -0.0060    0.0283
+187    unsw                     A                     B  margin_logit      500              5   -0.0003   -0.0024    0.0011
+188    unsw                     A                     B         n_fwd      500              5    0.0000   -0.0053    0.0057

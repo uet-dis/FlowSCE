@@ -1,0 +1,88 @@
+01:41:02 | data cic: split {'train': 42000, 'val': 5995, 'test': 12005} | attack rate {'train': 0.75, 'val': 0.75, 'test': 0.75} | test vectors also in train after preprocessing 0.0491 | F = 32
+01:41:08 | data doh: split {'train': 34859, 'val': 4985, 'test': 9963} | attack rate {'train': 0.602, 'val': 0.602, 'test': 0.602} | test vectors also in train after preprocessing 0.0080 | F = 21
+01:41:14 | data unsw: split {'train': 41995, 'val': 5994, 'test': 12011} | attack rate {'train': 0.5, 'val': 0.5, 'test': 0.5} | test vectors also in train after preprocessing 0.1907 | F = 48
+01:41:14 | stages 1-3 done (18s)
+01:41:14 | detector cic edge 11 macro-F1 0.9988 (1s)
+01:41:15 | detector cic edge 23 macro-F1 0.9991 (0s)
+01:41:15 | detector cic edge 37 macro-F1 0.9981 (0s)
+01:41:15 | detector cic edge 53 macro-F1 0.9998 (0s)
+01:41:15 | detector cic edge 71 macro-F1 0.9998 (0s)
+01:41:18 | detector cic flow 11 macro-F1 0.9983 (2s)
+01:41:23 | detector cic flow 23 macro-F1 0.9993 (6s)
+01:41:26 | detector cic flow 37 macro-F1 0.9987 (3s)
+01:41:29 | detector cic flow 53 macro-F1 0.9986 (3s)
+01:41:31 | detector cic flow 71 macro-F1 0.9977 (2s)
+01:41:33 | detector cic flow_gate 11 macro-F1 0.9980 (2s)
+01:41:37 | detector cic flow_gate 23 macro-F1 0.9996 (4s)
+01:41:39 | detector cic flow_gate 37 macro-F1 0.9982 (2s)
+01:41:42 | detector cic flow_gate 53 macro-F1 0.9988 (2s)
+01:41:44 | detector cic flow_gate 71 macro-F1 0.9984 (2s)
+01:41:45 | detector doh edge 11 macro-F1 0.9949 (0s)
+01:41:45 | detector doh edge 23 macro-F1 0.9933 (0s)
+01:41:45 | detector doh edge 37 macro-F1 0.9932 (0s)
+01:41:46 | detector doh edge 53 macro-F1 0.9926 (0s)
+01:41:46 | detector doh edge 71 macro-F1 0.9937 (0s)
+01:41:50 | detector doh flow 11 macro-F1 0.9997 (4s)
+01:41:53 | detector doh flow 23 macro-F1 0.9966 (3s)
+01:41:56 | detector doh flow 37 macro-F1 0.9939 (2s)
+01:42:00 | detector doh flow 53 macro-F1 0.9993 (5s)
+01:42:04 | detector doh flow 71 macro-F1 0.9970 (4s)
+01:42:07 | detector doh flow_gate 11 macro-F1 0.9957 (3s)
+01:42:11 | detector doh flow_gate 23 macro-F1 0.9974 (4s)
+01:42:14 | detector doh flow_gate 37 macro-F1 1.0000 (4s)
+01:42:18 | detector doh flow_gate 53 macro-F1 0.9970 (4s)
+01:42:23 | detector doh flow_gate 71 macro-F1 0.9995 (5s)
+01:42:23 | detector unsw edge 11 macro-F1 0.9927 (0s)
+01:42:24 | detector unsw edge 23 macro-F1 0.9927 (0s)
+01:42:24 | detector unsw edge 37 macro-F1 0.9927 (0s)
+01:42:24 | detector unsw edge 53 macro-F1 0.9928 (0s)
+01:42:24 | detector unsw edge 71 macro-F1 0.9924 (0s)
+01:42:26 | detector unsw flow 11 macro-F1 0.9888 (1s)
+01:42:27 | detector unsw flow 23 macro-F1 0.9900 (1s)
+01:42:28 | detector unsw flow 37 macro-F1 0.9893 (1s)
+01:42:29 | detector unsw flow 53 macro-F1 0.9890 (1s)
+01:42:31 | detector unsw flow 71 macro-F1 0.9877 (1s)
+01:42:32 | detector unsw flow_gate 11 macro-F1 0.9903 (1s)
+01:42:33 | detector unsw flow_gate 23 macro-F1 0.9823 (1s)
+01:42:34 | detector unsw flow_gate 37 macro-F1 0.9877 (1s)
+01:42:36 | detector unsw flow_gate 53 macro-F1 0.9903 (1s)
+01:42:38 | detector unsw flow_gate 71 macro-F1 0.9910 (2s)
+01:43:13 | tuning cic locked {'lr': 0.3, 'lam1': 0.01, 'lam2': 0.003, 'search_margin': 0.5} (mean validation CSR 1.000, min over checkpoints 1.000); on grid edge: ['lr', 'lam1']
+01:44:01 | tuning doh locked {'lr': 0.3, 'lam1': 0.003, 'lam2': 0.001, 'search_margin': 0.5} (mean validation CSR 1.000, min over checkpoints 1.000); on grid edge: ['lr', 'lam2']
+01:47:33 | tuning unsw locked {'lr': 0.3, 'lam1': 0.001, 'lam2': 0.001, 'search_margin': 0.5} (mean validation CSR 0.996, min over checkpoints 0.980); on grid edge: ['lr', 'lam1', 'lam2']
+01:47:34 | RQ1 cic rebuild 8.9e-16 | original score 9.5e-07 | FD 1.4e-09 | context share 0.0e+00
+01:47:35 | RQ1 doh rebuild 2.2e-16 | original score 2.5e-06 | FD 1.4e-07 | context share 1.8e-04
+01:47:35 | RQ1 unsw rebuild 1.8e-15 | original score 1.7e-06 | FD 1.2e-09 | context share 4.4e-05
+01:47:36 | ablation cic seed 11 (1s)
+01:47:38 | ablation cic seed 23 (1s)
+01:47:39 | ablation cic seed 37 (1s)
+01:47:40 | ablation cic seed 53 (1s)
+01:47:41 | ablation cic seed 71 (1s)
+01:47:42 | ablation doh seed 11 (1s)
+01:47:43 | ablation doh seed 23 (1s)
+01:47:44 | ablation doh seed 37 (1s)
+01:47:44 | ablation doh seed 53 (1s)
+01:47:45 | ablation doh seed 71 (1s)
+01:47:46 | ablation unsw seed 11 (1s)
+01:47:48 | ablation unsw seed 23 (2s)
+01:47:50 | ablation unsw seed 37 (2s)
+01:47:51 | ablation unsw seed 53 (1s)
+01:47:52 | ablation unsw seed 71 (1s)
+01:47:52 | 
+   dataset variant  attempted  nominal  verified  spurious    CSR    SVR  support_eps_median  l1_median  margin_logit_median  n_fwd_median
+0      cic       A        500      500       500         0  1.000  0.000                 7.0      8.885                0.155          30.0
+1      cic      A0        500      500       500         0  1.000  0.000                18.0     15.667                1.147          12.0
+2      cic       B        500      500       500         0  1.000  0.000                 7.0      8.885                0.155          30.0
+3      cic       C        500      500       500         0  1.000  0.000                 7.0      8.885                0.155          30.0
+4      cic       D        500      500       500         0  1.000  0.000                 7.0      8.785                0.119          30.0
+5      doh       A        500      500       500         0  1.000  0.000                 7.0      8.228                0.292          31.0
+6      doh      A0        500      500       500         0  1.000  0.000                20.0     15.283                1.279          11.0
+7      doh       B        500      500       499         1  0.998  0.002                 7.0      8.219                0.288          31.0
+8      doh       C        500      500       500         0  1.000  0.000                 7.0      8.220                0.296          31.0
+9      doh       D        500      500       500         0  1.000  0.000                 7.0      7.648                0.172          34.0
+10    unsw       A        500      500       500         0  1.000  0.000                 6.0      9.597                0.107          26.0
+11    unsw      A0        500      500       500         0  1.000  0.000                13.0     13.707                0.187          13.0
+12    unsw       B        500      500       500         0  1.000  0.000                 6.0      9.597                0.105          26.0
+13    unsw       C        500      500       500         0  1.000  0.000                 6.0      9.597                0.106          26.0
+14    unsw       D        500      500       500         0  1.000  0.000                 6.0      9.208                0.088          24.0
+01:47:52 | done in 416s

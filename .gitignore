@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# downloaded archives and large data built locally
+archives/
+*.zip
+data/cira_cic_dohbrw2020_l2_full.parquet
+
+# temporary / build files
+*.tmp
+results/**/*.tmp.parquet
+*.log
+!results/logs/*.log
+*.aux
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+.DS_Store

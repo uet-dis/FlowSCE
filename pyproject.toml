@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flowsce"
+dynamic = ["version"]
+description = "Policy-consistent counterfactual reasoning for graph-based network intrusion detection"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["numpy", "pandas", "pyarrow", "scikit-learn", "torch>=2.1"]
+
+[project.optional-dependencies]
+baselines = ["dice-ml==0.12"]
+
+[tool.setuptools]
+packages = ["flowsce"]

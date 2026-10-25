@@ -1,0 +1,14 @@
+\begin{table*}[t]
+\centering\small
+\caption{Executed data protocol. Subsets rebuilt row by row from the official releases; stratified group split 70/10/20 (identical raw vectors never cross partitions, seed 0); preprocessing fitted on the training partition. Test graph: one snapshot of the test partition. $F/F_{\rm mut}$: processed / mutable features. Parallel: flows that share their ordered endpoint pair with another flow. $\omega$: median coupling over all test flows. Dup.: share of test vectors equal to a training vector after preprocessing.}
+\label{tab:data}
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+Dataset & Flows & Train / val / test & $F/F_{\rm mut}$ & Hosts & Self-loops & Parallel & $\omega$ & Dup. \\
+\midrule
+CIC-IDS2018 & 60,000 & 42,000 / 5,995 / 12,005 & 32 / 21 & 662 & 19 & 11,032 & $3.7\times10^{-4}$ & 0.049 \\
+DoHBrw-2020 & 49,807 & 34,859 / 4,985 / 9,963 & 21 / 20 & 21 & 0 & 9,962 & $1.7\times10^{-3}$ & 0.007 \\
+UNSW-NB15 & 60,000 & 41,995 / 5,994 / 12,011 & 48 / 15 & 45 & 7 & 12,000 & $2.5\times10^{-3}$ & 0.190 \\
+\bottomrule
+\end{tabular}
+\end{table*}

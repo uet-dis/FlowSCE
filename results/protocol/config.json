@@ -1,0 +1,68 @@
+{
+  "datasets": [
+    "cic",
+    "doh",
+    "unsw"
+  ],
+  "seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "kinds": [
+    "edge",
+    "flow",
+    "flow_gate"
+  ],
+  "main": "tuned",
+  "n_queries": 100,
+  "n_val_queries": 50,
+  "detector": {
+    "kind": "flow",
+    "d_e": 128,
+    "d_c": 32,
+    "hid": 64,
+    "heads": 4,
+    "layers": 2,
+    "mlp": [
+      128,
+      64
+    ],
+    "dropout": 0.2,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "epochs": 300,
+    "patience": 40
+  },
+  "tuned": {
+    "cic": {
+      "kind": "flow",
+      "lr": 0.003,
+      "dropout": 0.1,
+      "layers": 1
+    },
+    "doh": {
+      "kind": "flow",
+      "lr": 0.003,
+      "dropout": 0.1,
+      "layers": 1
+    },
+    "unsw": {
+      "kind": "flow_sage_gate",
+      "lr": 0.003,
+      "dropout": 0.1,
+      "layers": 1
+    }
+  },
+  "env": {
+    "python": "3.11.7",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "pandas": "3.0.6",
+    "sklearn": "1.9.1",
+    "device": "cuda",
+    "gpu": "NVIDIA RTX 5880 Ada Generation"
+  }
+}

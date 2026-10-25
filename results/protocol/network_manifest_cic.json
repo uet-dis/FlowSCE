@@ -1,0 +1,116 @@
+{
+  "dataset": "cic",
+  "source": "https://espace.library.uq.edu.au/view/UQ:ece9b83 (NF-CICIDS2018-v3)",
+  "file": "nf_cicids2018_v3_4class_60k.parquet",
+  "file_sha256": "2a129451aa5a6cc307a8efdea7169bb839060b7ccb2e0b66324b5e4286d80c54",
+  "rows": 60000,
+  "label_column": "Label",
+  "label_mapping": "int",
+  "attack_type_column": "Attack",
+  "endpoint_columns": [
+    "IPV4_SRC_ADDR",
+    "IPV4_DST_ADDR"
+  ],
+  "time_column": "FLOW_START_MILLISECONDS",
+  "split": {
+    "rule": "stratified group split; group = identical raw feature vector; strata = attack type",
+    "seed": 0,
+    "ratios": [
+      0.7,
+      0.1,
+      0.2
+    ],
+    "file": "results/splits/cic_split.csv",
+    "file_sha256": "520c48c65a396dd834178597205561004d2568d57d3c81f80102055c8b08f965",
+    "achieved": {
+      "train": 42000,
+      "val": 5995,
+      "test": 12005
+    },
+    "classes": {
+      "train": {
+        "Benign": 10500,
+        "FTP-BruteForce": 10500,
+        "DoS_attacks-Hulk": 10500,
+        "Bot": 10500
+      },
+      "val": {
+        "Benign": 1499,
+        "DoS_attacks-Hulk": 1499,
+        "Bot": 1499,
+        "FTP-BruteForce": 1498
+      },
+      "test": {
+        "FTP-BruteForce": 3002,
+        "Benign": 3001,
+        "DoS_attacks-Hulk": 3001,
+        "Bot": 3001
+      }
+    },
+    "attack_rate": {
+      "train": 0.75,
+      "val": 0.7499582985821518,
+      "test": 0.7500208246563932
+    },
+    "test_processed_duplicates_in_train": 0.04914618908788005
+  },
+  "preprocessing": {
+    "n_features": 32,
+    "dropped_constant": [
+      "FTP_COMMAND_RET_CODE"
+    ],
+    "dropped_corr": [
+      "IN_PKTS",
+      "OUT_PKTS",
+      "CLIENT_TCP_FLAGS",
+      "FLOW_DURATION_MILLISECONDS",
+      "DURATION_IN",
+      "DURATION_OUT",
+      "MAX_TTL",
+      "MAX_IP_PKT_LEN",
+      "RETRANSMITTED_OUT_PKTS",
+      "NUM_PKTS_UP_TO_128_BYTES",
+      "NUM_PKTS_256_TO_512_BYTES",
+      "NUM_PKTS_512_TO_1024_BYTES",
+      "ICMP_IPV4_TYPE",
+      "SRC_TO_DST_IAT_STDDEV",
+      "DST_TO_SRC_IAT_MAX",
+      "DST_TO_SRC_IAT_STDDEV"
+    ],
+    "log1p": [
+      "L4_DST_PORT",
+      "L7_PROTO",
+      "OUT_BYTES",
+      "SHORTEST_FLOW_PKT",
+      "SRC_TO_DST_SECOND_BYTES",
+      "DST_TO_SRC_SECOND_BYTES",
+      "RETRANSMITTED_IN_BYTES",
+      "RETRANSMITTED_OUT_BYTES",
+      "SRC_TO_DST_AVG_THROUGHPUT",
+      "DST_TO_SRC_AVG_THROUGHPUT",
+      "NUM_PKTS_1024_TO_1514_BYTES",
+      "ICMP_TYPE",
+      "DNS_QUERY_ID",
+      "SRC_TO_DST_IAT_MIN",
+      "SRC_TO_DST_IAT_MAX",
+      "SRC_TO_DST_IAT_AVG",
+      "DST_TO_SRC_IAT_MIN",
+      "DST_TO_SRC_IAT_AVG"
+    ],
+    "onehot": {},
+    "fitted_on": "train",
+    "median_sha": "9190fdefd019a759",
+    "mu_sha": "a4387d000c14ad22",
+    "sd_sha": "ae27c9d39777c4bd"
+  },
+  "bootstrap_cluster": "contiguous time blocks of 500 flows within each partition",
+  "env": {
+    "python": "3.11.7",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "pandas": "3.0.6",
+    "sklearn": "1.9.1",
+    "device": "cuda",
+    "gpu": "NVIDIA RTX 5880 Ada Generation"
+  }
+}

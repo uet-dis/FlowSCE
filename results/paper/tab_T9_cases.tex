@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\footnotesize
+\caption{FlowSCE explanations of one true and one false alert per dataset (the alert whose support equals the median, largest search support first). Raw values in the units of the extractor documentation (``unknown'': not documented); support: changed features of the search output $\to$ FlowSCE; margin: logit margin of the benign decision. The CIC-IDS2018 and DoHBrw-2020 true-alert changes leave the related byte and duration fields unchanged and are therefore not realizable traffic.}
+\label{tab:cases}
+\begin{tabular}{@{}lllllrr@{}}
+\toprule
+Dataset & Alert (class) & Changed feature & Unit & Original $\to$ counterfactual & Support & Margin \\
+\midrule
+CIC-IDS2018 & True (Bot) & \texttt{DST\_TO\_SRC\_AVG\_THROUGHPUT} & bits/s & 248,000 $\to$ 0 & 21 $\to$ 1 & 0.82 \\
+CIC-IDS2018 & False (Benign) & \texttt{NUM\_PKTS\_128\_TO\_256\_BYTES} & packets & 1 $\to$ 4 & 17 $\to$ 1 & 1.86 \\
+DoHBrw-2020 & True (Malicious) & \texttt{FlowBytesSent} & bytes & 4,446 $\to$ 2,379,774 & 20 $\to$ 1 & 0.44 \\
+DoHBrw-2020 & False (Benign) & \texttt{ResponseTimeTimeMode} & unknown & 1.4e-05 $\to$ -0.859 & 20 $\to$ 1 & 0.76 \\
+UNSW-NB15 & True (Generic) & \texttt{tcprtt} & unknown & 0.203 $\to$ 0.853 & 15 $\to$ 1 & 1.11 \\
+UNSW-NB15 & False (Benign) & \texttt{tcprtt} & unknown & 0.115 $\to$ 0.747 & 15 $\to$ 1 & 1.12 \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering\footnotesize
+\caption{Spurious validity of the stale-context variant B among its nominal successes, pooled over all wall-clock window policies (subsets and complete DoHBrw-2020 capture), by the coupling $\omega_{\pi,k}$ of the individual alert and by B's own stale logit margin; last rows: the same coupling bins ($\le$0.01, 0.01--0.1, 0.1--0.5, $>$0.5) per dataset.}
+\label{tab:a-coupling}
+\begin{tabular}{@{}llrr@{}}
+\toprule
+Grouping & Bin & Spurious / nominal & Rate (\%) \\
+\midrule
+per-alert coupling & $\omega\in(0,0.01]$ & 0/2776 & 0.0 \\
+per-alert coupling & $\omega\in(0.01,0.1]$ & 7/2087 & 0.3 \\
+per-alert coupling & $\omega\in(0.1,0.5]$ & 48/1167 & 4.1 \\
+per-alert coupling & $\omega\in(0.5,\infty]$ & 136/988 & 13.8 \\
+stale margin of B & stale margin $\in(-\infty,0.05]$ & 69/1126 & 6.1 \\
+stale margin of B & stale margin $\in(0.05,0.25]$ & 53/2031 & 2.6 \\
+stale margin of B & stale margin $\in(0.25,1]$ & 39/2346 & 1.7 \\
+stale margin of B & stale margin $\in(1,\infty]$ & 30/1515 & 2.0 \\
+CIC-IDS2018 & by coupling bin & 0/1096 / 0/471 / 1/242 / 0/191 & -- \\
+DoHBrw-2020 & by coupling bin & 0/814 / 1/691 / 2/231 / 6/173 & -- \\
+DoHBrw-2020 (full) & by coupling bin & 0/715 / 3/460 / 8/84 / 5/63 & -- \\
+UNSW-NB15 & by coupling bin & 0/151 / 3/465 / 37/610 / 125/561 & -- \\
+\bottomrule
+\end{tabular}
+\end{table}

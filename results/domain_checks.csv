@@ -1,0 +1,12 @@
+dataset,step,method,relation,n,share_holding,share_violating,note
+doh,raw data,—,FlowSentRate = 1*FlowBytesSent/duration,49734,1.0,0.0,
+doh,counterfactuals,original alerts,FlowSentRate = FlowBytesSent/Duration,500,,0.0,
+doh,counterfactuals,FlowSCE,FlowSentRate = FlowBytesSent/Duration,500,,0.354,
+doh,counterfactuals,FlowSCE (A),FlowSentRate = FlowBytesSent/Duration,500,,0.882,
+doh,counterfactuals,CANDICE,FlowSentRate = FlowBytesSent/Duration,38,,0.9736842105263158,
+doh,counterfactuals,DiCE,FlowSentRate = FlowBytesSent/Duration,15,,0.8,
+doh,counterfactuals,A0 + LBS-adapted,FlowSentRate = FlowBytesSent/Duration,500,,0.292,
+unsw,raw data,—,Sload = 8*sbytes/duration,59894,0.03686512839349518,0.9631348716065048,
+unsw,counterfactuals,all,skipped,0,,,relation does not hold on every flow of the raw data
+cic,raw data,—,SRC_TO_DST_AVG_THROUGHPUT = 8*IN_BYTES/duration,60000,0.6531166666666667,0.3468833333333333,
+cic,counterfactuals,all,skipped,0,,,relation does not hold on every flow of the raw data

@@ -1,0 +1,29 @@
+\begin{table*}[t]
+\centering\scriptsize
+\caption{Sequential latency of FlowSCE (variant A, seed-11 checkpoint, 20 alerts per cell, one warm-up excluded, GPU-synchronized): test graphs from 25/50/100\% of the test time blocks with all mutable features, and the full graph with the first 25/50\% of them in schema order. Rows with a reduced mutable set mostly time failed searches that exhaust the update budget (cost of failure, not latency of an explanation). Latency in seconds; generate / restore / assess: medians; GPU: peak allocated MB; RSS: peak CPU resident MB of the process; $N_f/N_b$: median forward / backward evaluations.}
+\label{tab:runtime}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrrrrrrrrrrr@{}}
+\toprule
+Dataset & $N$ & $M$ & $F_{\rm mut}$ & Mean & Median & p95 & Gen. & Rest. & Assess & GPU & RSS & CSR & $N_f/N_b$ \\
+\midrule
+CIC-IDS2018 & 356 & 3,005 & 21 & 0.036 & 0.036 & 0.045 & 0.024 & 0.010 & 0.0017 & 67 & 1442 & 1.00 & 28 / 4 \\
+ & 434 & 6,005 & 21 & 0.027 & 0.026 & 0.034 & 0.014 & 0.010 & 0.0017 & 79 & 1448 & 1.00 & 29 / 4 \\
+ & 662 & 12,005 & 21 & 0.041 & 0.039 & 0.061 & 0.029 & 0.009 & 0.0013 & 108 & 1449 & 1.00 & 28 / 4 \\
+ & 662 & 12,005 & 5 & 3.615 & 4.392 & 4.483 & 4.391 & 0.000 & 0.0000 & 103 & 1449 & 0.00 & 502 / 500 \\
+ & 662 & 12,005 & 10 & 1.100 & 0.301 & 4.413 & 0.290 & 0.008 & 0.0019 & 108 & 1449 & 0.80 & 52 / 37 \\
+\midrule
+DoHBrw-2020 & 19 & 2,500 & 20 & 0.059 & 0.066 & 0.096 & 0.053 & 0.011 & 0.0017 & 62 & 1449 & 1.00 & 40 / 14 \\
+ & 20 & 5,000 & 20 & 0.044 & 0.043 & 0.064 & 0.031 & 0.011 & 0.0017 & 73 & 1449 & 1.00 & 37 / 11 \\
+ & 21 & 9,963 & 20 & 0.041 & 0.040 & 0.060 & 0.031 & 0.008 & 0.0012 & 94 & 1449 & 1.00 & 34 / 8 \\
+ & 21 & 9,963 & 5 & 1.429 & 1.748 & 1.750 & 1.748 & 0.000 & 0.0000 & 94 & 1449 & 0.20 & 502 / 500 \\
+ & 21 & 9,963 & 10 & 0.178 & 0.088 & 0.432 & 0.083 & 0.004 & 0.0013 & 94 & 1449 & 0.95 & 40 / 24 \\
+\midrule
+UNSW-NB15 & 44 & 3,011 & 15 & 0.025 & 0.022 & 0.046 & 0.016 & 0.005 & 0.0010 & 55 & 1459 & 1.00 & 27 / 7 \\
+ & 44 & 6,011 & 15 & 0.049 & 0.033 & 0.071 & 0.025 & 0.007 & 0.0012 & 57 & 1464 & 1.00 & 27 / 7 \\
+ & 45 & 12,011 & 15 & 0.040 & 0.025 & 0.168 & 0.019 & 0.005 & 0.0010 & 64 & 1464 & 1.00 & 27 / 7 \\
+ & 45 & 12,011 & 4 & 1.487 & 1.135 & 3.500 & 1.135 & 0.000 & 0.0000 & 61 & 1464 & 0.00 & 502 / 500 \\
+ & 45 & 12,011 & 8 & 0.880 & 1.128 & 1.166 & 1.128 & 0.000 & 0.0000 & 64 & 1464 & 0.25 & 502 / 500 \\
+\bottomrule
+\end{tabular}}
+\end{table*}

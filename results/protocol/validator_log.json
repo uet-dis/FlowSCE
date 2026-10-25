@@ -1,0 +1,59 @@
+{
+  "cic": {
+    "n_features": 32,
+    "n_mutable": 21,
+    "n_integer": 32,
+    "zero_delta_valid": 1.0,
+    "projected_random_valid": 1.0,
+    "immutable_edit_rejected": 1.0,
+    "checked": [
+      "immutable",
+      "train range (raw)",
+      "integer (raw)",
+      "finite"
+    ],
+    "not_checked": [
+      "coupled statistics",
+      "units",
+      "packet-level realizability"
+    ]
+  },
+  "doh": {
+    "n_features": 21,
+    "n_mutable": 20,
+    "n_integer": 4,
+    "zero_delta_valid": 1.0,
+    "projected_random_valid": 1.0,
+    "immutable_edit_rejected": 1.0,
+    "checked": [
+      "immutable",
+      "train range (raw)",
+      "integer (raw)",
+      "finite"
+    ],
+    "not_checked": [
+      "coupled statistics",
+      "units",
+      "packet-level realizability"
+    ]
+  },
+  "unsw": {
+    "n_features": 48,
+    "n_mutable": 15,
+    "n_integer": 40,
+    "zero_delta_valid": 1.0,
+    "projected_random_valid": 1.0,
+    "immutable_edit_rejected": 1.0,
+    "checked": [
+      "immutable",
+      "train range (raw)",
+      "integer (raw)",
+      "finite"
+    ],
+    "not_checked": [
+      "coupled statistics",
+      "units",
+      "packet-level realizability"
+    ]
+  }
+}

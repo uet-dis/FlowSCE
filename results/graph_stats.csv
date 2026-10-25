@@ -1,0 +1,4 @@
+dataset,hosts,flows,self_loops,parallel_pairs,flows_in_parallel_pairs,deg_min,deg_p10,deg_median,deg_p90,deg_max
+cic,662,12005,19,324,11032,1.0,1.0,2.0,25.0,6003.0
+doh,21,9963,0,97,9962,26.0,273.0,558.0,2308.0,3343.0
+unsw,45,12011,7,154,12000,1.0,7.0,511.0,921.8000000000002,2315.0

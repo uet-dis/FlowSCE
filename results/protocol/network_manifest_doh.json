@@ -1,0 +1,91 @@
+{
+  "dataset": "doh",
+  "source": "https://www.unb.ca/cic/datasets/dohbrw-2020.html (l2-benign.csv, l2-malicious.csv)",
+  "file": "cira_cic_dohbrw2020_l2_49807.parquet",
+  "file_sha256": "0c02f6fb4b55988d6e84f4b9f21ca5b838f44b23de6b84de1653fcf33248174b",
+  "rows": 49807,
+  "label_column": "Label",
+  "label_mapping": "benign_string",
+  "attack_type_column": "Label",
+  "endpoint_columns": [
+    "SourceIP",
+    "DestinationIP"
+  ],
+  "time_column": "TimeStamp",
+  "split": {
+    "rule": "stratified group split; group = identical raw feature vector; strata = attack type",
+    "seed": 0,
+    "ratios": [
+      0.7,
+      0.1,
+      0.2
+    ],
+    "file": "results/splits/doh_split.csv",
+    "file_sha256": "ad1787e3a37e42b9073120e2b110d94b53ab0155417450eae743f29853f60464",
+    "achieved": {
+      "train": 34859,
+      "val": 4985,
+      "test": 9963
+    },
+    "classes": {
+      "train": {
+        "Malicious": 21000,
+        "Benign": 13859
+      },
+      "val": {
+        "Malicious": 2999,
+        "Benign": 1986
+      },
+      "test": {
+        "Malicious": 6001,
+        "Benign": 3962
+      }
+    },
+    "attack_rate": {
+      "train": 0.6024269198772196,
+      "val": 0.60160481444333,
+      "test": 0.6023286158787514
+    },
+    "test_processed_duplicates_in_train": 0.008029709926728896
+  },
+  "preprocessing": {
+    "n_features": 21,
+    "dropped_constant": [],
+    "dropped_corr": [
+      "DestinationPort",
+      "FlowReceivedRate",
+      "PacketLengthStandardDeviation",
+      "PacketLengthMean",
+      "PacketLengthCoefficientofVariation",
+      "PacketTimeStandardDeviation",
+      "PacketTimeMean",
+      "PacketTimeMedian",
+      "ResponseTimeTimeStandardDeviation",
+      "ResponseTimeTimeMedian"
+    ],
+    "log1p": [
+      "FlowBytesSent",
+      "FlowBytesReceived",
+      "PacketLengthVariance",
+      "PacketLengthMedian",
+      "PacketLengthMode",
+      "PacketTimeVariance",
+      "PacketTimeMode"
+    ],
+    "onehot": {},
+    "fitted_on": "train",
+    "median_sha": "db326545f0d8540c",
+    "mu_sha": "d217322b23cbaacf",
+    "sd_sha": "78e93617d4c414b1"
+  },
+  "bootstrap_cluster": "contiguous time blocks of 500 flows within each partition",
+  "env": {
+    "python": "3.11.7",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "pandas": "3.0.6",
+    "sklearn": "1.9.1",
+    "device": "cuda",
+    "gpu": "NVIDIA RTX 5880 Ada Generation"
+  }
+}

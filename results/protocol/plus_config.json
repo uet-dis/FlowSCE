@@ -1,0 +1,53 @@
+{
+ "cic": {
+  "T_rep": 50,
+  "T_polish": 100,
+  "opts": {
+   "probe_k": null,
+   "probe_T": 50,
+   "probe_free": true,
+   "probe_init": "both",
+   "probe_select": "best_l1",
+   "shrink": true,
+   "start": "D",
+   "floor_mode": "target"
+  },
+  "m_target": "ln 3",
+  "selected_on": "validation alerts only (results/validation/compare_v1..v7.csv); configuration v7",
+  "rule": "development on the 50 validation alerts per checkpoint; the configuration was fixed before any test alert was explained"
+ },
+ "doh": {
+  "T_rep": 50,
+  "T_polish": 100,
+  "opts": {
+   "probe_k": null,
+   "probe_T": 50,
+   "probe_free": true,
+   "probe_init": "both",
+   "probe_select": "best_l1",
+   "shrink": true,
+   "start": "D",
+   "floor_mode": "target"
+  },
+  "m_target": "ln 3",
+  "selected_on": "validation alerts only (results/validation/compare_v1..v7.csv); configuration v7",
+  "rule": "development on the 50 validation alerts per checkpoint; the configuration was fixed before any test alert was explained"
+ },
+ "unsw": {
+  "T_rep": 50,
+  "T_polish": 100,
+  "opts": {
+   "probe_k": null,
+   "probe_T": 50,
+   "probe_free": true,
+   "probe_init": "both",
+   "probe_select": "best_l1",
+   "shrink": true,
+   "start": "D",
+   "floor_mode": "target"
+  },
+  "m_target": "ln 3",
+  "selected_on": "validation alerts only (results/validation/compare_v1..v7.csv); configuration v7",
+  "rule": "development on the 50 validation alerts per checkpoint; the configuration was fixed before any test alert was explained"
+ }
+}

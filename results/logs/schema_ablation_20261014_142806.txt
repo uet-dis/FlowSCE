@@ -1,0 +1,305 @@
+
+######## cic seed 11: 100 queries | mutable 21/32 | key group = ['MIN_TTL']
+  top-5 features by mean squared gradient: [('NUM_PKTS_128_TO_256_BYTES', 0.0269), ('DST_TO_SRC_IAT_MIN', 0.0232), ('SRC_TO_DST_IAT_MIN', 0.0172), ('RETRANSMITTED_OUT_BYTES', 0.0149), ('PROTOCOL', 0.0115)] (immutable: ['PROTOCOL'] )
+  S0      mutable 21  CSR 1.000  supp_eps 19.0  failed-but-reached-q<0 nan  (0.3s)
+  S0+key  mutable 22  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S1      mutable 21  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+key  mutable 22  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+all  mutable 32  CSR 1.000  supp_eps 30.0  failed-but-reached-q<0 nan  (0.1s)
+  S0p     mutable 21  CSR 1.000  supp_eps 18.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p+key mutable 22  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  grad_imm_share median: solved 0.332 | failed nan
+  reset key group → benign: solved 0.00 | failed nan; reset ALL immutable → benign: failed nan
+
+######## cic seed 23: 100 queries | mutable 21/32 | key group = ['MIN_TTL']
+  top-5 features by mean squared gradient: [('DNS_TTL_ANSWER', 0.194), ('NUM_PKTS_1024_TO_1514_BYTES', 0.1697), ('L7_PROTO', 0.1392), ('DST_TO_SRC_AVG_THROUGHPUT', 0.1365), ('OUT_BYTES', 0.0927)] (immutable: ['L7_PROTO', 'DNS_TTL_ANSWER'] )
+  S0      mutable 21  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S0+key  mutable 22  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  S1      mutable 21  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+key  mutable 22  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+all  mutable 32  CSR 1.000  supp_eps 30.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p     mutable 21  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p+key mutable 22  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  grad_imm_share median: solved 0.442 | failed nan
+  reset key group → benign: solved 0.00 | failed nan; reset ALL immutable → benign: failed nan
+
+######## cic seed 37: 100 queries | mutable 21/32 | key group = ['MIN_TTL']
+  top-5 features by mean squared gradient: [('L7_PROTO', 0.1277), ('NUM_PKTS_128_TO_256_BYTES', 0.051), ('DST_TO_SRC_IAT_MIN', 0.0493), ('OUT_BYTES', 0.0383), ('TCP_WIN_MAX_IN', 0.0285)] (immutable: ['L7_PROTO'] )
+  S0      mutable 21  CSR 1.000  supp_eps 19.0  failed-but-reached-q<0 nan  (0.2s)
+  S0+key  mutable 22  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S1      mutable 21  CSR 1.000  supp_eps 19.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+key  mutable 22  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+all  mutable 32  CSR 1.000  supp_eps 30.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p     mutable 21  CSR 1.000  supp_eps 18.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p+key mutable 22  CSR 1.000  supp_eps 19.0  failed-but-reached-q<0 nan  (0.2s)
+  grad_imm_share median: solved 0.301 | failed nan
+  reset key group → benign: solved 0.02 | failed nan; reset ALL immutable → benign: failed nan
+
+######## cic seed 53: 100 queries | mutable 21/32 | key group = ['MIN_TTL']
+  top-5 features by mean squared gradient: [('L7_PROTO', 0.0411), ('MIN_IP_PKT_LEN', 0.0407), ('PROTOCOL', 0.0334), ('IN_BYTES', 0.0287), ('DNS_QUERY_ID', 0.028)] (immutable: ['PROTOCOL', 'L7_PROTO', 'DNS_QUERY_ID'] )
+  S0      mutable 21  CSR 1.000  supp_eps 19.0  failed-but-reached-q<0 nan  (0.2s)
+  S0+key  mutable 22  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S1      mutable 21  CSR 1.000  supp_eps 19.5  failed-but-reached-q<0 nan  (0.2s)
+  S1+key  mutable 22  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+all  mutable 32  CSR 1.000  supp_eps 30.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p     mutable 21  CSR 1.000  supp_eps 18.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p+key mutable 22  CSR 1.000  supp_eps 18.5  failed-but-reached-q<0 nan  (0.2s)
+  grad_imm_share median: solved 0.388 | failed nan
+  reset key group → benign: solved 0.00 | failed nan; reset ALL immutable → benign: failed nan
+
+######## cic seed 71: 100 queries | mutable 21/32 | key group = ['MIN_TTL']
+  top-5 features by mean squared gradient: [('OUT_BYTES', 0.0714), ('TCP_WIN_MAX_IN', 0.0591), ('RETRANSMITTED_OUT_BYTES', 0.0432), ('MIN_TTL', 0.0354), ('DNS_QUERY_ID', 0.0336)] (immutable: ['MIN_TTL', 'DNS_QUERY_ID'] )
+  S0      mutable 21  CSR 1.000  supp_eps 19.0  failed-but-reached-q<0 nan  (0.1s)
+  S0+key  mutable 22  CSR 1.000  supp_eps 19.0  failed-but-reached-q<0 nan  (0.1s)
+  S1      mutable 21  CSR 1.000  supp_eps 19.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+key  mutable 22  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.1s)
+  S1+all  mutable 32  CSR 1.000  supp_eps 30.0  failed-but-reached-q<0 nan  (0.1s)
+  S0p     mutable 21  CSR 1.000  supp_eps 17.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p+key mutable 22  CSR 1.000  supp_eps 18.0  failed-but-reached-q<0 nan  (0.2s)
+  grad_imm_share median: solved 0.310 | failed nan
+  reset key group → benign: solved 0.00 | failed nan; reset ALL immutable → benign: failed nan
+
+######## doh seed 11: 100 queries | mutable 20/21 | key group = ['SourcePort']
+  top-5 features by mean squared gradient: [('PacketTimeVariance', 0.0472), ('PacketLengthMedian', 0.0437), ('PacketLengthMode', 0.0409), ('PacketLengthSkewFromMode', 0.0405), ('ResponseTimeTimeMean', 0.0363)] (immutable: [] )
+  S0      mutable 20  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (1.2s)
+  S0+key  mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  S1      mutable 20  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+key  mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+all  mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p     mutable 20  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.3s)
+  S0p+key mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.3s)
+  grad_imm_share median: solved 0.034 | failed nan
+  reset key group → benign: solved 0.00 | failed nan; reset ALL immutable → benign: failed nan
+
+######## doh seed 23: 100 queries | mutable 20/21 | key group = ['SourcePort']
+  top-5 features by mean squared gradient: [('PacketTimeVariance', 0.9186), ('PacketLengthMedian', 0.7249), ('PacketLengthMode', 0.4433), ('PacketLengthVariance', 0.3599), ('Duration', 0.3574)] (immutable: [] )
+  S0      mutable 20  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S0+key  mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  S1      mutable 20  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+key  mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+all  mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p     mutable 20  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.3s)
+  S0p+key mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  grad_imm_share median: solved 0.016 | failed nan
+  reset key group → benign: solved 0.03 | failed nan; reset ALL immutable → benign: failed nan
+
+######## doh seed 37: 100 queries | mutable 20/21 | key group = ['SourcePort']
+  top-5 features by mean squared gradient: [('PacketLengthVariance', 1.9324), ('PacketLengthMode', 1.1627), ('PacketTimeVariance', 0.7035), ('PacketLengthMedian', 0.6559), ('Duration', 0.4224)] (immutable: [] )
+  S0      mutable 20  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S0+key  mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  S1      mutable 20  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+key  mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.1s)
+  S1+all  mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.1s)
+  S0p     mutable 20  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p+key mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  grad_imm_share median: solved 0.020 | failed nan
+  reset key group → benign: solved 0.05 | failed nan; reset ALL immutable → benign: failed nan
+
+######## doh seed 53: 100 queries | mutable 20/21 | key group = ['SourcePort']
+  top-5 features by mean squared gradient: [('Duration', 0.0901), ('PacketLengthMedian', 0.0786), ('ResponseTimeTimeMean', 0.0517), ('FlowBytesSent', 0.0475), ('ResponseTimeTimeVariance', 0.0457)] (immutable: [] )
+  S0      mutable 20  CSR 1.000  supp_eps 19.0  failed-but-reached-q<0 nan  (0.3s)
+  S0+key  mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.3s)
+  S1      mutable 20  CSR 1.000  supp_eps 19.0  failed-but-reached-q<0 nan  (0.3s)
+  S1+key  mutable 21  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.3s)
+  S1+all  mutable 21  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.3s)
+  S0p     mutable 20  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.3s)
+  S0p+key mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.3s)
+  grad_imm_share median: solved 0.042 | failed nan
+  reset key group → benign: solved 0.00 | failed nan; reset ALL immutable → benign: failed nan
+
+######## doh seed 71: 100 queries | mutable 20/21 | key group = ['SourcePort']
+  top-5 features by mean squared gradient: [('PacketLengthMode', 1.4745), ('Duration', 0.9968), ('FlowBytesSent', 0.6999), ('ResponseTimeTimeMean', 0.6509), ('ResponseTimeTimeMode', 0.5037)] (immutable: [] )
+  S0      mutable 20  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S0+key  mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.1s)
+  S1      mutable 20  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+key  mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+all  mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p     mutable 20  CSR 1.000  supp_eps 20.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p+key mutable 21  CSR 1.000  supp_eps 21.0  failed-but-reached-q<0 nan  (0.2s)
+  grad_imm_share median: solved 0.041 | failed nan
+  reset key group → benign: solved 0.03 | failed nan; reset ALL immutable → benign: failed nan
+
+######## unsw seed 11: 100 queries | mutable 15/48 | key group = ['sttl', 'dttl']
+  top-5 features by mean squared gradient: [('sttl', 0.1731), ('smeansz', 0.0429), ('ct_flw_http_mthd', 0.023), ('Sintpkt', 0.0208), ('Sjit', 0.0206)] (immutable: ['sttl', 'ct_flw_http_mthd'] )
+  S0      mutable 15  CSR 0.980  supp_eps 13.5  failed-but-reached-q<0 1.00  (4.0s)
+  S0+key  mutable 17  CSR 1.000  supp_eps 14.0  failed-but-reached-q<0 nan  (0.2s)
+  S1      mutable 15  CSR 1.000  supp_eps 15.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+key  mutable 17  CSR 1.000  supp_eps 17.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+all  mutable 28  CSR 1.000  supp_eps 28.0  failed-but-reached-q<0 nan  (0.1s)
+  S0p     mutable 15  CSR 1.000  supp_eps 12.0  failed-but-reached-q<0 nan  (0.3s)
+  S0p+key mutable 17  CSR 1.000  supp_eps 14.0  failed-but-reached-q<0 nan  (0.2s)
+  grad_imm_share median: solved 0.697 | failed 0.843
+  reset key group → benign: solved 0.11 | failed 0.00; reset ALL immutable → benign: failed 1.00
+  S0 failures: reached q<0 before Π in 1.00 of them (rejected by V_k 0.00, flipped back after Π 1.00); median best raw q -3.845
+  failed in S0 but solved in: S0p 1.00 | S0p+key 1.00 | S1 1.00 | S0+key 1.00 | S1+key 1.00 | S1+all 1.00
+
+######## unsw seed 23: 100 queries | mutable 15/48 | key group = ['sttl', 'dttl']
+  top-5 features by mean squared gradient: [('sttl', 0.0669), ('state=CON', 0.0347), ('proto=unas', 0.0201), ('dttl', 0.0171), ('ct_dst_ltm', 0.0135)] (immutable: ['sttl', 'dttl', 'ct_dst_ltm', 'proto=unas', 'state=CON'] )
+  S0      mutable 15  CSR 0.970  supp_eps 14.0  failed-but-reached-q<0 1.00  (4.8s)
+  S0+key  mutable 17  CSR 0.990  supp_eps 15.0  failed-but-reached-q<0 1.00  (3.7s)
+  S1      mutable 15  CSR 0.990  supp_eps 15.0  failed-but-reached-q<0 1.00  (4.4s)
+  S1+key  mutable 17  CSR 1.000  supp_eps 17.0  failed-but-reached-q<0 nan  (0.3s)
+  S1+all  mutable 28  CSR 1.000  supp_eps 28.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p     mutable 15  CSR 1.000  supp_eps 14.0  failed-but-reached-q<0 nan  (0.9s)
+  S0p+key mutable 17  CSR 1.000  supp_eps 15.0  failed-but-reached-q<0 nan  (0.8s)
+  grad_imm_share median: solved 0.720 | failed 0.657
+  reset key group → benign: solved 0.52 | failed 0.00; reset ALL immutable → benign: failed 0.00
+  S0 failures: reached q<0 before Π in 1.00 of them (rejected by V_k 0.00, flipped back after Π 1.00); median best raw q -2.469
+  failed in S0 but solved in: S0p 1.00 | S0p+key 1.00 | S1 0.67 | S0+key 0.67 | S1+key 1.00 | S1+all 1.00
+
+######## unsw seed 37: 100 queries | mutable 15/48 | key group = ['sttl', 'dttl']
+  top-5 features by mean squared gradient: [('sttl', 0.2327), ('smeansz', 0.0996), ('state=RST', 0.068), ('ct_dst_ltm', 0.046), ('proto=arp', 0.0437)] (immutable: ['sttl', 'ct_dst_ltm', 'proto=arp', 'state=RST'] )
+  S0      mutable 15  CSR 0.930  supp_eps 13.0  failed-but-reached-q<0 1.00  (5.0s)
+  S0+key  mutable 17  CSR 0.980  supp_eps 14.0  failed-but-reached-q<0 1.00  (6.6s)
+  S1      mutable 15  CSR 1.000  supp_eps 15.0  failed-but-reached-q<0 nan  (0.4s)
+  S1+key  mutable 17  CSR 1.000  supp_eps 17.0  failed-but-reached-q<0 nan  (0.3s)
+  S1+all  mutable 28  CSR 1.000  supp_eps 28.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p     mutable 15  CSR 1.000  supp_eps 13.0  failed-but-reached-q<0 nan  (1.5s)
+  S0p+key mutable 17  CSR 1.000  supp_eps 14.0  failed-but-reached-q<0 nan  (1.2s)
+  grad_imm_share median: solved 0.760 | failed 0.710
+  reset key group → benign: solved 0.20 | failed 0.00; reset ALL immutable → benign: failed 0.00
+  S0 failures: reached q<0 before Π in 1.00 of them (rejected by V_k 0.00, flipped back after Π 1.00); median best raw q -2.551
+  failed in S0 but solved in: S0p 1.00 | S0p+key 1.00 | S1 1.00 | S0+key 0.71 | S1+key 1.00 | S1+all 1.00
+
+######## unsw seed 53: 100 queries | mutable 15/48 | key group = ['sttl', 'dttl']
+  top-5 features by mean squared gradient: [('sttl', 0.2494), ('smeansz', 0.0474), ('service=pop3', 0.0449), ('proto=udp', 0.0445), ('state=REQ', 0.0348)] (immutable: ['sttl', 'proto=udp', 'state=REQ', 'service=pop3'] )
+  S0      mutable 15  CSR 0.940  supp_eps 12.0  failed-but-reached-q<0 1.00  (6.7s)
+  S0+key  mutable 17  CSR 0.970  supp_eps 14.0  failed-but-reached-q<0 1.00  (6.5s)
+  S1      mutable 15  CSR 1.000  supp_eps 14.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+key  mutable 17  CSR 1.000  supp_eps 16.0  failed-but-reached-q<0 nan  (0.1s)
+  S1+all  mutable 28  CSR 1.000  supp_eps 27.0  failed-but-reached-q<0 nan  (0.1s)
+  S0p     mutable 15  CSR 1.000  supp_eps 12.0  failed-but-reached-q<0 nan  (0.5s)
+  S0p+key mutable 17  CSR 1.000  supp_eps 14.0  failed-but-reached-q<0 nan  (0.3s)
+  grad_imm_share median: solved 0.781 | failed 0.796
+  reset key group → benign: solved 0.64 | failed 0.00; reset ALL immutable → benign: failed 0.00
+  S0 failures: reached q<0 before Π in 1.00 of them (rejected by V_k 0.00, flipped back after Π 1.00); median best raw q -1.840
+  failed in S0 but solved in: S0p 1.00 | S0p+key 1.00 | S1 1.00 | S0+key 0.50 | S1+key 1.00 | S1+all 1.00
+
+######## unsw seed 71: 100 queries | mutable 15/48 | key group = ['sttl', 'dttl']
+  top-5 features by mean squared gradient: [('sttl', 0.6881), ('smeansz', 0.1876), ('service=ftp-data', 0.1441), ('Dintpkt', 0.0906), ('state=INT', 0.086)] (immutable: ['sttl', 'state=INT', 'service=ftp-data'] )
+  S0      mutable 15  CSR 0.970  supp_eps 12.0  failed-but-reached-q<0 1.00  (5.8s)
+  S0+key  mutable 17  CSR 1.000  supp_eps 14.0  failed-but-reached-q<0 nan  (0.2s)
+  S1      mutable 15  CSR 1.000  supp_eps 14.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+key  mutable 17  CSR 1.000  supp_eps 16.0  failed-but-reached-q<0 nan  (0.2s)
+  S1+all  mutable 28  CSR 1.000  supp_eps 27.0  failed-but-reached-q<0 nan  (0.2s)
+  S0p     mutable 15  CSR 1.000  supp_eps 11.0  failed-but-reached-q<0 nan  (0.4s)
+  S0p+key mutable 17  CSR 1.000  supp_eps 13.0  failed-but-reached-q<0 nan  (0.3s)
+  grad_imm_share median: solved 0.730 | failed 0.734
+  reset key group → benign: solved 0.46 | failed 0.33; reset ALL immutable → benign: failed 0.00
+  S0 failures: reached q<0 before Π in 1.00 of them (rejected by V_k 0.00, flipped back after Π 1.00); median best raw q -2.540
+  failed in S0 but solved in: S0p 1.00 | S0p+key 1.00 | S1 1.00 | S0+key 1.00 | S1+key 1.00 | S1+all 1.00
+
+dataset  seed  schema  n_mutable  CSR  support_eps_med  l1_med  margin_med  share_failed_with_neg_hit  seconds
+    cic    11      S0         21 1.00             19.0  15.894       0.806                        NaN      0.3
+    cic    11  S0+key         22 1.00             20.0  15.468       0.763                        NaN      0.2
+    cic    11      S1         21 1.00             20.0  16.628       0.967                        NaN      0.2
+    cic    11  S1+key         22 1.00             21.0  15.796       0.802                        NaN      0.2
+    cic    11  S1+all         32 1.00             30.0  15.330       1.547                        NaN      0.1
+    cic    11     S0p         21 1.00             18.0  15.686       1.141                        NaN      0.2
+    cic    11 S0p+key         22 1.00             20.0  19.022       1.293                        NaN      0.2
+    cic    23      S0         21 1.00             20.0  18.919       1.493                        NaN      0.2
+    cic    23  S0+key         22 1.00             21.0  19.466       1.827                        NaN      0.2
+    cic    23      S1         21 1.00             20.0  20.416       1.855                        NaN      0.2
+    cic    23  S1+key         22 1.00             21.0  20.763       1.633                        NaN      0.2
+    cic    23  S1+all         32 1.00             30.0  24.973       1.789                        NaN      0.2
+    cic    23     S0p         21 1.00             20.0  22.255       2.238                        NaN      0.2
+    cic    23 S0p+key         22 1.00             21.0  22.905       1.599                        NaN      0.2
+    cic    37      S0         21 1.00             19.0  15.075       0.810                        NaN      0.2
+    cic    37  S0+key         22 1.00             20.0  14.819       0.901                        NaN      0.2
+    cic    37      S1         21 1.00             19.0  16.808       0.881                        NaN      0.2
+    cic    37  S1+key         22 1.00             20.0  16.786       1.235                        NaN      0.2
+    cic    37  S1+all         32 1.00             30.0  19.473       1.064                        NaN      0.2
+    cic    37     S0p         21 1.00             18.0  15.516       1.013                        NaN      0.2
+    cic    37 S0p+key         22 1.00             19.0  15.915       1.141                        NaN      0.2
+    cic    53      S0         21 1.00             19.0  13.349       1.078                        NaN      0.2
+    cic    53  S0+key         22 1.00             20.0  13.200       1.359                        NaN      0.2
+    cic    53      S1         21 1.00             19.5  14.339       1.328                        NaN      0.2
+    cic    53  S1+key         22 1.00             21.0  14.957       0.945                        NaN      0.2
+    cic    53  S1+all         32 1.00             30.0  15.263       1.568                        NaN      0.2
+    cic    53     S0p         21 1.00             18.0  16.587       1.212                        NaN      0.2
+    cic    53 S0p+key         22 1.00             18.5  17.501       1.325                        NaN      0.2
+    cic    71      S0         21 1.00             19.0  13.776       0.582                        NaN      0.1
+    cic    71  S0+key         22 1.00             19.0  13.524       0.645                        NaN      0.1
+    cic    71      S1         21 1.00             19.0  16.741       0.670                        NaN      0.2
+    cic    71  S1+key         22 1.00             20.0  16.335       0.697                        NaN      0.1
+    cic    71  S1+all         32 1.00             30.0  20.482       0.557                        NaN      0.1
+    cic    71     S0p         21 1.00             17.0  14.824       0.619                        NaN      0.2
+    cic    71 S0p+key         22 1.00             18.0  15.179       0.673                        NaN      0.2
+    doh    11      S0         20 1.00             20.0  18.916       0.885                        NaN      1.2
+    doh    11  S0+key         21 1.00             21.0  19.424       0.824                        NaN      0.2
+    doh    11      S1         20 1.00             20.0  20.760       0.974                        NaN      0.2
+    doh    11  S1+key         21 1.00             21.0  21.803       1.300                        NaN      0.2
+    doh    11  S1+all         21 1.00             21.0  21.803       1.300                        NaN      0.2
+    doh    11     S0p         20 1.00             20.0  18.324       1.106                        NaN      0.3
+    doh    11 S0p+key         21 1.00             21.0  18.697       1.157                        NaN      0.3
+    doh    23      S0         20 1.00             20.0  15.651       1.054                        NaN      0.2
+    doh    23  S0+key         21 1.00             21.0  16.804       1.065                        NaN      0.2
+    doh    23      S1         20 1.00             20.0  17.908       1.132                        NaN      0.2
+    doh    23  S1+key         21 1.00             21.0  18.638       1.115                        NaN      0.2
+    doh    23  S1+all         21 1.00             21.0  18.638       1.115                        NaN      0.2
+    doh    23     S0p         20 1.00             20.0  16.249       1.312                        NaN      0.3
+    doh    23 S0p+key         21 1.00             21.0  16.972       1.271                        NaN      0.2
+    doh    37      S0         20 1.00             20.0  14.544       0.991                        NaN      0.2
+    doh    37  S0+key         21 1.00             21.0  15.168       1.267                        NaN      0.2
+    doh    37      S1         20 1.00             20.0  14.757       0.945                        NaN      0.2
+    doh    37  S1+key         21 1.00             21.0  15.190       1.161                        NaN      0.1
+    doh    37  S1+all         21 1.00             21.0  15.190       1.161                        NaN      0.1
+    doh    37     S0p         20 1.00             20.0  14.941       1.086                        NaN      0.2
+    doh    37 S0p+key         21 1.00             21.0  14.920       1.101                        NaN      0.2
+    doh    53      S0         20 1.00             19.0  16.646       1.029                        NaN      0.3
+    doh    53  S0+key         21 1.00             21.0  16.448       1.088                        NaN      0.3
+    doh    53      S1         20 1.00             19.0  17.168       1.394                        NaN      0.3
+    doh    53  S1+key         21 1.00             20.0  17.560       1.771                        NaN      0.3
+    doh    53  S1+all         21 1.00             20.0  17.560       1.771                        NaN      0.3
+    doh    53     S0p         20 1.00             20.0  17.120       1.430                        NaN      0.3
+    doh    53 S0p+key         21 1.00             21.0  16.878       1.620                        NaN      0.3
+    doh    71      S0         20 1.00             20.0  11.195       1.440                        NaN      0.2
+    doh    71  S0+key         21 1.00             21.0  11.599       1.700                        NaN      0.1
+    doh    71      S1         20 1.00             20.0  12.200       2.022                        NaN      0.2
+    doh    71  S1+key         21 1.00             21.0  12.049       2.068                        NaN      0.2
+    doh    71  S1+all         21 1.00             21.0  12.049       2.068                        NaN      0.2
+    doh    71     S0p         20 1.00             20.0  11.064       1.623                        NaN      0.2
+    doh    71 S0p+key         21 1.00             21.0  11.509       1.692                        NaN      0.2
+   unsw    11      S0         15 0.98             13.5  14.437       0.073                        1.0      4.0
+   unsw    11  S0+key         17 1.00             14.0   8.109       0.362                        NaN      0.2
+   unsw    11      S1         15 1.00             15.0  14.912       0.185                        NaN      0.2
+   unsw    11  S1+key         17 1.00             17.0  10.827       0.453                        NaN      0.2
+   unsw    11  S1+all         28 1.00             28.0  15.526       0.546                        NaN      0.1
+   unsw    11     S0p         15 1.00             12.0  13.093       0.136                        NaN      0.3
+   unsw    11 S0p+key         17 1.00             14.0   8.778       0.399                        NaN      0.2
+   unsw    23      S0         15 0.97             14.0  11.084       0.308                        1.0      4.8
+   unsw    23  S0+key         17 0.99             15.0   7.062       0.661                        1.0      3.7
+   unsw    23      S1         15 0.99             15.0  13.913       0.372                        1.0      4.4
+   unsw    23  S1+key         17 1.00             17.0   9.673       0.688                        NaN      0.3
+   unsw    23  S1+all         28 1.00             28.0  14.989       1.162                        NaN      0.2
+   unsw    23     S0p         15 1.00             14.0  18.859       0.379                        NaN      0.9
+   unsw    23 S0p+key         17 1.00             15.0   9.737       0.787                        NaN      0.8
+   unsw    37      S0         15 0.93             13.0  10.828       0.181                        1.0      5.0
+   unsw    37  S0+key         17 0.98             14.0   9.119       0.370                        1.0      6.6
+   unsw    37      S1         15 1.00             15.0  13.086       0.313                        NaN      0.4
+   unsw    37  S1+key         17 1.00             17.0  10.712       0.368                        NaN      0.3
+   unsw    37  S1+all         28 1.00             28.0  16.461       0.708                        NaN      0.2
+   unsw    37     S0p         15 1.00             13.0  12.298       0.233                        NaN      1.5
+   unsw    37 S0p+key         17 1.00             14.0   9.283       0.423                        NaN      1.2
+   unsw    53      S0         15 0.94             12.0  12.660       0.175                        1.0      6.7
+   unsw    53  S0+key         17 0.97             14.0   9.718       0.350                        1.0      6.5
+   unsw    53      S1         15 1.00             14.0  13.948       0.264                        NaN      0.2
+   unsw    53  S1+key         17 1.00             16.0  10.636       0.490                        NaN      0.1
+   unsw    53  S1+all         28 1.00             27.0  16.058       0.576                        NaN      0.1
+   unsw    53     S0p         15 1.00             12.0  13.321       0.183                        NaN      0.5
+   unsw    53 S0p+key         17 1.00             14.0  10.345       0.409                        NaN      0.3
+   unsw    71      S0         15 0.97             12.0  12.892       0.051                        1.0      5.8
+   unsw    71  S0+key         17 1.00             14.0   8.470       0.263                        NaN      0.2
+   unsw    71      S1         15 1.00             14.0  12.851       0.204                        NaN      0.2
+   unsw    71  S1+key         17 1.00             16.0   8.988       0.374                        NaN      0.2
+   unsw    71  S1+all         28 1.00             27.0  14.101       0.548                        NaN      0.2
+   unsw    71     S0p         15 1.00             11.0  13.216       0.116                        NaN      0.4
+   unsw    71 S0p+key         17 1.00             13.0   9.183       0.398                        NaN      0.3
+
+How to read:
+  • CSR(S0p) >> CSR(S0)         → the search needs in-loop projection.
+  • CSR(S1) >> CSR(S0)          → range clipping / integer rounding block solutions.
+  • CSR(S0+key) >> CSR(S0)      → solutions need a locked feature group: the detector relies on an immutable shortcut.
+  • many failed searches that reached q<0 → candidates crossed the boundary but projection / validation pulled them back.
+  • q_min_raw far from 0 and reset_key_flip high on failures → mutable features cannot flip the label.
+

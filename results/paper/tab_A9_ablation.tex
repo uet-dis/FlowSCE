@@ -1,0 +1,41 @@
+\begin{table*}[t]
+\centering\footnotesize
+\caption{Ablation of the FlowSCE refinement on the registered alerts, starting from the same search outputs (A0): one step removed at a time, the complete refinement under a reduced forward budget (compare with the oracle calls of LBS-adapted in Table~\ref{tab:minimizers}), and the single-feature probes run from the alert itself without a generator (CSR over all alerts; the other columns over its successes). Quality columns over verified successes; margin $\ge\ln3$: share reaching the polishing target; OC / $N_b$: median forward / backward evaluations of the refinement.}
+\label{tab:a-ablation}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llrrrrrrrrr@{}}
+\toprule
+Dataset & Refinement & CSR & mean $s_\epsilon$ & 1-feat.\ (\%) & $L_1$ & kNN & Margin & $\ge\ln3$ (\%) & OC & $N_b$ \\
+\midrule
+CIC-IDS2018 & complete refinement & 1.000 & 1.068 & 97.8 & 6.04 & 11.82 & 1.182 & 91.4 & 1111 & 1041 \\
+ & without single-feature probes & 1.000 & 1.240 & 89.8 & 7.96 & 14.29 & 1.164 & 87.0 & 113 & 58 \\
+ & without repair & 1.000 & 1.268 & 96.4 & 6.04 & 11.82 & 1.181 & 93.4 & 1111 & 1041 \\
+ & without polishing & 1.000 & 1.068 & 97.8 & 5.54 & 11.34 & 0.418 & 16.6 & 1109 & 1040 \\
+ & without $L_1$ shrinking & 1.000 & 1.068 & 97.8 & 6.16 & 12.03 & 1.340 & 91.4 & 1103 & 1041 \\
+ & forward budget 1000 & 1.000 & 1.674 & 91.0 & 5.80 & 11.72 & 0.736 & 19.0 & 1003 & 946 \\
+ & forward budget 500 & 1.000 & 2.998 & 68.0 & 8.00 & 13.96 & 0.509 & 9.4 & 503 & 458 \\
+ & forward budget 200 & 1.000 & 4.792 & 35.0 & 10.23 & 14.52 & 0.375 & 5.4 & 203 & 166 \\
+ & probes only, no generator & 0.878 & 1.000 & 100.0 & 5.98 & 11.76 & 1.163 & 83.8 & 997 & 961 \\
+\midrule
+DoHBrw-2020 & complete refinement & 1.000 & 1.288 & 81.0 & 17.57 & 20.22 & 1.128 & 89.0 & 1543 & 1450 \\
+ & without single-feature probes & 1.000 & 1.632 & 64.0 & 22.37 & 21.30 & 1.114 & 78.0 & 182 & 94 \\
+ & without repair & 1.000 & 2.940 & 75.6 & 17.15 & 19.97 & 1.124 & 95.2 & 1504 & 1402 \\
+ & without polishing & 1.000 & 1.288 & 81.0 & 16.11 & 18.37 & 0.341 & 15.0 & 1524 & 1438 \\
+ & without $L_1$ shrinking & 1.000 & 1.288 & 81.0 & 17.58 & 20.26 & 1.171 & 89.0 & 1532 & 1450 \\
+ & forward budget 1000 & 1.000 & 5.478 & 54.0 & 19.73 & 20.14 & 0.441 & 18.4 & 1003 & 942 \\
+ & forward budget 500 & 1.000 & 7.982 & 26.8 & 25.03 & 22.65 & 0.339 & 15.4 & 503 & 452 \\
+ & forward budget 200 & 1.000 & 9.272 & 11.8 & 25.82 & 23.55 & 0.315 & 14.2 & 203 & 158 \\
+ & probes only, no generator & 0.548 & 1.000 & 100.0 & 14.02 & 17.51 & 1.132 & 87.6 & 1012 & 980 \\
+\midrule
+UNSW-NB15 & complete refinement & 0.998 & 1.004 & 99.6 & 6.97 & 10.44 & 1.119 & 98.8 & 825 & 769 \\
+ & without single-feature probes & 0.998 & 1.046 & 96.8 & 8.98 & 12.79 & 1.116 & 98.2 & 69 & 19 \\
+ & without repair & 0.998 & 1.012 & 99.6 & 6.96 & 10.44 & 1.119 & 98.8 & 825 & 769 \\
+ & without polishing & 0.998 & 1.004 & 99.6 & 5.73 & 8.90 & 0.258 & 32.3 & 822 & 767 \\
+ & without $L_1$ shrinking & 0.998 & 1.004 & 99.6 & 7.28 & 10.70 & 1.160 & 98.8 & 818 & 769 \\
+ & forward budget 1000 & 0.998 & 1.004 & 99.6 & 6.80 & 10.01 & 1.118 & 84.4 & 825 & 769 \\
+ & forward budget 500 & 0.998 & 1.030 & 99.0 & 6.35 & 9.54 & 0.425 & 31.7 & 503 & 464 \\
+ & forward budget 200 & 0.998 & 1.096 & 95.4 & 6.42 & 9.71 & 0.425 & 30.5 & 203 & 170 \\
+ & probes only, no generator & 0.988 & 1.000 & 100.0 & 6.81 & 10.25 & 1.116 & 95.1 & 745 & 717 \\
+\bottomrule
+\end{tabular}}
+\end{table*}

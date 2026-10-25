@@ -1,0 +1,28 @@
+\begin{table*}[t]
+\centering\small
+\caption{Generators through the shared reconstructed oracle, the same 500 registered alerts per dataset, mask, projection, validator and budget (500 updates, 4096 forward evaluations); no minimizer, except the last row of each dataset, the complete FlowSCE explainer (search followed by the refinement of Section~\ref{sec:refine}). CANDICE: configuration of the original paper ($\lambda_1=\lambda_2=0.5$, five counterfactuals from $\mathcal N(0,0.1)$, learning rate chosen on validation alerts); CANDICE (tuned $\lambda$): penalties tuned on validation alerts; DiCE: official library, gradient method, defaults except the iteration count. For CANDICE and DiCE the valid counterfactual with the smallest $s_\epsilon$ is reported. Quality columns: medians over verified successes; $N_f$: median forward evaluations of successful queries (for FlowSCE, search and refinement together). Sequential run times are compared in Appendix~\ref{app:candice}.}
+\label{tab:generators}
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+Dataset & Generator & CSR & $s_\epsilon$ & $L_1$ & kNN & Margin & $N_f$ \\
+\midrule
+CIC-IDS2018 & FlowSCE search (A0) & 1.000 & 19 & 20.74 & 22.60 & 1.449 & 11 \\
+ & CANDICE & 0.002 & 13 & 0.19 & 0.21 & 0.000 & 1109 \\
+ & CANDICE (tuned $\lambda$) & 0.908 & 17 & 14.84 & 16.92 & 0.460 & 109 \\
+ & DiCE (dice-ml) & 1.000 & 16 & 22.20 & 14.14 & 3.195 & 4045 \\
+ & \textbf{FlowSCE} (search + refinement) & 1.000 & 1 & 6.04 & 11.82 & 1.182 & 1124 \\
+\midrule
+DoHBrw-2020 & FlowSCE search (A0) & 1.000 & 20 & 38.69 & 31.22 & 0.782 & 16 \\
+ & CANDICE & 0.076 & 20 & 1.87 & 4.09 & 0.324 & 20 \\
+ & CANDICE (tuned $\lambda$) & 0.866 & 20 & 26.85 & 22.33 & 0.204 & 193 \\
+ & DiCE (dice-ml) & 0.030 & 19 & 19.38 & 8.76 & 1.312 & 4045 \\
+ & \textbf{FlowSCE} (search + refinement) & 1.000 & 1 & 17.57 & 20.22 & 1.128 & 1564 \\
+\midrule
+UNSW-NB15 & FlowSCE search (A0) & 0.998 & 14 & 19.52 & 19.83 & 0.234 & 13 \\
+ & CANDICE & 0.000 & -- & -- & -- & -- & -- \\
+ & CANDICE (tuned $\lambda$) & 0.986 & 14 & 16.84 & 17.24 & 0.046 & 152 \\
+ & DiCE (dice-ml) & 0.398 & 13 & 30.35 & 24.99 & 1.324 & 4045 \\
+ & \textbf{FlowSCE} (search + refinement) & 0.998 & 1 & 6.97 & 10.44 & 1.119 & 843 \\
+\bottomrule
+\end{tabular}
+\end{table*}

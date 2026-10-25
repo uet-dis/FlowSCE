@@ -1,0 +1,314 @@
+{
+ "dataset": "cic",
+ "release": "NetFlow version of CSE-CIC-IDS2018 (UQ NIDS datasets, nProbe features)",
+ "url": "https://espace.library.uq.edu.au/view/UQ:ece9b83",
+ "zip": "data_2018.zip",
+ "members": [
+  {
+   "member": "f78acbaa2afe1595_NFV3DATA-A11964_A11964/data/NF-CICIDS2018-v3.csv",
+   "sha256": "242a6971cc801eae621b1fc4d966db2cd0af9cc866805f36a6fc5d0058dfbb74",
+   "bytes": 4222783755,
+   "uncompressed_size": 4222783755,
+   "data_rows": 20115529,
+   "class_counts": {
+    "Benign": 17514626,
+    "FTP-BruteForce": 386720,
+    "SSH-Bruteforce": 188474,
+    "DoS_attacks-GoldenEye": 61300,
+    "DoS_attacks-Slowloris": 36040,
+    "DoS_attacks-SlowHTTPTest": 105550,
+    "DoS_attacks-Hulk": 100076,
+    "DDoS_attacks-LOIC-HTTP": 288589,
+    "DDOS_attack-LOIC-UDP": 3450,
+    "DDOS_attack-HOIC": 1032311,
+    "Brute_Force_-Web": 1618,
+    "Brute_Force_-XSS": 480,
+    "SQL_Injection": 440,
+    "Infilteration": 188152,
+    "Bot": 207703
+   }
+  }
+ ],
+ "subset_file": "data/nf_cicids2018_v3_4class_60k.parquet",
+ "subset_rows": 60000,
+ "subset_class_counts": {
+  "Benign": 15000,
+  "FTP-BruteForce": 15000,
+  "DoS_attacks-Hulk": 15000,
+  "Bot": 15000
+ },
+ "matched_rows": 60000,
+ "full_match_rows": 60000,
+ "unmatched_rows": 0,
+ "rows_with_duplicate_source_candidates": 29648,
+ "subset_rows_per_source_file": {
+  "f78acbaa2afe1595_NFV3DATA-A11964_A11964/data/NF-CICIDS2018-v3.csv": 60000
+ },
+ "source_rows_file": "data/source_rows/source_rows_cic.csv.gz",
+ "key_columns": [
+  "IPV4_SRC_ADDR",
+  "L4_SRC_PORT",
+  "IPV4_DST_ADDR",
+  "L4_DST_PORT",
+  "FLOW_START_MILLISECONDS",
+  "FLOW_END_MILLISECONDS",
+  "IN_BYTES",
+  "OUT_BYTES"
+ ],
+ "note": "source_row = 0-based data row index in the member file (header excluded). The subsets are documented by these row lists.",
+ "feature_docs": [
+  {
+   "\u00ef\u00bb\u00bfFeature": "IPV4_SRC_ADDR",
+   "Description": "IPv4 source address"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "IPV4_DST_ADDR",
+   "Description": "IPv4 destination address"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "L4_SRC_PORT",
+   "Description": "IPv4 source port number"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "L4_DST_PORT",
+   "Description": "IPv4 destination port number"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "PROTOCOL",
+   "Description": "IP protocol identifier byte"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "L7_PROTO",
+   "Description": "Layer 7 protocol (numeric)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "IN_BYTES",
+   "Description": "Incoming number of bytes"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "OUT_BYTES",
+   "Description": "Outgoing number of bytes"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "IN_PKTS",
+   "Description": "Incoming number of packets"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "OUT_PKTS",
+   "Description": "Outgoing number of packets"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "FLOW_DURATION_MILLISECONDS",
+   "Description": "Flow duration in milliseconds"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "TCP_FLAGS",
+   "Description": "Cumulative of all TCP flags"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "CLIENT_TCP_FLAGS",
+   "Description": "Cumulative of all client TCP flags"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "SERVER_TCP_FLAGS",
+   "Description": "Cumulative of all server TCP flags"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "DURATION_IN",
+   "Description": "Client to Server stream duration (msec)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "DURATION_OUT",
+   "Description": "Client to Server stream duration (msec)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "MIN_TTL",
+   "Description": "Min flow TTL"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "MAX_TTL",
+   "Description": "Max flow TTL"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "LONGEST_FLOW_PKT",
+   "Description": "Longest packet (bytes) of the flow"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "SHORTEST_FLOW_PKT",
+   "Description": "Shortest packet (bytes) of the flow"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "MIN_IP_PKT_LEN",
+   "Description": "Len of the smallest flow IP packet observed"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "MAX_IP_PKT_LEN",
+   "Description": "Len of the largest flow IP packet observed"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "SRC_TO_DST_SECOND_BYTES",
+   "Description": "Src to dst Bytes/sec"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "DST_TO_SRC_SECOND_BYTES",
+   "Description": "Dst to src Bytes/sec"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "RETRANSMITTED_IN_BYTES",
+   "Description": "Number of retransmitted TCP flow bytes (src->dst)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "RETRANSMITTED_IN_PKTS",
+   "Description": "Number of retransmitted TCP flow packets (src->dst)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "RETRANSMITTED_OUT_BYTES",
+   "Description": "Number of retransmitted TCP flow bytes (dst->src)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "RETRANSMITTED_OUT_PKTS",
+   "Description": "Number of retransmitted TCP flow packets (dst->src)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "SRC_TO_DST_AVG_THROUGHPUT",
+   "Description": "Src to dst average thpt (bps)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "DST_TO_SRC_AVG_THROUGHPUT",
+   "Description": "Dst to src average thpt (bps)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "NUM_PKTS_UP_TO_128_BYTES",
+   "Description": "Packets whose IP size <= 128"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "NUM_PKTS_128_TO_256_BYTES",
+   "Description": "Packets whose IP size > 128 and <= 256"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "NUM_PKTS_256_TO_512_BYTES",
+   "Description": "Packets whose IP size > 256 and <= 512"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "NUM_PKTS_512_TO_1024_BYTES",
+   "Description": "Packets whose IP size > 512 and <= 1024"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "NUM_PKTS_1024_TO_1514_BYTES",
+   "Description": "Packets whose IP size >\u00ef\u00bf\u00bd\u00ef\u00bf\u00bd1024 and <= 1514"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "TCP_WIN_MAX_IN",
+   "Description": "Max TCP Window (src->dst)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "TCP_WIN_MAX_OUT",
+   "Description": "Max TCP Window (dst->src)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "ICMP_TYPE",
+   "Description": "ICMP Type * 256 + ICMP code"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "ICMP_IPV4_TYPE",
+   "Description": "ICMP Type"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "DNS_QUERY_ID",
+   "Description": "DNS query transaction Id"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "DNS_QUERY_TYPE",
+   "Description": "DNS query type (e.g. 1=A, 2=NS..)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "DNS_TTL_ANSWER",
+   "Description": "TTL of the first A record (if any)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "FTP_COMMAND_RET_CODE",
+   "Description": "FTP client command return code"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "FLOW_START_MILLISECONDS",
+   "Description": "Flow start timestamp in milliseconds"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "FLOW_END_MILLISECONDS",
+   "Description": "Flow end timestamp in milliseconds"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "SRC_TO_DST_IAT_MIN                ",
+   "Description": "Minimum Inter-Packet Arrval Time (src->dst)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "SRC_TO_DST_IAT_MAX                ",
+   "Description": "Maximum Inter-Packet Arrval Time (src->dst)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "SRC_TO_DST_IAT_AVG                ",
+   "Description": "Average Inter-Packet Arrval Time (src->dst)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "SRC_TO_DST_IAT_STDDEV             ",
+   "Description": "Sandard Deviaion Inter-Packet Arrval Time (src->dst)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "DST_TO_SRC_IAT_MIN                ",
+   "Description": "Minimum Inter-Packet Arrval Time (dst > src)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "DST_TO_SRC_IAT_MAX                ",
+   "Description": "Minimum Inter-Packet Arrval Time  (dst > src)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "DST_TO_SRC_IAT_AVG                ",
+   "Description": "Minimum Inter-Packet Arrval Time  (dst > src)"
+  },
+  {
+   "\u00ef\u00bb\u00bfFeature": "DST_TO_SRC_IAT_STDDEV             ",
+   "Description": "Minimum Inter-Packet Arrval Time  (dst > src)"
+  }
+ ],
+ "publisher_manifest_sha1": "ddcad6d826b73a128a447a0189137efd6c8f70c9 data/NF-CICIDS2018-v3.csv\nd028597391217f78df3db31c1dbd96805203196f data/NetFlow_v3_Features.csv",
+ "source_class_counts": {
+  "Benign": 17514626,
+  "FTP-BruteForce": 386720,
+  "SSH-Bruteforce": 188474,
+  "DoS_attacks-GoldenEye": 61300,
+  "DoS_attacks-Slowloris": 36040,
+  "DoS_attacks-SlowHTTPTest": 105550,
+  "DoS_attacks-Hulk": 100076,
+  "DDoS_attacks-LOIC-HTTP": 288589,
+  "DDOS_attack-LOIC-UDP": 3450,
+  "DDOS_attack-HOIC": 1032311,
+  "Brute_Force_-Web": 1618,
+  "Brute_Force_-XSS": 480,
+  "SQL_Injection": 440,
+  "Infilteration": 188152,
+  "Bot": 207703
+ },
+ "sampling_ratio_by_class": {
+  "Benign": 0.0008564270798588563,
+  "FTP-BruteForce": 0.0387877534133223,
+  "SSH-Bruteforce": 0.0,
+  "DoS_attacks-GoldenEye": 0.0,
+  "DoS_attacks-Slowloris": 0.0,
+  "DoS_attacks-SlowHTTPTest": 0.0,
+  "DoS_attacks-Hulk": 0.1498860865742036,
+  "DDoS_attacks-LOIC-HTTP": 0.0,
+  "DDOS_attack-LOIC-UDP": 0.0,
+  "DDOS_attack-HOIC": 0.0,
+  "Brute_Force_-Web": 0.0,
+  "Brute_Force_-XSS": 0.0,
+  "SQL_Injection": 0.0,
+  "Infilteration": 0.0,
+  "Bot": 0.07221850430663014
+ },
+ "data_quality_notes": [
+  "4 of the 15 classes are used (Benign, FTP-BruteForce, DoS_attacks-Hulk, Bot), 15,000 rows each",
+  "the source contains exact duplicate rows; source_row lists the first unused identical row in file order",
+  "publisher SHA-1 (BagIt manifest-sha1.txt) verified for NF-CICIDS2018-v3.csv and NetFlow_v3_Features.csv"
+ ],
+ "subset_content_sha256": "003d5be5a0666d45cb502e797228e978266e21b2ba907ca000fa7cfe7f8c33b1"
+}

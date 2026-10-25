@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\footnotesize
+\caption{RQ1--RQ3 on the real detectors and alerts. RQ1: maximum absolute difference of the rank-one update from an independent rebuild (Rebuild) and of the total gradient from central finite differences (FD), float64; Legacy: a naive update rule that ignores the double incidence of a self-loop (Section~\ref{sec:verification-design}), on every self-loop of the test graph, $\max|\Delta X_V|$ / $\max|\Delta q|$. RQ2: stale-context candidates rejected by reconstruction / nominal successes, on the full snapshot (500 registered alerts) and over the wall-clock windows $\Delta t\in\{600,60,10,1\}$\,s (detector retrained per window, five seeds, 100 alerts each). RQ3: paired cluster-bootstrap difference in CSR between A and C with 95\% interval; for the windows, the window with the largest difference. A and C never return a spurious candidate.}
+\label{tab:main}
+\begin{tabular}{@{}lrrrrrll@{}}
+\toprule
+& \multicolumn{3}{c}{RQ1: reconstruction} & \multicolumn{2}{c}{RQ2: spurious B} & \multicolumn{2}{c}{RQ3: $\Delta$CSR A$-$C} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}\cmidrule(l){7-8}
+Dataset & Rebuild & FD & Legacy & Full & Windows & Full snapshot & Windows (largest) \\
+\midrule
+CIC-IDS2018 & $8.9\times10^{-16}$ & $2.9\times10^{-9}$ & 0.103 / $4.5\times10^{-4}$ & 0/500 & 1/2000 & 0.000 [0.000, 0.000] & 0.000 at every $\Delta t$ \\
+DoHBrw-2020 & $2.2\times10^{-16}$ & $5.0\times10^{-8}$ & no self-loop & 0/500 & 9/1909 & 0.000 [0.000, 0.000] & +0.012 [+0.002, +0.022] ($\Delta t{=}10$\,s) \\
+UNSW-NB15 & $1.8\times10^{-15}$ & $1.3\times10^{-9}$ & 1.28 / 0.00104 & 1/499 & 165/1787 & 0.000 [0.000, 0.000] & +0.132 [+0.104, +0.164] ($\Delta t{=}1$\,s) \\
+DoHBrw-2020 (full capture) & -- & -- & -- & -- & 16/1322 & -- & +0.014 [+0.002, +0.028] ($\Delta t{=}1$\,s) \\
+\bottomrule
+\end{tabular}
+\end{table*}

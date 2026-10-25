@@ -1,0 +1,13 @@
+dataset,method,seconds_500_alerts,implementation
+unsw,FlowSCE,2249.0632716681575,sequential reference
+unsw,FlowSCE (A),79.08201055717655,sequential reference
+unsw,CANDICE,6670.457029059995,sequential reference
+unsw,A0 + LBS-adapted,319.8660661720205,sequential reference
+doh,FlowSCE,5522.338084211922,sequential reference
+doh,FlowSCE (A),98.85779901104979,sequential reference
+doh,CANDICE,8732.278543613269,sequential reference
+doh,A0 + LBS-adapted,531.1583580119768,sequential reference
+cic,FlowSCE,5474.85768285708,sequential reference
+cic,FlowSCE (A),47.67240045394283,sequential reference
+cic,CANDICE,11483.957331813988,sequential reference
+cic,A0 + LBS-adapted,286.534277713974,sequential reference

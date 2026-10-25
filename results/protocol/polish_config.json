@@ -1,0 +1,20 @@
+{
+  "cic": {
+    "T_polish": 25,
+    "val_reached": 0.848,
+    "best_reached": 0.848,
+    "val_nfwd_median": 9.0
+  },
+  "doh": {
+    "T_polish": 25,
+    "val_reached": 0.78,
+    "best_reached": 0.78,
+    "val_nfwd_median": 10.0
+  },
+  "unsw": {
+    "T_polish": 25,
+    "val_reached": 0.27710843373493976,
+    "best_reached": 0.27710843373493976,
+    "val_nfwd_median": 30.0
+  }
+}

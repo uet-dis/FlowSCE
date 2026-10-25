@@ -1,0 +1,159 @@
+{
+  "dataset": "unsw",
+  "source": "https://research.unsw.edu.au/projects/unsw-nb15-dataset (UNSW-NB15_1..4.csv)",
+  "file": "unsw_nb15_60k.parquet",
+  "file_sha256": "7c638f6adb85206c418e369ae8106010699b462eb935a97288fa61947414fb1d",
+  "rows": 60000,
+  "label_column": "Label",
+  "label_mapping": "int",
+  "attack_type_column": "attack_cat",
+  "endpoint_columns": [
+    "srcip",
+    "dstip"
+  ],
+  "time_column": "Stime",
+  "split": {
+    "rule": "stratified group split; group = identical raw feature vector; strata = attack type",
+    "seed": 0,
+    "ratios": [
+      0.7,
+      0.1,
+      0.2
+    ],
+    "file": "results/splits/unsw_split.csv",
+    "file_sha256": "c3028d00a18daafa4761b952ec0dffa3ff0c9fe1ab73fc37984c6d92601d5d19",
+    "achieved": {
+      "train": 41995,
+      "val": 5994,
+      "test": 12011
+    },
+    "classes": {
+      "train": {
+        "Normal": 21000,
+        "Generic": 14053,
+        "Exploits": 2935,
+        "Fuzzers": 1574,
+        "DoS": 1043,
+        "Reconnaissance": 919,
+        "Analysis": 183,
+        "Backdoor": 123,
+        "Shellcode": 109,
+        "Backdoors": 39,
+        "Worms": 17
+      },
+      "val": {
+        "Normal": 2999,
+        "Generic": 2010,
+        "Exploits": 417,
+        "Fuzzers": 218,
+        "DoS": 154,
+        "Reconnaissance": 135,
+        "Analysis": 23,
+        "Shellcode": 16,
+        "Backdoor": 16,
+        "Backdoors": 4,
+        "Worms": 2
+      },
+      "test": {
+        "Normal": 6001,
+        "Generic": 4024,
+        "Exploits": 835,
+        "Fuzzers": 437,
+        "DoS": 310,
+        "Reconnaissance": 264,
+        "Analysis": 50,
+        "Backdoor": 43,
+        "Shellcode": 32,
+        "Backdoors": 9,
+        "Worms": 6
+      }
+    },
+    "attack_rate": {
+      "train": 0.4999404691034647,
+      "val": 0.49966633299966634,
+      "test": 0.5003746565648156
+    },
+    "test_processed_duplicates_in_train": 0.19065856298393138
+  },
+  "preprocessing": {
+    "n_features": 48,
+    "dropped_constant": [],
+    "dropped_corr": [
+      "sloss",
+      "dloss",
+      "Dpkts",
+      "dwin",
+      "synack",
+      "ackdat",
+      "ct_state_ttl",
+      "ct_srv_dst",
+      "ct_src_ ltm",
+      "ct_src_dport_ltm",
+      "ct_dst_sport_ltm",
+      "ct_dst_src_ltm",
+      "proto=tcp",
+      "state=FIN",
+      "service=http"
+    ],
+    "log1p": [
+      "dsport",
+      "sbytes",
+      "dbytes",
+      "Sload",
+      "Dload",
+      "Spkts",
+      "smeansz",
+      "dmeansz",
+      "res_bdy_len",
+      "Sjit",
+      "Djit",
+      "Sintpkt",
+      "Dintpkt"
+    ],
+    "onehot": {
+      "proto": [
+        "udp",
+        "tcp",
+        "unas",
+        "ospf",
+        "sctp",
+        "arp",
+        "ipv6",
+        "gre"
+      ],
+      "state": [
+        "INT",
+        "FIN",
+        "CON",
+        "REQ",
+        "RST",
+        "ECO",
+        "CLO"
+      ],
+      "service": [
+        "dns",
+        "-",
+        "http",
+        "ftp-data",
+        "smtp",
+        "ftp",
+        "ssh",
+        "pop3"
+      ]
+    },
+    "fitted_on": "train",
+    "median_sha": "8df65c1f1b051280",
+    "mu_sha": "5e815d0b7c620058",
+    "sd_sha": "78ba14cae993c815"
+  },
+  "bootstrap_cluster": "contiguous time blocks of 500 flows within each partition",
+  "env": {
+    "python": "3.11.7",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.26.4",
+    "pandas": "3.0.6",
+    "sklearn": "1.9.1",
+    "device": "cuda",
+    "gpu": "NVIDIA RTX 5880 Ada Generation"
+  }
+}

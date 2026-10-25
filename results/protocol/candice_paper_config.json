@@ -1,0 +1,29 @@
+{
+ "cic": {
+  "lr": 0.005,
+  "n_cf": 5,
+  "lam1": 0.5,
+  "lam2": 0.5,
+  "iters": 500,
+  "init_noise": 0.1,
+  "rule": "Section 5.4 selection rule on validation alerts"
+ },
+ "doh": {
+  "lr": 0.1,
+  "n_cf": 5,
+  "lam1": 0.5,
+  "lam2": 0.5,
+  "iters": 500,
+  "init_noise": 0.1,
+  "rule": "Section 5.4 selection rule on validation alerts"
+ },
+ "unsw": {
+  "lr": 0.005,
+  "n_cf": 5,
+  "lam1": 0.5,
+  "lam2": 0.5,
+  "iters": 500,
+  "init_noise": 0.1,
+  "rule": "Section 5.4 selection rule on validation alerts"
+ }
+}

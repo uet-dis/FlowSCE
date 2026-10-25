@@ -1,0 +1,47 @@
+{
+  "cic": {
+    "tau": 0.5,
+    "lr": 0.5,
+    "lam1": 0.0003,
+    "lam2": 0.001,
+    "search_margin": 0.25,
+    "T": 500,
+    "max_fwd": 4096,
+    "eps_support": 1e-08,
+    "max_restore_trials": 2000,
+    "cov_ridge": 0.001,
+    "knn_q": 5,
+    "box_proj": true,
+    "min_margin": 0.0
+  },
+  "doh": {
+    "tau": 0.5,
+    "lr": 0.5,
+    "lam1": 0.003,
+    "lam2": 0.0003,
+    "search_margin": 0.25,
+    "T": 500,
+    "max_fwd": 4096,
+    "eps_support": 1e-08,
+    "max_restore_trials": 2000,
+    "cov_ridge": 0.001,
+    "knn_q": 5,
+    "box_proj": true,
+    "min_margin": 0.0
+  },
+  "unsw": {
+    "tau": 0.5,
+    "lr": 0.5,
+    "lam1": 0.01,
+    "lam2": 0.01,
+    "search_margin": 0.25,
+    "T": 500,
+    "max_fwd": 4096,
+    "eps_support": 1e-08,
+    "max_restore_trials": 2000,
+    "cov_ridge": 0.001,
+    "knn_q": 5,
+    "box_proj": true,
+    "min_margin": 0.0
+  }
+}
